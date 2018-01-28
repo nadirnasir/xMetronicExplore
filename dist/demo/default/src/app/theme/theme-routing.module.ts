@@ -526,6 +526,14 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/snippets\/faq\/faq-faq-1\/faq-faq-1.module#FaqFaq1Module"
             },
             {
+                "path": "snippets\/invoices\/invoice-1",
+                "loadChildren": ".\/pages\/default\/snippets\/invoices\/invoices-invoice-1\/invoices-invoice-1.module#InvoicesInvoice1Module"
+            },
+            {
+                "path": "snippets\/invoices\/invoice-2",
+                "loadChildren": ".\/pages\/default\/snippets\/invoices\/invoices-invoice-2\/invoices-invoice-2.module#InvoicesInvoice2Module"
+            },
+            {
                 "path": "header\/actions",
                 "loadChildren": ".\/pages\/default\/header\/header-actions\/header-actions.module#HeaderActionsModule"
             },
