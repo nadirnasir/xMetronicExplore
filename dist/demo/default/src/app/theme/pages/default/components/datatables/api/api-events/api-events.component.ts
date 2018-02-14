@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-api-events",
-templateUrl: "./api-events.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-api-events",
+    templateUrl: "./api-events.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ApiEventsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-api-events',
-['assets/demo/default/custom/components/datatables/api/events.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-api-events',
+            ['assets/demo/default/custom/components/datatables/api/events.js']);
 
-}
+    }
 
 }

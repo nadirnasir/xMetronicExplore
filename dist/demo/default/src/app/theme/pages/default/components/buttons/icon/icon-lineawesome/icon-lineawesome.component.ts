@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-icon-lineawesome",
-templateUrl: "./icon-lineawesome.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-icon-lineawesome",
+    templateUrl: "./icon-lineawesome.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class IconLineawesomeComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

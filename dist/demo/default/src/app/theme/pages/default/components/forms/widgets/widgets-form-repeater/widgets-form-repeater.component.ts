@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-form-repeater",
-templateUrl: "./widgets-form-repeater.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-form-repeater",
+    templateUrl: "./widgets-form-repeater.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsFormRepeaterComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-form-repeater',
-['assets/demo/default/custom/components/forms/widgets/form-repeater.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-form-repeater',
+            ['assets/demo/default/custom/components/forms/widgets/form-repeater.js']);
 
-}
+    }
 
 }

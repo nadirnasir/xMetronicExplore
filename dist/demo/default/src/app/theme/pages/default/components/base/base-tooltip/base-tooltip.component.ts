@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../helpers';
 
 
 @Component({
-selector: "app-base-tooltip",
-templateUrl: "./base-tooltip.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-tooltip",
+    templateUrl: "./base-tooltip.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseTooltipComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-WidgetsNouisliderComponent
-]})
-export class WidgetsNouisliderModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        WidgetsNouisliderComponent
+    ]
+})
+export class WidgetsNouisliderModule {
 
 
 

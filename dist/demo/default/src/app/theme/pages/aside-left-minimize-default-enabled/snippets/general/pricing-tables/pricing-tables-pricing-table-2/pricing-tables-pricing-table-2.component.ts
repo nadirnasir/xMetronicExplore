@@ -3,23 +3,23 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-pricing-tables-pricing-table-2",
-templateUrl: "./pricing-tables-pricing-table-2.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-pricing-tables-pricing-table-2",
+    templateUrl: "./pricing-tables-pricing-table-2.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class PricingTablesPricingTable2Component implements OnInit, AfterViewInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
+    }
+    ngAfterViewInit() {
 
-Helpers.bodyClass('m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-aside-left--minimize m-brand--minimize m-footer--push m-aside--offcanvas-default');
+        Helpers.bodyClass('m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-aside-left--minimize m-brand--minimize m-footer--push m-aside--offcanvas-default');
 
-}
+    }
 
 }

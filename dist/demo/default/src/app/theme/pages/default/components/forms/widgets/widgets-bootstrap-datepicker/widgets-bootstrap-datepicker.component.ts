@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-bootstrap-datepicker",
-templateUrl: "./widgets-bootstrap-datepicker.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-bootstrap-datepicker",
+    templateUrl: "./widgets-bootstrap-datepicker.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsBootstrapDatepickerComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-bootstrap-datepicker',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-datepicker.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-bootstrap-datepicker',
+            ['assets/demo/default/custom/components/forms/widgets/bootstrap-datepicker.js']);
 
-}
+    }
 
 }

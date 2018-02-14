@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../helpers';
 
 
 @Component({
-selector: "app-base-alerts",
-templateUrl: "./base-alerts.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-alerts",
+    templateUrl: "./base-alerts.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseAlertsComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

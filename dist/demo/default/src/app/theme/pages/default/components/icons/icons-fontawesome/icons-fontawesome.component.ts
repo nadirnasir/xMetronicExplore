@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../helpers';
 
 
 @Component({
-selector: "app-icons-fontawesome",
-templateUrl: "./icons-fontawesome.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-icons-fontawesome",
+    templateUrl: "./icons-fontawesome.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class IconsFontawesomeComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

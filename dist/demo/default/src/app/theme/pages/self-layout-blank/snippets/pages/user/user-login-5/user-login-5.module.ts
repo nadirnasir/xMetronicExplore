@@ -10,14 +10,16 @@ const routes: Routes = [
         "component": UserLogin5Component
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-UserLogin5Component
-]})
-export class UserLogin5Module  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        UserLogin5Component
+    ]
+})
+export class UserLogin5Module {
 
 
 

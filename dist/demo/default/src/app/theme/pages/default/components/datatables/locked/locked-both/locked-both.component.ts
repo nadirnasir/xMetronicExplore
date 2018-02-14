@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-locked-both",
-templateUrl: "./locked-both.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-locked-both",
+    templateUrl: "./locked-both.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class LockedBothComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-locked-both',
-['assets/demo/default/custom/components/datatables/locked/both.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-locked-both',
+            ['assets/demo/default/custom/components/datatables/locked/both.js']);
 
-}
+    }
 
 }

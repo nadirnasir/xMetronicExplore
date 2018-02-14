@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-tabs-bootstrap",
-templateUrl: "./tabs-bootstrap.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-tabs-bootstrap",
+    templateUrl: "./tabs-bootstrap.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class TabsBootstrapComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-bootstrap-touchspin",
-templateUrl: "./widgets-bootstrap-touchspin.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-bootstrap-touchspin",
+    templateUrl: "./widgets-bootstrap-touchspin.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsBootstrapTouchspinComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-bootstrap-touchspin',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-touchspin.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-bootstrap-touchspin',
+            ['assets/demo/default/custom/components/forms/widgets/bootstrap-touchspin.js']);
 
-}
+    }
 
 }

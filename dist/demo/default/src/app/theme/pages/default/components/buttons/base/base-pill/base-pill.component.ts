@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-base-pill",
-templateUrl: "./base-pill.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-pill",
+    templateUrl: "./base-pill.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BasePillComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

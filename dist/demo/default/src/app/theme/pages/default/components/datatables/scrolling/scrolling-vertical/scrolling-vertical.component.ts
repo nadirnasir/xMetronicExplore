@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-scrolling-vertical",
-templateUrl: "./scrolling-vertical.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-scrolling-vertical",
+    templateUrl: "./scrolling-vertical.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ScrollingVerticalComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-scrolling-vertical',
-['assets/demo/default/custom/components/datatables/scrolling/vertical.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-scrolling-vertical',
+            ['assets/demo/default/custom/components/datatables/scrolling/vertical.js']);
 
-}
+    }
 
 }

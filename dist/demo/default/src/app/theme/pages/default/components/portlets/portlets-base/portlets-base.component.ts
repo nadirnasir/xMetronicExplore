@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../helpers';
 
 
 @Component({
-selector: "app-portlets-base",
-templateUrl: "./portlets-base.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-portlets-base",
+    templateUrl: "./portlets-base.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class PortletsBaseComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

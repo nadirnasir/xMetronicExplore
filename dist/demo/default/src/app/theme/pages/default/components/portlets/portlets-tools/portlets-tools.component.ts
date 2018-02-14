@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-portlets-tools",
-templateUrl: "./portlets-tools.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-portlets-tools",
+    templateUrl: "./portlets-tools.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class PortletsToolsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-portlets-tools',
-['assets/demo/default/custom/components/portlets/tools.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-portlets-tools',
+            ['assets/demo/default/custom/components/portlets/tools.js']);
 
-}
+    }
 
 }

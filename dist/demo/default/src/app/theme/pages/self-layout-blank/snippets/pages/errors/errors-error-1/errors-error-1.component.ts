@@ -3,23 +3,23 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: ".m-grid.m-grid--hor.m-grid--root.m-page",
-templateUrl: "./errors-error-1.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: ".m-grid.m-grid--hor.m-grid--root.m-page",
+    templateUrl: "./errors-error-1.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ErrorsError1Component implements OnInit, AfterViewInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
+    }
+    ngAfterViewInit() {
 
-Helpers.bodyClass('m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default');
+        Helpers.bodyClass('m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default');
 
-}
+    }
 
 }

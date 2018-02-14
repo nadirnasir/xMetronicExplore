@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-bootstrap-daterangepicker",
-templateUrl: "./widgets-bootstrap-daterangepicker.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-bootstrap-daterangepicker",
+    templateUrl: "./widgets-bootstrap-daterangepicker.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsBootstrapDaterangepickerComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-bootstrap-daterangepicker',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-daterangepicker.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-bootstrap-daterangepicker',
+            ['assets/demo/default/custom/components/forms/widgets/bootstrap-daterangepicker.js']);
 
-}
+    }
 
 }

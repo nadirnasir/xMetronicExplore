@@ -18,15 +18,17 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-RecaptchaModule.forRoot(),
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-WidgetsRecaptchaComponent
-]})
-export class WidgetsRecaptchaModule  {
+@NgModule({
+    imports: [
+        RecaptchaModule.forRoot(),
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        WidgetsRecaptchaComponent
+    ]
+})
+export class WidgetsRecaptchaModule {
 
 
 

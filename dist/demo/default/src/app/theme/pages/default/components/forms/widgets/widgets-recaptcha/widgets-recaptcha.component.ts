@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-widgets-recaptcha",
-templateUrl: "./widgets-recaptcha.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-recaptcha",
+    templateUrl: "./widgets-recaptcha.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsRecaptchaComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

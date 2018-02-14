@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../helpers';
 
 
 @Component({
-selector: "app-buttons-group",
-templateUrl: "./buttons-group.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-buttons-group",
+    templateUrl: "./buttons-group.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ButtonsGroupComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

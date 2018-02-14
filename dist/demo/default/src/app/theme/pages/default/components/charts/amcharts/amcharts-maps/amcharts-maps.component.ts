@@ -4,25 +4,25 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-amcharts-maps",
-templateUrl: "./amcharts-maps.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-amcharts-maps",
+    templateUrl: "./amcharts-maps.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class AmchartsMapsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-amcharts-maps',
-['//www.amcharts.com/lib/3/plugins/export/export.min.js',
-'assets/demo/default/custom/components/charts/amcharts/maps.js']);
-Helpers.loadStyles('app-amcharts-maps',[
-'//www.amcharts.com/lib/3/plugins/export/export.css']);
-}
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-amcharts-maps',
+            ['//www.amcharts.com/lib/3/plugins/export/export.min.js',
+                'assets/demo/default/custom/components/charts/amcharts/maps.js']);
+        Helpers.loadStyles('app-amcharts-maps', [
+            '//www.amcharts.com/lib/3/plugins/export/export.css']);
+    }
 
 }

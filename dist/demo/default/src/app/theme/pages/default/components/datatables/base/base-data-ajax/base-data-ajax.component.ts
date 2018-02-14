@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-data-ajax",
-templateUrl: "./base-data-ajax.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-data-ajax",
+    templateUrl: "./base-data-ajax.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseDataAjaxComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-data-ajax',
-['assets/demo/default/custom/components/datatables/base/data-ajax.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-data-ajax',
+            ['assets/demo/default/custom/components/datatables/base/data-ajax.js']);
 
-}
+    }
 
 }

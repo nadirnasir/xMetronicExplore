@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-input-mask",
-templateUrl: "./widgets-input-mask.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-input-mask",
+    templateUrl: "./widgets-input-mask.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsInputMaskComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-input-mask',
-['assets/demo/default/custom/components/forms/widgets/input-mask.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-input-mask',
+            ['assets/demo/default/custom/components/forms/widgets/input-mask.js']);
 
-}
+    }
 
 }

@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-column-width",
-templateUrl: "./base-column-width.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-column-width",
+    templateUrl: "./base-column-width.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseColumnWidthComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-column-width',
-['assets/demo/default/custom/components/datatables/base/column-width.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-column-width',
+            ['assets/demo/default/custom/components/datatables/base/column-width.js']);
 
-}
+    }
 
 }

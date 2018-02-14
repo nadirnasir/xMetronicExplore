@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-locked-right",
-templateUrl: "./locked-right.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-locked-right",
+    templateUrl: "./locked-right.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class LockedRightComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-locked-right',
-['assets/demo/default/custom/components/datatables/locked/right.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-locked-right',
+            ['assets/demo/default/custom/components/datatables/locked/right.js']);
 
-}
+    }
 
 }

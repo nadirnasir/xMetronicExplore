@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-bootstrap-maxlength",
-templateUrl: "./widgets-bootstrap-maxlength.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-bootstrap-maxlength",
+    templateUrl: "./widgets-bootstrap-maxlength.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsBootstrapMaxlengthComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-bootstrap-maxlength',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-maxlength.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-bootstrap-maxlength',
+            ['assets/demo/default/custom/components/forms/widgets/bootstrap-maxlength.js']);
 
-}
+    }
 
 }

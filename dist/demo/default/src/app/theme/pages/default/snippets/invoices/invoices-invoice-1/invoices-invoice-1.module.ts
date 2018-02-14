@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-InvoicesInvoice1Component
-]})
-export class InvoicesInvoice1Module  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        InvoicesInvoice1Component
+    ]
+})
+export class InvoicesInvoice1Module {
 
 
 

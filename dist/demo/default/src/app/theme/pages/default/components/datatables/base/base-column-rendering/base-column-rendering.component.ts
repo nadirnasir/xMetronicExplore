@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-column-rendering",
-templateUrl: "./base-column-rendering.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-column-rendering",
+    templateUrl: "./base-column-rendering.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseColumnRenderingComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-column-rendering',
-['assets/demo/default/custom/components/datatables/base/column-rendering.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-column-rendering',
+            ['assets/demo/default/custom/components/datatables/base/column-rendering.js']);
 
-}
+    }
 
 }

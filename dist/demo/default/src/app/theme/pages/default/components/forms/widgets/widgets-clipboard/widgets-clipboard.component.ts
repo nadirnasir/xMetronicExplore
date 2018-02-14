@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-clipboard",
-templateUrl: "./widgets-clipboard.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-clipboard",
+    templateUrl: "./widgets-clipboard.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsClipboardComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-clipboard',
-['assets/demo/default/custom/components/forms/widgets/clipboard.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-clipboard',
+            ['assets/demo/default/custom/components/forms/widgets/clipboard.js']);
 
-}
+    }
 
 }

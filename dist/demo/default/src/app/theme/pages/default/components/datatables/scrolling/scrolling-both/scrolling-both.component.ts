@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-scrolling-both",
-templateUrl: "./scrolling-both.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-scrolling-both",
+    templateUrl: "./scrolling-both.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ScrollingBothComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-scrolling-both',
-['assets/demo/default/custom/components/datatables/scrolling/both.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-scrolling-both',
+            ['assets/demo/default/custom/components/datatables/scrolling/both.js']);
 
-}
+    }
 
 }

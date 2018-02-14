@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-ControlsCheckboxRadioComponent
-]})
-export class ControlsCheckboxRadioModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        ControlsCheckboxRadioComponent
+    ]
+})
+export class ControlsCheckboxRadioModule {
 
 
 

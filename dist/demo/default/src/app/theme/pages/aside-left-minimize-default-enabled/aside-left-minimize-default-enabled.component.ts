@@ -3,18 +3,18 @@ import { Helpers } from '../../../helpers';
 
 
 @Component({
-selector: ".m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body",
-templateUrl: "./aside-left-minimize-default-enabled.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: ".m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body",
+    templateUrl: "./aside-left-minimize-default-enabled.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class AsideLeftMinimizeDefaultEnabledComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

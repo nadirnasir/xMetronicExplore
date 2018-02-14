@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-controls-base",
-templateUrl: "./controls-base.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-controls-base",
+    templateUrl: "./controls-base.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ControlsBaseComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

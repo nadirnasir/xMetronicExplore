@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-utils-idle-timer",
-templateUrl: "./utils-idle-timer.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-utils-idle-timer",
+    templateUrl: "./utils-idle-timer.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class UtilsIdleTimerComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-utils-idle-timer',
-['assets/demo/default/custom/components/utils/idle-timer.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-utils-idle-timer',
+            ['assets/demo/default/custom/components/utils/idle-timer.js']);
 
-}
+    }
 
 }

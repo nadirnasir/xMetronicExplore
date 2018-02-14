@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-child-data-ajax",
-templateUrl: "./child-data-ajax.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-child-data-ajax",
+    templateUrl: "./child-data-ajax.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ChildDataAjaxComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-child-data-ajax',
-['assets/demo/default/custom/components/datatables/child/data-ajax.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-child-data-ajax',
+            ['assets/demo/default/custom/components/datatables/child/data-ajax.js']);
 
-}
+    }
 
 }

@@ -4,24 +4,24 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-maps-jqvmap",
-templateUrl: "./maps-jqvmap.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-maps-jqvmap",
+    templateUrl: "./maps-jqvmap.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class MapsJqvmapComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-maps-jqvmap',
-['assets/vendors/custom/jqvmap/jqvmap.bundle.js',
-'assets/demo/default/custom/components/maps/jqvmap.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-maps-jqvmap',
+            ['assets/vendors/custom/jqvmap/jqvmap.bundle.js',
+                'assets/demo/default/custom/components/maps/jqvmap.js']);
 
-}
+    }
 
 }

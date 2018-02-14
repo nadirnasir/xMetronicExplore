@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 declare let Dropzone: any;
 @Component({
-selector: "app-widgets-dropzone",
-templateUrl: "./widgets-dropzone.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-dropzone",
+    templateUrl: "./widgets-dropzone.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsDropzoneComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-dropzone',
-['assets/demo/default/custom/components/forms/widgets/dropzone.js']);
-Dropzone._autoDiscoverFunction();
-}
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-dropzone',
+            ['assets/demo/default/custom/components/forms/widgets/dropzone.js']);
+        Dropzone._autoDiscoverFunction();
+    }
 
 }

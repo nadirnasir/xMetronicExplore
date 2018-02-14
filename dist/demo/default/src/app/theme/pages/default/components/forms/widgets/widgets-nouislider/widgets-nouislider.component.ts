@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-nouislider",
-templateUrl: "./widgets-nouislider.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-nouislider",
+    templateUrl: "./widgets-nouislider.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsNouisliderComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-nouislider',
-['assets/demo/default/custom/components/forms/widgets/nouislider.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-nouislider',
+            ['assets/demo/default/custom/components/forms/widgets/nouislider.js']);
 
-}
+    }
 
 }

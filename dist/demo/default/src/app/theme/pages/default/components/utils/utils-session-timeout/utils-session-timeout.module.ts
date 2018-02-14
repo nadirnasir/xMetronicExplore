@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-UtilsSessionTimeoutComponent
-]})
-export class UtilsSessionTimeoutModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        UtilsSessionTimeoutComponent
+    ]
+})
+export class UtilsSessionTimeoutModule {
 
 
 

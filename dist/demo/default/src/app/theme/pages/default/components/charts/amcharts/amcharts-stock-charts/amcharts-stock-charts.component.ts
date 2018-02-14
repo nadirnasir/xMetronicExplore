@@ -4,25 +4,25 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-amcharts-stock-charts",
-templateUrl: "./amcharts-stock-charts.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-amcharts-stock-charts",
+    templateUrl: "./amcharts-stock-charts.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class AmchartsStockChartsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-amcharts-stock-charts',
-['//www.amcharts.com/lib/3/plugins/export/export.min.js',
-'assets/demo/default/custom/components/charts/amcharts/stock-charts.js']);
-Helpers.loadStyles('app-amcharts-stock-charts',[
-'//www.amcharts.com/lib/3/plugins/export/export.css']);
-}
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-amcharts-stock-charts',
+            ['//www.amcharts.com/lib/3/plugins/export/export.min.js',
+                'assets/demo/default/custom/components/charts/amcharts/stock-charts.js']);
+        Helpers.loadStyles('app-amcharts-stock-charts', [
+            '//www.amcharts.com/lib/3/plugins/export/export.css']);
+    }
 
 }

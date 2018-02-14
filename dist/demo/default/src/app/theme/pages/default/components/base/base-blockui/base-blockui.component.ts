@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-base-blockui",
-templateUrl: "./base-blockui.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-blockui",
+    templateUrl: "./base-blockui.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseBlockuiComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-blockui',
-['assets/demo/default/custom/components/base/blockui.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-blockui',
+            ['assets/demo/default/custom/components/base/blockui.js']);
 
-}
+    }
 
 }

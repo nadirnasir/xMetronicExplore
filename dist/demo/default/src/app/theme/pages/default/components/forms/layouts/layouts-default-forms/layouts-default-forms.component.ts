@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-layouts-default-forms",
-templateUrl: "./layouts-default-forms.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-layouts-default-forms",
+    templateUrl: "./layouts-default-forms.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class LayoutsDefaultFormsComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

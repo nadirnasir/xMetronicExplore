@@ -4,24 +4,24 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-widgets-chart",
-templateUrl: "./widgets-chart.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-chart",
+    templateUrl: "./widgets-chart.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsChartComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-chart',
-['assets/vendors/custom/gmaps/gmaps.js',
-'assets/app/js/dashboard.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-chart',
+            ['assets/vendors/custom/gmaps/gmaps.js',
+                'assets/app/js/dashboard.js']);
 
-}
+    }
 
 }

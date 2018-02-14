@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-utils-session-timeout",
-templateUrl: "./utils-session-timeout.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-utils-session-timeout",
+    templateUrl: "./utils-session-timeout.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class UtilsSessionTimeoutComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-utils-session-timeout',
-['assets/demo/default/custom/components/utils/session-timeout.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-utils-session-timeout',
+            ['assets/demo/default/custom/components/utils/session-timeout.js']);
 
-}
+    }
 
 }

@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-widgets-bootstrap-switch",
-templateUrl: "./widgets-bootstrap-switch.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-widgets-bootstrap-switch",
+    templateUrl: "./widgets-bootstrap-switch.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WidgetsBootstrapSwitchComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-widgets-bootstrap-switch',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-switch.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-widgets-bootstrap-switch',
+            ['assets/demo/default/custom/components/forms/widgets/bootstrap-switch.js']);
 
-}
+    }
 
 }

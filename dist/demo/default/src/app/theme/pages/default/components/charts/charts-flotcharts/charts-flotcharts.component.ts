@@ -4,24 +4,24 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-charts-flotcharts",
-templateUrl: "./charts-flotcharts.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-charts-flotcharts",
+    templateUrl: "./charts-flotcharts.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ChartsFlotchartsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-charts-flotcharts',
-['assets/vendors/custom/flot/flot.bundle.js',
-'assets/demo/default/custom/components/charts/flotcharts.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-charts-flotcharts',
+            ['assets/vendors/custom/flot/flot.bundle.js',
+                'assets/demo/default/custom/components/charts/flotcharts.js']);
 
-}
+    }
 
 }

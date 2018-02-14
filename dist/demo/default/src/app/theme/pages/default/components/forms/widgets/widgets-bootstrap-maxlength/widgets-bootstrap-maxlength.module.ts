@@ -17,14 +17,16 @@ const routes: Routes = [
         ]
     }
 ];
-@NgModule({imports: [
-CommonModule,RouterModule.forChild(routes),LayoutModule
-],exports: [
-RouterModule
-],declarations: [
-WidgetsBootstrapMaxlengthComponent
-]})
-export class WidgetsBootstrapMaxlengthModule  {
+@NgModule({
+    imports: [
+        CommonModule, RouterModule.forChild(routes), LayoutModule
+    ], exports: [
+        RouterModule
+    ], declarations: [
+        WidgetsBootstrapMaxlengthComponent
+    ]
+})
+export class WidgetsBootstrapMaxlengthModule {
 
 
 

@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-wizard-wizard-1",
-templateUrl: "./wizard-wizard-1.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-wizard-wizard-1",
+    templateUrl: "./wizard-wizard-1.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class WizardWizard1Component implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-wizard-wizard-1',
-['assets/demo/default/custom/components/forms/wizard/wizard.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-wizard-wizard-1',
+            ['assets/demo/default/custom/components/forms/wizard/wizard.js']);
 
-}
+    }
 
 }

@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-calendar-background-events",
-templateUrl: "./calendar-background-events.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-calendar-background-events",
+    templateUrl: "./calendar-background-events.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class CalendarBackgroundEventsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-calendar-background-events',
-['assets/demo/default/custom/components/calendar/background-events.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-calendar-background-events',
+            ['assets/demo/default/custom/components/calendar/background-events.js']);
 
-}
+    }
 
 }

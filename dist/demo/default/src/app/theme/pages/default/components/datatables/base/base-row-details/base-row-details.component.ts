@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-row-details",
-templateUrl: "./base-row-details.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-row-details",
+    templateUrl: "./base-row-details.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseRowDetailsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-row-details',
-['assets/demo/default/custom/components/datatables/base/row-details.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-row-details',
+            ['assets/demo/default/custom/components/datatables/base/row-details.js']);
 
-}
+    }
 
 }

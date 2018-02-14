@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-html-table",
-templateUrl: "./base-html-table.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-html-table",
+    templateUrl: "./base-html-table.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseHtmlTableComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-html-table',
-['assets/demo/default/custom/components/datatables/base/html-table.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-html-table',
+            ['assets/demo/default/custom/components/datatables/base/html-table.js']);
 
-}
+    }
 
 }

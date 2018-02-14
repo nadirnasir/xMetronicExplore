@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-api-methods",
-templateUrl: "./api-methods.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-api-methods",
+    templateUrl: "./api-methods.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ApiMethodsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-api-methods',
-['assets/demo/default/custom/components/datatables/api/methods.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-api-methods',
+            ['assets/demo/default/custom/components/datatables/api/methods.js']);
 
-}
+    }
 
 }

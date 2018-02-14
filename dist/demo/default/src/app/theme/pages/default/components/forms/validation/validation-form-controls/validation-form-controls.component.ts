@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-validation-form-controls",
-templateUrl: "./validation-form-controls.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-validation-form-controls",
+    templateUrl: "./validation-form-controls.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class ValidationFormControlsComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-validation-form-controls',
-['assets/demo/default/custom/components/forms/validation/form-controls.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-validation-form-controls',
+            ['assets/demo/default/custom/components/forms/validation/form-controls.js']);
 
-}
+    }
 
 }

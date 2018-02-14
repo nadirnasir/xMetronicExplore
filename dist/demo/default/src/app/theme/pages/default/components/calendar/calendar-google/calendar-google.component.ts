@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-calendar-google",
-templateUrl: "./calendar-google.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-calendar-google",
+    templateUrl: "./calendar-google.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class CalendarGoogleComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-calendar-google',
-['assets/demo/default/custom/components/calendar/google.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-calendar-google',
+            ['assets/demo/default/custom/components/calendar/google.js']);
 
-}
+    }
 
 }

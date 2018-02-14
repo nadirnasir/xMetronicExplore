@@ -3,18 +3,18 @@ import { Helpers } from '../../../../../../../helpers';
 
 
 @Component({
-selector: "app-icon-flaticon",
-templateUrl: "./icon-flaticon.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-icon-flaticon",
+    templateUrl: "./icon-flaticon.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class IconFlaticonComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }

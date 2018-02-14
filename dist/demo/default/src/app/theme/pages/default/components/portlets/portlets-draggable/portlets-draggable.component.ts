@@ -4,24 +4,24 @@ import { ScriptLoaderService } from '../../../../../../_services/script-loader.s
 
 
 @Component({
-selector: "app-portlets-draggable",
-templateUrl: "./portlets-draggable.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-portlets-draggable",
+    templateUrl: "./portlets-draggable.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class PortletsDraggableComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-portlets-draggable',
-['assets/vendors/custom/jquery-ui/jquery-ui.bundle.js',
-'assets/demo/default/custom/components/portlets/draggable.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-portlets-draggable',
+            ['assets/vendors/custom/jquery-ui/jquery-ui.bundle.js',
+                'assets/demo/default/custom/components/portlets/draggable.js']);
 
-}
+    }
 
 }

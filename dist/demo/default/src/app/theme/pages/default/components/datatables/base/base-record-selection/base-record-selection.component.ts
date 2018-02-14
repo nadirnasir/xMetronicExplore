@@ -4,23 +4,23 @@ import { ScriptLoaderService } from '../../../../../../../_services/script-loade
 
 
 @Component({
-selector: "app-base-record-selection",
-templateUrl: "./base-record-selection.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-base-record-selection",
+    templateUrl: "./base-record-selection.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseRecordSelectionComponent implements OnInit, AfterViewInit {
 
 
-constructor(private _script: ScriptLoaderService)  {
+    constructor(private _script: ScriptLoaderService) {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
-this._script.loadScripts('app-base-record-selection',
-['assets/demo/default/custom/components/datatables/base/record-selection.js']);
+    }
+    ngAfterViewInit() {
+        this._script.loadScripts('app-base-record-selection',
+            ['assets/demo/default/custom/components/datatables/base/record-selection.js']);
 
-}
+    }
 
 }
