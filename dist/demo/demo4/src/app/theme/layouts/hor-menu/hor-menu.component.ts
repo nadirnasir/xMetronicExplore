@@ -3,23 +3,23 @@ import { Helpers } from '../../../helpers';
 
 declare let mLayout: any;
 @Component({
-selector: "app-hor-menu",
-templateUrl: "./hor-menu.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-hor-menu",
+    templateUrl: "./hor-menu.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class HorMenuComponent implements OnInit, AfterViewInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
-ngAfterViewInit()  {
+    }
+    ngAfterViewInit() {
 
-mLayout.initHeader();
+        mLayout.initHeader();
 
-}
+    }
 
 }

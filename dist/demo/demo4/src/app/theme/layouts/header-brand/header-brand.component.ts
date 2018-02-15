@@ -3,18 +3,18 @@ import { Helpers } from '../../../helpers';
 
 
 @Component({
-selector: "app-header-brand",
-templateUrl: "./header-brand.component.html",
-encapsulation: ViewEncapsulation.None,
+    selector: "app-header-brand",
+    templateUrl: "./header-brand.component.html",
+    encapsulation: ViewEncapsulation.None,
 })
 export class HeaderBrandComponent implements OnInit {
 
 
-constructor()  {
+    constructor() {
 
-}
-ngOnInit()  {
+    }
+    ngOnInit() {
 
-}
+    }
 
 }
