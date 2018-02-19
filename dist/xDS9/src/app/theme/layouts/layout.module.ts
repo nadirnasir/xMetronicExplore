@@ -3,7 +3,6 @@ import { DefaultComponent } from '../pages/default/default.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { AsideNavComponent } from './aside-nav/aside-nav.component';
 import { LoaderEnabledEnabledTypeSpinnerMessageComponent } from '../pages/loader-enabled-enabled-type-spinner-message/loader-enabled-enabled-type-spinner-message.component';
-import { AsideRightComponent } from './aside-right/aside-right.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuickSidebarComponent } from './quick-sidebar/quick-sidebar.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
@@ -19,7 +18,6 @@ DefaultComponent,
 HeaderNavComponent,
 AsideNavComponent,
 LoaderEnabledEnabledTypeSpinnerMessageComponent,
-AsideRightComponent,
 FooterComponent,
 QuickSidebarComponent,
 ScrollTopComponent,
@@ -32,7 +30,6 @@ DefaultComponent,
 HeaderNavComponent,
 AsideNavComponent,
 LoaderEnabledEnabledTypeSpinnerMessageComponent,
-AsideRightComponent,
 FooterComponent,
 QuickSidebarComponent,
 ScrollTopComponent,

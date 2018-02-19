@@ -1,6 +1,6 @@
 {
     "config": {
-        "demo": "",
+        "demo": "xDS9",
         "debug": false,
         "compile": {
             "jsUglify": false,
@@ -15,7 +15,8 @@
         },
         "dist": [
             "./../dist/demo/**/src/assets",
-            "./../dist/skeleton/**/src/assets"
+            "./../dist/skeleton/**/src/assets",
+            "./../dist/xDS9/src/assets/"
         ]
     },
     "build": {
@@ -457,6 +458,42 @@
             }
         },
         "demo": {
+            "xDS9": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo9/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo9/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo9/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo9/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+
             "default": {
                 "base": {
                     "src": {

@@ -9,7 +9,7 @@ import {Helpers} from "./helpers";
 })
 export class AppComponent implements OnInit {
 	title = 'app';
-	globalBodyClass = 'm-page--loading-non-block m--skin- m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-light m-aside-right--enabled m-aside--offcanvas-default';
+	globalBodyClass = 'm-page--loading-non-block m--skin- m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-light m-aside--offcanvas-default';
 
 	constructor(private _router: Router) {
 	}
