@@ -1,6 +1,6 @@
 {
     "config": {
-        "demo": "xDS9",
+        "demo": "xDS7", 
         "debug": false,
         "compile": {
             "jsUglify": false,
@@ -16,7 +16,7 @@
         "dist": [
             "./../dist/demo/**/src/assets",
             "./../dist/skeleton/**/src/assets",
-            "./../dist/xDS9/src/assets/"
+            "./../dist/**/src/assets/"
         ]
     },
     "build": {
@@ -458,6 +458,41 @@
             }
         },
         "demo": {
+            "xDS7": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS7/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS7/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS7/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS7/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
             "xDS9": {
                 "base": {
                     "src": {
