@@ -462,13 +462,13 @@
                 "base": {
                     "src": {
                         "styles": [
-                            "{$config.path.src}/sass/demo/demo9/style.scss"
+                            "{$config.path.src}/sass/demo/xDS9/style.scss"
                         ],
                         "scripts": [
                             "{$config.path.src}/js/framework/base/**/*.js",
                             "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
                             "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo9/base/**/*.js",
+                            "{$config.path.src}/js/demo/xDS9/base/**/*.js",
                             "{$config.path.src}/js/app/base/**/*.js",
                             "{$config.path.src}/js/snippets/base/**/*.js"
                         ]
@@ -481,10 +481,10 @@
                 "custom": {
                     "src": {
                         "scripts": [
-                            "{$config.path.src}/js/demo/demo9/custom/**/*.js"
+                            "{$config.path.src}/js/demo/xDS9/custom/**/*.js"
                         ],
                         "media": [
-                            "{$config.path.src}/media/demo/demo9/**/*.*"
+                            "{$config.path.src}/media/demo/xDS9/**/*.*"
                         ]
                     },
                     "output": {
