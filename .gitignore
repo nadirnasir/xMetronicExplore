@@ -45,6 +45,6 @@ testem.log
 Thumbs.db
 
 # Compresses Files
-*.zip
+# *.zip
 *.rar
 *.7z
