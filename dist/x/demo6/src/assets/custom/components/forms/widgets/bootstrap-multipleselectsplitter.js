@@ -19,3 +19,4 @@ var BootstrapMultipleSelectsplitter = function () {
 jQuery(document).ready(function() {    
     BootstrapMultipleSelectsplitter.init();
 });
+//# sourceMappingURL=bootstrap-multipleselectsplitter.js.map

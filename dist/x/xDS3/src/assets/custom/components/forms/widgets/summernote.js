@@ -20,3 +20,4 @@ var SummernoteDemo = function () {
 jQuery(document).ready(function() {
     SummernoteDemo.init();
 });
+//# sourceMappingURL=summernote.js.map

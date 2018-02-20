@@ -5,8 +5,8 @@
         "compile": {
             "jsUglify": false,
             "cssMinify": false,
-            "jsSourcemaps": false,
-            "cssSourcemaps": false
+            "jsSourcemaps": true,
+            "cssSourcemaps": true
         },
         "path": {
             "src": "./../src",

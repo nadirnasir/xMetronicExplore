@@ -27,3 +27,4 @@ var SessionTimeoutDemo = function () {
 jQuery(document).ready(function() {    
     SessionTimeoutDemo.init();
 });
+//# sourceMappingURL=session-timeout.js.map

@@ -81,3 +81,4 @@ var IONRangeSlider = function () {
 jQuery(document).ready(function() {    
     IONRangeSlider.init();
 });
+//# sourceMappingURL=ion-range-slider.js.map

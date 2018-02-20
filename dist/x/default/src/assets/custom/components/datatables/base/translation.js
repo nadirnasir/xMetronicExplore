@@ -110,3 +110,4 @@ var DatatableTranslationDemo = function () {
 jQuery(document).ready(function () {
 	DatatableTranslationDemo.init();
 });
+//# sourceMappingURL=translation.js.map

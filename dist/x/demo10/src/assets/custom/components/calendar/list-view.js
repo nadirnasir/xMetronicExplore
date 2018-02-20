@@ -136,3 +136,4 @@ var CalendarListView = function() {
 jQuery(document).ready(function() {
     CalendarListView.init();
 });
+//# sourceMappingURL=list-view.js.map

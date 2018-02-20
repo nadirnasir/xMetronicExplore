@@ -266,3 +266,4 @@ var BlockUIDemo = function () {
 jQuery(document).ready(function() {    
     BlockUIDemo.init();
 });
+//# sourceMappingURL=blockui.js.map

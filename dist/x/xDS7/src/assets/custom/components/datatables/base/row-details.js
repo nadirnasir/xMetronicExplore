@@ -140,3 +140,4 @@ var DatatableAutoColumnHideDemo = function() {
 jQuery(document).ready(function() {
   DatatableAutoColumnHideDemo.init();
 });
+//# sourceMappingURL=row-details.js.map

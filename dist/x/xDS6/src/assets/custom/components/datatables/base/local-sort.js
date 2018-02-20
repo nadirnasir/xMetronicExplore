@@ -189,3 +189,4 @@ var DatatableLocalSortDemo = function () {
 jQuery(document).ready(function () {
 	DatatableLocalSortDemo.init();
 });
+//# sourceMappingURL=local-sort.js.map

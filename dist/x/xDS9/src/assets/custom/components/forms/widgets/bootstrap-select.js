@@ -19,3 +19,4 @@ var BootstrapSelect = function () {
 jQuery(document).ready(function() {    
     BootstrapSelect.init();
 });
+//# sourceMappingURL=bootstrap-select.js.map

@@ -168,3 +168,4 @@ var SweetAlert2Demo = function() {
 jQuery(document).ready(function() {
     SweetAlert2Demo.init();
 });
+//# sourceMappingURL=sweetalert2.js.map

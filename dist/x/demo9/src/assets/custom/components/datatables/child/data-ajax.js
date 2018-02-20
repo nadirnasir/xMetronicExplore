@@ -248,3 +248,4 @@ var DatatableChildRemoteDataDemo = function() {
 jQuery(document).ready(function() {
   DatatableChildRemoteDataDemo.init();
 });
+//# sourceMappingURL=data-ajax.js.map

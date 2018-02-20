@@ -80,3 +80,4 @@ var DatatableHtmlTableDemo = function() {
 jQuery(document).ready(function() {
 	DatatableHtmlTableDemo.init();
 });
+//# sourceMappingURL=html-table.js.map

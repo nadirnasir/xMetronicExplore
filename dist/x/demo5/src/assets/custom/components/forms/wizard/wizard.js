@@ -209,3 +209,4 @@ var WizardDemo = function () {
 jQuery(document).ready(function() {    
     WizardDemo.init();
 });
+//# sourceMappingURL=wizard.js.map

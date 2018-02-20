@@ -238,3 +238,4 @@ var DatatableRecordSelectionDemo = function() {
 jQuery(document).ready(function() {
 	DatatableRecordSelectionDemo.init();
 });
+//# sourceMappingURL=record-selection.js.map

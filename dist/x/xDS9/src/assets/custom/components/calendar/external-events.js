@@ -183,3 +183,4 @@ var CalendarExternalEvents = function() {
 jQuery(document).ready(function() {
     CalendarExternalEvents.init();
 });
+//# sourceMappingURL=external-events.js.map

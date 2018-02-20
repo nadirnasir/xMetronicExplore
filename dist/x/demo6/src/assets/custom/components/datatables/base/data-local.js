@@ -151,3 +151,4 @@ var DatatableDataLocalDemo = function () {
 jQuery(document).ready(function () {
 	DatatableDataLocalDemo.init();
 });
+//# sourceMappingURL=data-local.js.map

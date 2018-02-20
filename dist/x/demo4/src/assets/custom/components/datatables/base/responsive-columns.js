@@ -110,3 +110,4 @@ var DatatableResponsiveColumnsDemo = function () {
 jQuery(document).ready(function () {
 	DatatableResponsiveColumnsDemo.init();
 });
+//# sourceMappingURL=responsive-columns.js.map

@@ -217,3 +217,4 @@ var DatatableColumnRenderingDemo = function() {
 jQuery(document).ready(function() {
   DatatableColumnRenderingDemo.init();
 });
+//# sourceMappingURL=column-rendering.js.map

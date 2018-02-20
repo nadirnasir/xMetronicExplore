@@ -246,3 +246,4 @@ var jQVMapDemo = function() {
 jQuery(document).ready(function() {
     jQVMapDemo.init();
 });
+//# sourceMappingURL=jqvmap.js.map

@@ -141,3 +141,4 @@ var DefaultDatatableDemo = function () {
 jQuery(document).ready(function () {
 	DefaultDatatableDemo.init();
 });
+//# sourceMappingURL=vertical.js.map

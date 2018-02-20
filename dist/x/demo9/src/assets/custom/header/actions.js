@@ -17,3 +17,4 @@ var ActionsDemo = function () {
 jQuery(document).ready(function() {
     ActionsDemo.init();
 });
+//# sourceMappingURL=actions.js.map

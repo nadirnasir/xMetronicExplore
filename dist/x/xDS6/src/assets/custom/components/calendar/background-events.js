@@ -148,3 +148,4 @@ var CalendarBackgroundEvents = function() {
 jQuery(document).ready(function() {
     CalendarBackgroundEvents.init();
 });
+//# sourceMappingURL=background-events.js.map

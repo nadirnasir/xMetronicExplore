@@ -126,3 +126,4 @@ var BootstrapMaxlength = function () {
 jQuery(document).ready(function() {    
     BootstrapMaxlength.init();
 });
+//# sourceMappingURL=bootstrap-maxlength.js.map

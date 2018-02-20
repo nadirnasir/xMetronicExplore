@@ -149,3 +149,4 @@ var DatatableJsonRemoteDemo = function () {
 jQuery(document).ready(function () {
 	DatatableJsonRemoteDemo.init();
 });
+//# sourceMappingURL=data-json.js.map

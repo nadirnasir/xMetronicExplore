@@ -118,3 +118,4 @@ var BootstrapDatetimepicker = function () {
 jQuery(document).ready(function() {    
     BootstrapDatetimepicker.init();
 });
+//# sourceMappingURL=bootstrap-datetimepicker.js.map

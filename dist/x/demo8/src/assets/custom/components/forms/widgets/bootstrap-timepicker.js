@@ -53,3 +53,4 @@ var BootstrapTimepicker = function () {
 jQuery(document).ready(function() {    
     BootstrapTimepicker.init();
 });
+//# sourceMappingURL=bootstrap-timepicker.js.map

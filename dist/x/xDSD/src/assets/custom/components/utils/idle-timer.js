@@ -254,3 +254,4 @@ var IdleTimerDemo = function() {
 jQuery(document).ready(function() {
     IdleTimerDemo.init();
 });
+//# sourceMappingURL=idle-timer.js.map

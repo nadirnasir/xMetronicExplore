@@ -174,3 +174,4 @@ var DefaultDatatableDemo = function () {
 jQuery(document).ready(function () {
 	DefaultDatatableDemo.init();
 });
+//# sourceMappingURL=right.js.map

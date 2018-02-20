@@ -310,3 +310,5 @@ jQuery(document).ready(function() {
 });
 
 
+
+//# sourceMappingURL=nouislider.js.map

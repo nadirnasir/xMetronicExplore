@@ -19,3 +19,4 @@ var BootstrapTouchspin = function () {
 jQuery(document).ready(function() {    
     BootstrapTouchspin.init();
 });
+//# sourceMappingURL=google-recaptcha.js.map

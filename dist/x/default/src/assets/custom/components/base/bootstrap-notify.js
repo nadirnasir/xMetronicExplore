@@ -88,3 +88,4 @@ var BootstrapNotifyDemo = function () {
 jQuery(document).ready(function() {    
     BootstrapNotifyDemo.init();
 });
+//# sourceMappingURL=bootstrap-notify.js.map

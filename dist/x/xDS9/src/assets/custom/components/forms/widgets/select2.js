@@ -185,3 +185,4 @@ var Select2 = function() {
 jQuery(document).ready(function() {
     Select2.init();
 });
+//# sourceMappingURL=select2.js.map

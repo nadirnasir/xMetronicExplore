@@ -98,3 +98,4 @@ var DatatableColumnWidthDemo = function () {
 jQuery(document).ready(function () {
 	DatatableColumnWidthDemo.init();
 });
+//# sourceMappingURL=column-width.js.map

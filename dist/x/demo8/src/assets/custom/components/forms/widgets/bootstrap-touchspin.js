@@ -106,3 +106,4 @@ var BootstrapTouchspin = function() {
 jQuery(document).ready(function() {
     BootstrapTouchspin.init();
 });
+//# sourceMappingURL=bootstrap-touchspin.js.map

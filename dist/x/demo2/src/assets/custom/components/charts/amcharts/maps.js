@@ -1020,3 +1020,4 @@ var amChartsMapsDemo = function() {
 jQuery(document).ready(function() {
     amChartsMapsDemo.init();
 });
+//# sourceMappingURL=maps.js.map

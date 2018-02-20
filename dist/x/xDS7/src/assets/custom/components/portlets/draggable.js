@@ -31,3 +31,4 @@ var PortletDraggable = function () {
 jQuery(document).ready(function() {
     PortletDraggable.init();
 });
+//# sourceMappingURL=draggable.js.map

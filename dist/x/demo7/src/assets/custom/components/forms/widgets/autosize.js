@@ -25,3 +25,4 @@ var Autosize = function () {
 jQuery(document).ready(function() {    
     Autosize.init();
 });
+//# sourceMappingURL=autosize.js.map

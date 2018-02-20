@@ -18,3 +18,4 @@ var BootstrapMarkdown = function () {
 jQuery(document).ready(function() {
     BootstrapMarkdown.init();
 });
+//# sourceMappingURL=bootstrap-markdown.js.map

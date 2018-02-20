@@ -550,3 +550,4 @@ var PortletTools = function () {
 jQuery(document).ready(function() {
     PortletTools.init();
 });
+//# sourceMappingURL=tools.js.map

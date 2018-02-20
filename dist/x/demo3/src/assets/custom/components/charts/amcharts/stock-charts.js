@@ -779,3 +779,4 @@ var amChartsStockChartsDemo = function() {
 jQuery(document).ready(function() {
     amChartsStockChartsDemo.init();
 });
+//# sourceMappingURL=stock-charts.js.map

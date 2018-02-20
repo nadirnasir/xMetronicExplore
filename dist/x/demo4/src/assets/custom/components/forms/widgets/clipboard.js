@@ -22,3 +22,4 @@ var ClipboardDemo = function () {
 jQuery(document).ready(function() {    
     ClipboardDemo.init();
 });
+//# sourceMappingURL=clipboard.js.map

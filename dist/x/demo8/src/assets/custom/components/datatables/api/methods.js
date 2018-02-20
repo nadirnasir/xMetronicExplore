@@ -211,3 +211,4 @@ var DefaultDatatableDemo = function() {
 jQuery(document).ready(function() {
 	DefaultDatatableDemo.init();
 });
+//# sourceMappingURL=methods.js.map

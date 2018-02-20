@@ -76,3 +76,4 @@ var Inputmask = function () {
 jQuery(document).ready(function() {    
     Inputmask.init();
 });
+//# sourceMappingURL=input-mask.js.map

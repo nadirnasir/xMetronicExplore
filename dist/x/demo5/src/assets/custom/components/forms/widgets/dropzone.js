@@ -59,3 +59,4 @@ var DropzoneDemo = function () {
 }();
 
 DropzoneDemo.init();
+//# sourceMappingURL=dropzone.js.map

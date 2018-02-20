@@ -182,3 +182,4 @@ var MorrisChartsDemo = function() {
 jQuery(document).ready(function() {
     MorrisChartsDemo.init();
 });
+//# sourceMappingURL=morris-charts.js.map

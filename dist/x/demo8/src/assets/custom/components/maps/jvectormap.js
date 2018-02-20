@@ -18,3 +18,4 @@ var jVectorMap = function() {
 jQuery(document).ready(function() {
     jVectorMap.init();
 });
+//# sourceMappingURL=jvectormap.js.map

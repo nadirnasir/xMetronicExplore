@@ -133,3 +133,4 @@ var BootstrapDatepicker = function () {
 jQuery(document).ready(function() {    
     BootstrapDatepicker.init();
 });
+//# sourceMappingURL=bootstrap-datepicker.js.map

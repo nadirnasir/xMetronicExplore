@@ -136,3 +136,4 @@ var CalendarBasic = function() {
 jQuery(document).ready(function() {
     CalendarBasic.init();
 });
+//# sourceMappingURL=basic.js.map

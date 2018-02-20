@@ -2386,3 +2386,4 @@ var amChartsChartsDemo = function() {
 jQuery(document).ready(function() {
     amChartsChartsDemo.init();
 });
+//# sourceMappingURL=charts.js.map

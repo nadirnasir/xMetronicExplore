@@ -145,3 +145,4 @@ var FormWidgets = function () {
 jQuery(document).ready(function() {    
     FormWidgets.init();
 });
+//# sourceMappingURL=form-widgets.js.map

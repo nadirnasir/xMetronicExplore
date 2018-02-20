@@ -19,3 +19,4 @@ var BootstrapSwitch = function () {
 jQuery(document).ready(function() {    
     BootstrapSwitch.init();
 });
+//# sourceMappingURL=bootstrap-switch.js.map

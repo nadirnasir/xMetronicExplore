@@ -19,3 +19,4 @@ var Scrollable = function () {
 jQuery(document).ready(function() {    
     Scrollable.init();
 });
+//# sourceMappingURL=scrollable.js.map

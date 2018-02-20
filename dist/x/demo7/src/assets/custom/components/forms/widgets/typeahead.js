@@ -153,3 +153,4 @@ var Typeahead = function() {
 jQuery(document).ready(function() {
     Typeahead.init();
 });
+//# sourceMappingURL=typeahead.js.map

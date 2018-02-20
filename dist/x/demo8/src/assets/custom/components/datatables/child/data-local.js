@@ -562,3 +562,4 @@ var DatatableChildDataLocalDemo = function() {
 jQuery(document).ready(function() {
   DatatableChildDataLocalDemo.init();
 });
+//# sourceMappingURL=data-local.js.map

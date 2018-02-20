@@ -62,3 +62,4 @@ var CalendarGoogle = function() {
 jQuery(document).ready(function() {
     CalendarGoogle.init();
 });
+//# sourceMappingURL=google.js.map

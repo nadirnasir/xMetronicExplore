@@ -161,3 +161,4 @@ var ToastrDemo = function() {
 jQuery(document).ready(function() {
     ToastrDemo.init();
 });
+//# sourceMappingURL=toastr.js.map

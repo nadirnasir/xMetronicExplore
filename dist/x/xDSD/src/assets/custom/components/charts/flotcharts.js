@@ -726,3 +726,4 @@ var FlotchartsDemo = function() {
 jQuery(document).ready(function() {
     FlotchartsDemo.init();
 });
+//# sourceMappingURL=flotcharts.js.map
