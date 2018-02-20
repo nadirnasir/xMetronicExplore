@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-calendar-external-events',
 ['assets/vendors/custom/jquery-ui/jquery-ui.bundle.js',
-'assets/demo/default/custom/components/calendar/external-events.js']);
+'assets/custom/components/calendar/external-events.js']);
 
 }
 

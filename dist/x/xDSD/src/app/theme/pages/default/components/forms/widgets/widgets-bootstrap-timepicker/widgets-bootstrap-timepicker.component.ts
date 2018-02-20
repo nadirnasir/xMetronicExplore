@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-bootstrap-timepicker',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-timepicker.js']);
+['assets/custom/components/forms/widgets/bootstrap-timepicker.js']);
 
 }
 

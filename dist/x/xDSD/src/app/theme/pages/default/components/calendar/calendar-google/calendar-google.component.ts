@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-calendar-google',
-['assets/demo/default/custom/components/calendar/google.js']);
+['assets/custom/components/calendar/google.js']);
 
 }
 

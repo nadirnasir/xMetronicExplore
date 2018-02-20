@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-translation',
-['assets/demo/default/custom/components/datatables/base/translation.js']);
+['assets/custom/components/datatables/base/translation.js']);
 
 }
 

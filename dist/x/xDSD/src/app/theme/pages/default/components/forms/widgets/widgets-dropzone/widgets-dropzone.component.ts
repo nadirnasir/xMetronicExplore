@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-dropzone',
-['assets/demo/default/custom/components/forms/widgets/dropzone.js']);
+['assets/custom/components/forms/widgets/dropzone.js']);
 Dropzone._autoDiscoverFunction();
 }
 

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-bootstrap-daterangepicker',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-daterangepicker.js']);
+['assets/custom/components/forms/widgets/bootstrap-daterangepicker.js']);
 
 }
 

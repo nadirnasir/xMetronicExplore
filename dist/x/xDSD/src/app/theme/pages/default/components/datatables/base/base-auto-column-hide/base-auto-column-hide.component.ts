@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-auto-column-hide',
-['assets/demo/default/custom/components/datatables/base/auto-column-hide.js']);
+['assets/custom/components/datatables/base/auto-column-hide.js']);
 
 }
 

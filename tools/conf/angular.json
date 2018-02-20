@@ -1,6 +1,6 @@
 {
     "config": {
-        "demo": "", 
+        "demo": "xDSD", 
         "debug": false,
         "compile": {
             "jsUglify": false,
@@ -18,183 +18,6 @@
         ]
     },
     "build": {
-        "demo": {
-            "xDSD": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDSD/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDSD/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDSD/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDSD/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },
-            "xDS3": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS3/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS3/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS3/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS3/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },
-            "xDS6": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS6/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS6/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS6/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS6/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },       
-            "xDS7": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS7/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS7/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS7/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS7/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },
-            "xDS9": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS9/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS9/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS9/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS9/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            } 
-        },
         "vendors": {
             "base": {
                 "src": {
@@ -631,6 +454,183 @@
                     }
                 }
             }
+        },
+        "demo": {
+            "xDSD": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDSD/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDSD/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDSD/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDSD/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS3": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS3/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS3/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS3/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS3/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS6": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS6/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS6/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS6/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS6/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },       
+            "xDS7": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS7/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS7/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS7/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS7/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS9": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS9/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS9/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS9/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS9/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            } 
         },
         "snippets": {
             "src": {

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-typeahead',
-['assets/demo/default/custom/components/forms/widgets/typeahead.js']);
+['assets/custom/components/forms/widgets/typeahead.js']);
 
 }
 

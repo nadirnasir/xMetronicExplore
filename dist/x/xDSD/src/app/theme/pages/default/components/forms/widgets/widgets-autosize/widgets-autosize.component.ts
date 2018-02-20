@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-autosize',
-['assets/demo/default/custom/components/forms/widgets/autosize.js']);
+['assets/custom/components/forms/widgets/autosize.js']);
 
 }
 

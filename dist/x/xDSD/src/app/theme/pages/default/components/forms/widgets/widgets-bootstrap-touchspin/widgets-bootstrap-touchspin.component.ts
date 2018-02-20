@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-bootstrap-touchspin',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-touchspin.js']);
+['assets/custom/components/forms/widgets/bootstrap-touchspin.js']);
 
 }
 

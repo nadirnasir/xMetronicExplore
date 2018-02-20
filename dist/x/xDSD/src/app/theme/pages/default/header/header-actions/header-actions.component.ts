@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-header-actions',
-['assets/demo/default/custom/header/actions.js']);
+['assets/custom/header/actions.js']);
 
 }
 

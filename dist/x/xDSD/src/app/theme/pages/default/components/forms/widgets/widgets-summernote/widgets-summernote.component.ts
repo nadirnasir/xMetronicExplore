@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-summernote',
-['assets/demo/default/custom/components/forms/widgets/summernote.js']);
+['assets/custom/components/forms/widgets/summernote.js']);
 
 }
 

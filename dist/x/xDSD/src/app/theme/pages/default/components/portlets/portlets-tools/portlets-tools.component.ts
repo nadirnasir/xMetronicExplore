@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-portlets-tools',
-['assets/demo/default/custom/components/portlets/tools.js']);
+['assets/custom/components/portlets/tools.js']);
 
 }
 

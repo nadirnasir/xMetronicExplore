@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-locked-html-table',
-['assets/demo/default/custom/components/datatables/locked/html-table.js']);
+['assets/custom/components/datatables/locked/html-table.js']);
 
 }
 

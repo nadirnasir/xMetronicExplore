@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-toastr',
-['assets/demo/default/custom/components/base/toastr.js']);
+['assets/custom/components/base/toastr.js']);
 
 }
 

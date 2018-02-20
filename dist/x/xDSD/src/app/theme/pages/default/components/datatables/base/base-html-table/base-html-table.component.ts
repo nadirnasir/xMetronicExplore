@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-html-table',
-['assets/demo/default/custom/components/datatables/base/html-table.js']);
+['assets/custom/components/datatables/base/html-table.js']);
 
 }
 

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-scrolling-both',
-['assets/demo/default/custom/components/datatables/scrolling/both.js']);
+['assets/custom/components/datatables/scrolling/both.js']);
 
 }
 

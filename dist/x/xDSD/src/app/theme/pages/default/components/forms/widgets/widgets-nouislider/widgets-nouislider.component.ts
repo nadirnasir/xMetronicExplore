@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-nouislider',
-['assets/demo/default/custom/components/forms/widgets/nouislider.js']);
+['assets/custom/components/forms/widgets/nouislider.js']);
 
 }
 

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-bootstrap-datepicker',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-datepicker.js']);
+['assets/custom/components/forms/widgets/bootstrap-datepicker.js']);
 
 }
 

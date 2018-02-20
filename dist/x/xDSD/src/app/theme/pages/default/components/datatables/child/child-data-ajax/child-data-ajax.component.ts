@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-child-data-ajax',
-['assets/demo/default/custom/components/datatables/child/data-ajax.js']);
+['assets/custom/components/datatables/child/data-ajax.js']);
 
 }
 

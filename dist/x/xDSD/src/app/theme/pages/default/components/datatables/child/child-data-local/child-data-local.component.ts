@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-child-data-local',
-['assets/demo/default/custom/components/datatables/child/data-local.js']);
+['assets/custom/components/datatables/child/data-local.js']);
 
 }
 

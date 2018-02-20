@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-data-ajax',
-['assets/demo/default/custom/components/datatables/base/data-ajax.js']);
+['assets/custom/components/datatables/base/data-ajax.js']);
 
 }
 

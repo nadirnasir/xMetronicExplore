@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-validation-form-widgets',
-['assets/demo/default/custom/components/forms/validation/form-widgets.js']);
+['assets/custom/components/forms/validation/form-widgets.js']);
 
 }
 

@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-charts-flotcharts',
 ['assets/vendors/custom/flot/flot.bundle.js',
-'assets/demo/default/custom/components/charts/flotcharts.js']);
+'assets/custom/components/charts/flotcharts.js']);
 
 }
 

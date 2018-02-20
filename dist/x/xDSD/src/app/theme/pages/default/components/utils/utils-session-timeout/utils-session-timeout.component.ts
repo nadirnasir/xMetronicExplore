@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-utils-session-timeout',
-['assets/demo/default/custom/components/utils/session-timeout.js']);
+['assets/custom/components/utils/session-timeout.js']);
 
 }
 

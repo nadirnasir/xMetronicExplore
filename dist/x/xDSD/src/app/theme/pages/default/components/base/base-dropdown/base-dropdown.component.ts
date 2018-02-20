@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-dropdown',
-['assets/demo/default/custom/components/base/dropdown.js']);
+['assets/custom/components/base/dropdown.js']);
 
 }
 

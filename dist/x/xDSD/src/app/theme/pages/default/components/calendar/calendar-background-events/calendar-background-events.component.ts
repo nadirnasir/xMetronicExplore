@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-calendar-background-events',
-['assets/demo/default/custom/components/calendar/background-events.js']);
+['assets/custom/components/calendar/background-events.js']);
 
 }
 

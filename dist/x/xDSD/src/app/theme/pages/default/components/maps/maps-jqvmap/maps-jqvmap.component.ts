@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-maps-jqvmap',
 ['assets/vendors/custom/jqvmap/jqvmap.bundle.js',
-'assets/demo/default/custom/components/maps/jqvmap.js']);
+'assets/custom/components/maps/jqvmap.js']);
 
 }
 

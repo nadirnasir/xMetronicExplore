@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-record-selection',
-['assets/demo/default/custom/components/datatables/base/record-selection.js']);
+['assets/custom/components/datatables/base/record-selection.js']);
 
 }
 

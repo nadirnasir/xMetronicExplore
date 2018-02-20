@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-clipboard',
-['assets/demo/default/custom/components/forms/widgets/clipboard.js']);
+['assets/custom/components/forms/widgets/clipboard.js']);
 
 }
 

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-scrolling-vertical',
-['assets/demo/default/custom/components/datatables/scrolling/vertical.js']);
+['assets/custom/components/datatables/scrolling/vertical.js']);
 
 }
 

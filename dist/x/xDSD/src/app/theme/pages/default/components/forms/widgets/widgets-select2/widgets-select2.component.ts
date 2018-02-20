@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-select2',
-['assets/demo/default/custom/components/forms/widgets/select2.js']);
+['assets/custom/components/forms/widgets/select2.js']);
 
 }
 

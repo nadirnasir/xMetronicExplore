@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-local-sort',
-['assets/demo/default/custom/components/datatables/base/local-sort.js']);
+['assets/custom/components/datatables/base/local-sort.js']);
 
 }
 

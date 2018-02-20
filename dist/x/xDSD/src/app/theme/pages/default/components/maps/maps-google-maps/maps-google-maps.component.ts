@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-maps-google-maps',
 ['assets/vendors/custom/gmaps/gmaps.js',
-'assets/demo/default/custom/components/maps/google-maps.js']);
+'assets/custom/components/maps/google-maps.js']);
 
 }
 

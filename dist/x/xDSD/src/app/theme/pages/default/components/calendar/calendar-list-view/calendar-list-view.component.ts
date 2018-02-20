@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-calendar-list-view',
-['assets/demo/default/custom/components/calendar/list-view.js']);
+['assets/custom/components/calendar/list-view.js']);
 
 }
 

@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-amcharts-stock-charts',
 ['//www.amcharts.com/lib/3/plugins/export/export.min.js',
-'assets/demo/default/custom/components/charts/amcharts/stock-charts.js']);
+'assets/custom/components/charts/amcharts/stock-charts.js']);
 Helpers.loadStyles('app-amcharts-stock-charts',[
 '//www.amcharts.com/lib/3/plugins/export/export.css']);
 }

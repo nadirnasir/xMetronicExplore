@@ -20,7 +20,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-charts-google-charts',
-['assets/demo/default/custom/components/charts/google-charts.js']);
+['assets/custom/components/charts/google-charts.js']);
 google.load('visualization', '1', {packages: ['corechart', 'bar', 'line'], callback: GoogleChartsDemo.runDemos()});
 }
 

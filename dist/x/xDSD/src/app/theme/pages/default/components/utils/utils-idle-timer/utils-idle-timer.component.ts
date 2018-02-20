@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-utils-idle-timer',
-['assets/demo/default/custom/components/utils/idle-timer.js']);
+['assets/custom/components/utils/idle-timer.js']);
 
 }
 

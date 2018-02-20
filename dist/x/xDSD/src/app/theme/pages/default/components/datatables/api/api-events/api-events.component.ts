@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-api-events',
-['assets/demo/default/custom/components/datatables/api/events.js']);
+['assets/custom/components/datatables/api/events.js']);
 
 }
 

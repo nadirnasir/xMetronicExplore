@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-charts-morris-charts',
-['assets/demo/default/custom/components/charts/morris-charts.js']);
+['assets/custom/components/charts/morris-charts.js']);
 
 }
 

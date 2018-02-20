@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-portlets-draggable',
 ['assets/vendors/custom/jquery-ui/jquery-ui.bundle.js',
-'assets/demo/default/custom/components/portlets/draggable.js']);
+'assets/custom/components/portlets/draggable.js']);
 
 }
 

@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-treeview',
-['assets/demo/default/custom/components/base/treeview.js']);
+['assets/custom/components/base/treeview.js']);
 
 }
 

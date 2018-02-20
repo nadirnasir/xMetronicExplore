@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-bootstrap-notify',
-['assets/demo/default/custom/components/base/bootstrap-notify.js']);
+['assets/custom/components/base/bootstrap-notify.js']);
 
 }
 

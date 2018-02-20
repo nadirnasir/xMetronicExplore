@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-bootstrap-maxlength',
-['assets/demo/default/custom/components/forms/widgets/bootstrap-maxlength.js']);
+['assets/custom/components/forms/widgets/bootstrap-maxlength.js']);
 
 }
 

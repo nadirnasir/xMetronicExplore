@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-locked-left',
-['assets/demo/default/custom/components/datatables/locked/left.js']);
+['assets/custom/components/datatables/locked/left.js']);
 
 }
 

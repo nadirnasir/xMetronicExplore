@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-sweetalert2',
-['assets/demo/default/custom/components/base/sweetalert2.js']);
+['assets/custom/components/base/sweetalert2.js']);
 
 }
 

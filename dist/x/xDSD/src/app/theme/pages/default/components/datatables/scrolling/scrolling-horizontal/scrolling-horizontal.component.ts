@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-scrolling-horizontal',
-['assets/demo/default/custom/components/datatables/scrolling/horizontal.js']);
+['assets/custom/components/datatables/scrolling/horizontal.js']);
 
 }
 

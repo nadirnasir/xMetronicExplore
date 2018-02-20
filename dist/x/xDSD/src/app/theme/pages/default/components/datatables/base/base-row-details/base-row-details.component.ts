@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-row-details',
-['assets/demo/default/custom/components/datatables/base/row-details.js']);
+['assets/custom/components/datatables/base/row-details.js']);
 
 }
 

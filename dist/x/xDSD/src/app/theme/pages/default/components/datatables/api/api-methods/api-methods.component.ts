@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-api-methods',
-['assets/demo/default/custom/components/datatables/api/methods.js']);
+['assets/custom/components/datatables/api/methods.js']);
 
 }
 

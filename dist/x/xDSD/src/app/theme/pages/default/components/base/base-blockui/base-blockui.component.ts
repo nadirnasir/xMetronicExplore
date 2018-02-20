@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-blockui',
-['assets/demo/default/custom/components/base/blockui.js']);
+['assets/custom/components/base/blockui.js']);
 
 }
 

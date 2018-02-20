@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-locked-both',
-['assets/demo/default/custom/components/datatables/locked/both.js']);
+['assets/custom/components/datatables/locked/both.js']);
 
 }
 

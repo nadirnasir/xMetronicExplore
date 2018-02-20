@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-wizard-wizard-3',
-['assets/demo/default/custom/components/forms/wizard/wizard.js']);
+['assets/custom/components/forms/wizard/wizard.js']);
 
 }
 

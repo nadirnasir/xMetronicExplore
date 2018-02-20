@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-ion-range-slider',
-['assets/demo/default/custom/components/forms/widgets/ion-range-slider.js']);
+['assets/custom/components/forms/widgets/ion-range-slider.js']);
 
 }
 

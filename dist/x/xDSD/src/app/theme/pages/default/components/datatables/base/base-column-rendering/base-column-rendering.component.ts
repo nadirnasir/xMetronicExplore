@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-column-rendering',
-['assets/demo/default/custom/components/datatables/base/column-rendering.js']);
+['assets/custom/components/datatables/base/column-rendering.js']);
 
 }
 

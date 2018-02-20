@@ -20,7 +20,7 @@ ngOnInit()  {
 ngAfterViewInit()  {
 this._script.loadScripts('app-amcharts-maps',
 ['//www.amcharts.com/lib/3/plugins/export/export.min.js',
-'assets/demo/default/custom/components/charts/amcharts/maps.js']);
+'assets/custom/components/charts/amcharts/maps.js']);
 Helpers.loadStyles('app-amcharts-maps',[
 '//www.amcharts.com/lib/3/plugins/export/export.css']);
 }

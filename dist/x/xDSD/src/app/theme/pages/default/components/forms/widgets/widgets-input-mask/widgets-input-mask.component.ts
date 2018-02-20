@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-widgets-input-mask',
-['assets/demo/default/custom/components/forms/widgets/input-mask.js']);
+['assets/custom/components/forms/widgets/input-mask.js']);
 
 }
 

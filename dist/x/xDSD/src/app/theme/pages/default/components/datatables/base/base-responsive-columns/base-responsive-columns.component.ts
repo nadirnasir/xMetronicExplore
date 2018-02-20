@@ -19,7 +19,7 @@ ngOnInit()  {
 }
 ngAfterViewInit()  {
 this._script.loadScripts('app-base-responsive-columns',
-['assets/demo/default/custom/components/datatables/base/responsive-columns.js']);
+['assets/custom/components/datatables/base/responsive-columns.js']);
 
 }
 
