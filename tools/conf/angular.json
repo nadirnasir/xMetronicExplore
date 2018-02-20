@@ -1,6 +1,6 @@
 {
     "config": {
-        "demo": "xDS7", 
+        "demo": "xDSD", 
         "debug": false,
         "compile": {
             "jsUglify": false,
@@ -20,6 +20,534 @@
         ]
     },
     "build": {
+        "demo": {
+            "xDSD": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDSD/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDSD/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDSD/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDSD/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS3": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS3/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS3/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS3/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS3/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS6": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS6/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS6/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS6/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS6/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },       
+            "xDS7": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS7/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS7/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS7/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS7/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+            "xDS9": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/xDS9/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/xDS9/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/base/style.bundle.css",
+                        "scripts": "{$config.output}/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/xDS9/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/xDS9/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/custom/",
+                        "media": "{$config.output}/media/"
+                    }
+                }
+            },
+
+            "default": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/default/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/default/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/default/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/default/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/default/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/default/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/default/custom/",
+                        "media": "{$config.output}/demo/default/media/"
+                    }
+                }
+            },
+            "demo2": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo2/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo2/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo2/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo2/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo2/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo2/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo2/custom/",
+                        "media": "{$config.output}/demo/demo2/media/"
+                    }
+                }
+            },
+            "demo3": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo3/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo3/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo3/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo3/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo3/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo3/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo3/custom/",
+                        "media": "{$config.output}/demo/demo3/media/"
+                    }
+                }
+            },
+            "demo4": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo4/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo4/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo4/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo4/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo4/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo4/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo4/custom/",
+                        "media": "{$config.output}/demo/demo4/media/"
+                    }
+                }
+            },
+            "demo5": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo5/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo5/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo5/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo5/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo5/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo5/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo5/custom/",
+                        "media": "{$config.output}/demo/demo5/media/"
+                    }
+                }
+            },
+            "demo6": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo6/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo6/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo6/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo6/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo6/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo6/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo6/custom/",
+                        "media": "{$config.output}/demo/demo6/media/"
+                    }
+                }
+            },
+            "demo7": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo7/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo7/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo7/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo7/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo7/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo7/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo7/custom/",
+                        "media": "{$config.output}/demo/demo7/media/"
+                    }
+                }
+            },
+            "demo8": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo8/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo8/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo8/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo8/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo8/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo8/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo8/custom/",
+                        "media": "{$config.output}/demo/demo8/media/"
+                    }
+                }
+            },
+            "demo9": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo9/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo9/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo9/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo9/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo9/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo9/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo9/custom/",
+                        "media": "{$config.output}/demo/demo9/media/"
+                    }
+                }
+            },
+            "demo10": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/demo/demo10/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/framework/base/**/*.js",
+                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
+                            "{$config.path.src}/js/framework/**/*.js",
+                            "{$config.path.src}/js/demo/demo10/base/**/*.js",
+                            "{$config.path.src}/js/app/base/**/*.js",
+                            "{$config.path.src}/js/snippets/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo10/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo10/base/scripts.bundle.js"
+                    }
+                },
+                "custom": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.src}/js/demo/demo10/custom/**/*.js"
+                        ],
+                        "media": [
+                            "{$config.path.src}/media/demo/demo10/**/*.*"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.output}/demo/demo10/custom/",
+                        "media": "{$config.output}/demo/demo10/media/"
+                    }
+                }
+            }
+        },
         "vendors": {
             "base": {
                 "src": {
@@ -453,429 +981,6 @@
                     },
                     "bundle": {
                         "scripts": "{$config.output}/vendors/custom/flot/flot.bundle.js"
-                    }
-                }
-            }
-        },
-        "demo": {
-            "xDS7": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS7/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS7/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS7/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS7/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },
-            "xDS9": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/xDS9/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/xDS9/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/base/style.bundle.css",
-                        "scripts": "{$config.output}/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/xDS9/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/xDS9/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/custom/",
-                        "media": "{$config.output}/media/"
-                    }
-                }
-            },
-
-            "default": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/default/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/default/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/default/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/default/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/default/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/default/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/default/custom/",
-                        "media": "{$config.output}/demo/default/media/"
-                    }
-                }
-            },
-            "demo2": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo2/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo2/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo2/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo2/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo2/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo2/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo2/custom/",
-                        "media": "{$config.output}/demo/demo2/media/"
-                    }
-                }
-            },
-            "demo3": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo3/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo3/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo3/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo3/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo3/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo3/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo3/custom/",
-                        "media": "{$config.output}/demo/demo3/media/"
-                    }
-                }
-            },
-            "demo4": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo4/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo4/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo4/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo4/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo4/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo4/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo4/custom/",
-                        "media": "{$config.output}/demo/demo4/media/"
-                    }
-                }
-            },
-            "demo5": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo5/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo5/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo5/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo5/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo5/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo5/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo5/custom/",
-                        "media": "{$config.output}/demo/demo5/media/"
-                    }
-                }
-            },
-            "demo6": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo6/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo6/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo6/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo6/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo6/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo6/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo6/custom/",
-                        "media": "{$config.output}/demo/demo6/media/"
-                    }
-                }
-            },
-            "demo7": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo7/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo7/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo7/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo7/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo7/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo7/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo7/custom/",
-                        "media": "{$config.output}/demo/demo7/media/"
-                    }
-                }
-            },
-            "demo8": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo8/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo8/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo8/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo8/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo8/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo8/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo8/custom/",
-                        "media": "{$config.output}/demo/demo8/media/"
-                    }
-                }
-            },
-            "demo9": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo9/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo9/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo9/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo9/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo9/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo9/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo9/custom/",
-                        "media": "{$config.output}/demo/demo9/media/"
-                    }
-                }
-            },
-            "demo10": {
-                "base": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.src}/sass/demo/demo10/style.scss"
-                        ],
-                        "scripts": [
-                            "{$config.path.src}/js/framework/base/**/*.js",
-                            "{$config.path.src}/js/framework/components/general/datatable/datatable.js",
-                            "{$config.path.src}/js/framework/**/*.js",
-                            "{$config.path.src}/js/demo/demo10/base/**/*.js",
-                            "{$config.path.src}/js/app/base/**/*.js",
-                            "{$config.path.src}/js/snippets/base/**/*.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.output}/demo/demo10/base/style.bundle.css",
-                        "scripts": "{$config.output}/demo/demo10/base/scripts.bundle.js"
-                    }
-                },
-                "custom": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.src}/js/demo/demo10/custom/**/*.js"
-                        ],
-                        "media": [
-                            "{$config.path.src}/media/demo/demo10/**/*.*"
-                        ]
-                    },
-                    "output": {
-                        "scripts": "{$config.output}/demo/demo10/custom/",
-                        "media": "{$config.output}/demo/demo10/media/"
                     }
                 }
             }
