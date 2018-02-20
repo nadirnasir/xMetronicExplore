@@ -1,13 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+### Removed dist so that it can track the metronic idiotic file structure.
+# /dist 
 /dist-server
 /tmp
 /out-tsc
 
 # dependencies
-/node_modules
+### Added ** for all node_modules folders
+**/node_modules
 
 # IDEs and editors
 /.idea
