@@ -4931,31 +4931,6 @@ var mLayout = function() {
         };
 
         asideMenu = menu.mMenu(menuOptions);
-
-        // handle fixed aside menu
-        if (menu.data('menu-scrollable')) {
-            function initScrollableMenu(obj) {    
-                if (mUtil.isInResponsiveRange('tablet-and-mobile')) {
-                    // destroy if the instance was previously created
-                    mApp.destroyScroller(obj);
-                    return;
-                }
-
-                var height = mUtil.getViewPort().height - $('.m-header').outerHeight()
-                    - ($('.m-aside-left .m-aside__header').length != 0 ? $('.m-aside-left .m-aside__header').outerHeight() : 0)
-                    - ($('.m-aside-left .m-aside__footer').length != 0 ? $('.m-aside-left .m-aside__footer').outerHeight() : 0);
-                    //- $('.m-footer').outerHeight(); 
-
-                // create/re-create a new instance
-                mApp.initScroller(obj, {height: height});
-            }
-
-            initScrollableMenu(asideMenu);
-            
-            mUtil.addResizeHandler(function() {            
-                initScrollableMenu(asideMenu);
-            });   
-        }      
     }
 
     // handle vertical menu
@@ -4971,34 +4946,22 @@ var mLayout = function() {
                 target: '#m_aside_left_offcanvas_toggle',
                 state: 'm-brand__toggler--active'                
             }            
-        });        
-    }
+        }); 
 
-    // handle sidebar toggle
-    var initLeftAsideToggle = function() {
-        var asideLeftToggle = $('#m_aside_left_minimize_toggle').mToggle({
-            target: 'body',
-            targetState: 'm-brand--minimize m-aside-left--minimize',
-            togglerState: 'm-brand__toggler--active'
-        }).on('toggle', function(toggle) {
-            horMenu.pauseDropdownHover(800);
-            asideMenu.pauseDropdownHover(800);
+        $('#m_aside_left').find('.m-menu__item--submenu-fullheight').each(function() {
+            var obj = $(this).find('> .m-menu__submenu > .m-menu__wrapper');
 
-            //== Remember state in cookie
-            Cookies.set('sidebar_toggle_state', toggle.getState());
-        });
+            if (mUtil.isInResponsiveRange('tablet-and-mobile')) {
+                // destroy if the instance was previously created
+                mApp.destroyScroller(obj);
+                return;
+            }
 
-        //== Example: minimize the left aside on page load
-        //== asideLeftToggle.toggleOn();
+            var height = mUtil.getViewPort().height;
 
-        $('#m_aside_left_hide_toggle').mToggle({
-            target: 'body',
-            targetState: 'm-aside-left--hide',
-            togglerState: 'm-brand__toggler--active'
-        }).on('toggle', function() {
-            horMenu.pauseDropdownHover(800);
-            asideMenu.pauseDropdownHover(800);
-        })
+            // create/re-create a new instance
+            mApp.initScroller(obj, {height: height}, true);
+        });   
     }
 
     var initTopbar = function() {
@@ -5065,23 +5028,11 @@ var mLayout = function() {
 
         initAside: function() {
             initLeftAside();
-            initLeftAsideMenu();            
-            initLeftAsideToggle();
-
-            this.onLeftSidebarToggle(function(e) {
-              var datatables = $('.m-datatable');
-              $(datatables).each(function() {
-                $(this).mDatatable('redraw');
-              });
-            });
+            initLeftAsideMenu();     
         },
 
         getAsideMenu: function() {
             return asideMenu;
-        },
-
-        onLeftSidebarToggle: function(func) {
-            $('#m_aside_left_minimize_toggle').mToggle().on('toggle', func);
         },
 
         closeMobileAsideMenuOffcanvas: function() {

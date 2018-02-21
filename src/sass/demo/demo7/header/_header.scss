@@ -101,8 +101,31 @@
 		}
 
 		//== Title
+		// .m-header-head {
+		// 	@include shadow(get-shadow(light, '-'));
+		// }
+		//== Title
 		.m-header-head {
-			@include shadow(get-shadow(light, '-'));
-		}
+			.m-header__title {
+				display: table;
+				height: 100%;
+				float: left;
+
+				.m-header__title-text {
+					vertical-align: middle;
+					display: table-cell;			
+					padding: array-get($m-config-header, title, padding, desktop); 
+					color: array-get($m-config-header, title, color);
+					font-size: array-get($m-config-header, title, font-size, desktop);
+					font-weight: get-font-weight(bolder);
+
+					@include minimal-desktop() {
+						padding: array-get($m-config-header, title, padding, min-desktop); 
+					}
+				}
+			}
+		}		
+
 	}
 }
+

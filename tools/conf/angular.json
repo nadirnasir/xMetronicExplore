@@ -1,6 +1,6 @@
 {
     "config": {
-        "demo": "xDSD", 
+        "demo": "xDS7", 
         "debug": false,
         "compile": {
             "jsUglify": false,
