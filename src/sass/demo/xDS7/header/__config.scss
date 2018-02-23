@@ -8,7 +8,7 @@ $m-config-header: (
 		// Default mode
 		default: (
 			height: (
-				desktop: 90px,
+				desktop: 80px,
 				mobile: 60px
 			),
 			bg-color: #ffffff
@@ -21,6 +21,78 @@ $m-config-header: (
 				transition-show: all 0.3s ease, 
 			)
 		)
+	),
+
+	//== Title
+	title: (
+		padding: (
+			desktop: 0 40px 0 30px,
+			min-desktop: 0 10px 0 30px,
+			mobile: 0 0 0 5px
+		),
+		font-size: (
+			mobile: 1.2rem,
+			desktop: 1.4rem
+		),
+		color: #4C4C50
+	),
+
+	//== Brand
+	brand: (
+		// brand itself
+		self: (
+			bg-color: #ffffff,
+			padding: (
+				desktop: 0px 30px,
+				mobile: 0px 25px
+			),
+			width: (
+				default: $m-aside-left-width,
+				minimize: $m-aside-left-width-minimize
+			)
+		),
+
+		// logo
+		logo: (
+			width: (
+				mobile: 40px
+			)
+		),
+
+		// brand tools
+		tools: (
+			// itself
+			self: (
+				// space between togglers and icons
+				space: (
+					mobile: 10px 
+				)
+			),
+			// toggler
+			toggler: (
+				width: 26px,
+				height: 26px,  
+				transition-duration: 0.4s,
+				thickness: 1px,
+				space: 6px, 
+				radius: 0px,
+				color: (
+					default: #5d5f77,
+					hover: get-brand-color(),
+					active: get-brand-color()
+				)
+			),
+
+			// icon
+			icon: (
+				font-size: 1.4rem,
+				color: (
+					default: #5d5f77,
+					hover: lighten(#5d5f77, 20%),
+					active: lighten(#5d5f77, 20%)
+				)
+			)
+		)			
 	),
 
 	//== Topbar
@@ -134,10 +206,10 @@ $m-config-header: (
 			width: (
 				desktop: (
 					expandable: (
-						initial: 200px,
-						expanded: 260px
+						initial: 160px,
+						expanded: 240px
 					),
-					default: 200px
+					default: 180px
 				),
 				min-desktop: (
 					expandable: (
@@ -154,7 +226,7 @@ $m-config-header: (
 		input: (
 			font-size: 0.9rem,
 			padding: (
-				desktop: 7px 14px 7px 8px,
+				desktop: 7px 10px 7px 5px,
 				mobile: 7px 10px 7px 5px
 			),
 			bg-color: (
@@ -184,7 +256,7 @@ $m-config-header: (
 					mobile: 30px
 				),
 				padding: (
-					desktop: 0 0 0 14px,
+					desktop: 0 0 0 10px,
 					mobile: 0 0 0 10px
 				),
 				font-size: (
@@ -203,7 +275,7 @@ $m-config-header: (
 					desktop: 30px
 				),
 				padding: (
-					desktop: 0 14px 0 0
+					desktop: 0 10px 0 0
 				),
 				font-size: (
 					desktop: 1.2rem
@@ -234,7 +306,7 @@ $m-config-header: (
 		loader: (
 			color: #282a3c,
 			right: (
-				desktop: 14px,
+				desktop: 15px,
 				mobile: 10px
 			)
 		)

@@ -3,23 +3,26 @@
 	<div class="m-container m-container--fluid m-container--full-height">
 		<div class="m-stack m-stack--ver m-stack--desktop">
 			<!-- BEGIN: Brand -->
-			<div class="m-stack__item m-brand">
+			<div class="m-stack__item m-brand  m-brand--skin-light">
 				<div class="m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--middle m-brand__logo">
 						<a routerLink="/index" class="m-brand__logo-wrapper">
 							<img alt="" src="./assets/media/img/logo/logo.png"/>
 						</a>
+						<h3 class="m-header__title">
+							Apps
+						</h3>
 					</div>
 					<div class="m-stack__item m-stack__item--middle m-brand__tools">
 						<!-- BEGIN: Responsive Aside Left Menu Toggler -->
 						<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
 							<span></span>
 						</a>
-						<!-- END -->												<!-- BEGIN: Responsive Header Menu Toggler -->
+						<!-- END --> 			 						  							<!-- BEGIN: Responsive Header Menu Toggler -->
 						<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
 							<span></span>
 						</a>
-						<!-- END -->							<!-- BEGIN: Topbar Toggler -->
+						<!-- END --> 						  			<!-- BEGIN: Topbar Toggler -->
 						<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
 							<i class="flaticon-more"></i>
 						</a>
@@ -29,23 +32,22 @@
 			</div>
 			<!-- END: Brand -->
 			<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
-			<!-- 	<div class="m-header__title">
+				<div class="m-header__title">
 					<h3 class="m-header__title-text">
 						Applications
 					</h3>
-				</div> -->
-						
+				</div>
 				<!-- BEGIN: Horizontal Menu -->
 				<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light" id="m_aside_header_menu_mobile_close_btn">
 					<i class="la la-close"></i>
 				</button>
 				<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light"  >
 					<ul class="m-menu__nav  m-menu__nav--submenu-arrow">
-						<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" routerLinkActive="m-menu__item--open" routerLinkActiveOptions="{ exact: true }"   data-menu-submenu-toggle="click" aria-haspopup="true">
+						<li class="m-menu__item    m-menu__item--submenu m-menu__item--rel" routerLinkActive="m-menu__item--open" routerLinkActiveOptions="{ exact: true }"   data-menu-submenu-toggle="click" aria-haspopup="true">
 							<a  href="#" class="m-menu__link m-menu__toggle">
 								<span class="m-menu__item-here"></span>
 								<span class="m-menu__link-text">
-									Sales
+									Dashboard
 								</span>
 								<i class="m-menu__hor-arrow la la-angle-down"></i>
 								<i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -53,7 +55,7 @@
 							<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
 								<span class="m-menu__arrow m-menu__arrow--adjust"></span>
 								<ul class="m-menu__subnav">
-									<li class="m-menu__item"  data-redirect="true" aria-haspopup="true">
+									<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }"   aria-haspopup="true">
 										<a  routerLink="/index" class="m-menu__link">
 											<i class="m-menu__link-icon flaticon-diagram"></i>
 											<span class="m-menu__link-title">
@@ -192,7 +194,7 @@
 							<a  href="#" class="m-menu__link m-menu__toggle">
 								<span class="m-menu__item-here"></span>
 								<span class="m-menu__link-text">
-									Marketing
+									Reports
 								</span>
 								<i class="m-menu__hor-arrow la la-angle-down"></i>
 								<i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -325,16 +327,16 @@
 								</div>
 							</div>
 						</li>
-						<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
+						<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
 							<a  href="#" class="m-menu__link m-menu__toggle">
 								<span class="m-menu__item-here"></span>
 								<span class="m-menu__link-text">
-									Service
+									Orders
 								</span>
 								<i class="m-menu__hor-arrow la la-angle-down"></i>
 								<i class="m-menu__ver-arrow la la-angle-right"></i>
 							</a>
-							<div class="m-menu__submenu  m-menu__submenu--fixed m-menu__submenu--left" style="width:1000px">
+							<div class="m-menu__submenu  m-menu__submenu--fixed-xl m-menu__submenu--center" >
 								<span class="m-menu__arrow m-menu__arrow--adjust"></span>
 								<div class="m-menu__subnav">
 									<ul class="m-menu__content">
@@ -742,7 +744,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- END: Horizontal Menu -->								<!-- BEGIN: Topbar -->
+				<!-- END: Horizontal Menu -->				 				<!-- BEGIN: Topbar -->
 				<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--middle m-dropdown m-dropdown--arrow m-dropdown--large m-dropdown--mobile-full-width m-dropdown--align-right m-dropdown--skin-light m-header-search m-header-search--expandable m-header-search--skin-light" id="m_quicksearch" data-search-type="default">
 						<!--BEGIN: Search Form -->
@@ -762,7 +764,7 @@
 								</span>
 							</div>
 						</form>
-						<!--END: Search Form -->	<!--BEGIN: Search Results -->
+						<!--END: Search Form --> 	<!--BEGIN: Search Results -->
 						<div class="m-dropdown__wrapper">
 							<div class="m-dropdown__arrow m-dropdown__arrow--center"></div>
 							<div class="m-dropdown__inner">

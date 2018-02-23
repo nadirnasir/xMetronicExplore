@@ -26,12 +26,12 @@
 ///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
 ////////////////////////////////////////////////////////////////
 
-//== 6: Demo Config
+//== 7: Demo Config
 @import "demo-config";
 @import "base/_config";
 @import "header/_config";
 @import "aside/_config";
-@import "brand/_config";
+// @import "brand/_config";
 @import "menu-header/_config";
 @import "menu-aside/_config";   
 @import "footer/_config";
@@ -40,6 +40,7 @@
 @import "base/page";
 @import "base/body";
 
+@import "header/brand";
 @import "header/header";
 @import "header/topbar";
 @import "header/search";
@@ -48,7 +49,7 @@
 @import "aside/aside-right";
 @import "aside/aside-header-menu-mobile";
 
-@import "brand/brand";
+// @import "brand/brand";
 
 @import "menu-header/menu";
 @import "menu-aside/menu";
