@@ -12,11 +12,11 @@ import { AuthModule } from "./auth/auth.module";
 
 @NgModule({
   declarations: [
-ThemeComponent,
+    ThemeComponent,
     AppComponent,
   ],
   imports: [
-LayoutModule,
+    LayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
