@@ -20,7 +20,9 @@ export class Helpers {
 	 * @param title
 	 */
 	static setTitle(title) {
-		$('.m-subheader__title').text(title);
+		console.log(title)
+		$('.m-header__title-text').text(title);
+		// console.log($('body').html())
 	}
 
 	/**

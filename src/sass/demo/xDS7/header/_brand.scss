@@ -80,7 +80,12 @@
 			width: array-get($layout, self, width, default);	
 			padding: array-get($layout, self, padding, desktop); 
 			background: array-get($layout, self, bg-color);
-	
+
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			line-height: 0;
+			
 			.m-brand__logo,
 			.m-brand__tools {
 				@include transition(array-get($m-config-aside, aside-left, self, minimize, transition));

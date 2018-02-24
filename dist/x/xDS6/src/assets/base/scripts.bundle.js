@@ -4600,31 +4600,75 @@ jQuery.fn.extend({
 	};
 
 }(jQuery));
-//== Set defaults
 
-$.notifyDefaults({
-	template: '' +
-	'<div data-notify="container" class="alert alert-{0} m-alert" role="alert">' +
-	'<button type="button" aria-hidden="true" class="close" data-notify="dismiss"></button>' +
-	'<span data-notify="icon"></span>' +
-	'<span data-notify="title">{1}</span>' +
-	'<span data-notify="message">{2}</span>' +
-	'<div class="progress" data-notify="progressbar">' +
-	'<div class="progress-bar progress-bar-animated bg-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
-	'</div>' +
-	'<a href="{3}" target="{4}" data-notify="url"></a>' +
-	'</div>'
+  $.fn.markdown.defaults.iconlibrary = 'fa';
+//$.fn.bootstrapSwitch.defaults.size = 'large';
+//$.fn.bootstrapSwitch.defaults.onColor = 'success';
+$.fn.timepicker.defaults = $.extend(true, {}, $.fn.timepicker.defaults, {
+    icons: {
+        up: 'la la-angle-up',
+        down: 'la la-angle-down'  
+    }
 });
-//== Set defaults
-swal.setDefaults({
-	width: 400,
-	padding: '2.5rem',
-	buttonsStyling: false,
-	confirmButtonClass: 'btn btn-success m-btn m-btn--custom',
-	confirmButtonColor: null,
-	cancelButtonClass: 'btn btn-secondary m-btn m-btn--custom',
-	cancelButtonColor: null
+jQuery.validator.setDefaults({
+    errorElement: 'div', //default input error message container
+    errorClass: 'form-control-feedback', // default input error message class
+    focusInvalid: false, // do not focus the last invalid input
+    ignore: "",  // validate all fields including form hidden input
+
+    errorPlacement: function(error, element) { // render error placement for each input type
+        var group = $(element).closest('.m-form__group-sub').length > 0 ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
+        var help = group.find('.m-form__help');
+
+        if (group.find('.form-control-feedback').length !== 0) {
+            return;
+        }
+
+        if (help.length > 0) {
+            help.before(error);
+        } else {
+            if ($(element).closest('.input-group').length > 0) {
+                $(element).closest('.input-group').after(error);
+            } else {
+                if ($(element).is(':checkbox')) {
+                    $(element).closest('.m-checkbox').find('>span').after(error);
+                } else {
+                    $(element).after(error);
+                }                
+            }            
+        }
+    },
+
+    highlight: function(element) { // hightlight error inputs
+        var group = $(element).closest('.m-form__group-sub').length > 0  ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
+
+        console.log('add' + group.attr('class'));
+
+        group.addClass('has-danger'); // set error class to the control groupx
+    },
+
+    unhighlight: function(element) { // revert the change done by hightlight
+        var group = $(element).closest('.m-form__group-sub').length > 0  ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
+
+        group.removeClass('has-danger'); // set error class to the control group
+    },
+
+    success: function(label, element) {
+        var group = $(label).closest('.m-form__group-sub').length > 0  ? $(label).closest('.m-form__group-sub') : $(label).closest('.m-form__group');
+
+        //group.addClass('has-success').removeClass('has-danger'); // set success class and hide error class
+        group.removeClass('has-danger'); // hide error class
+        group.find('.form-control-feedback').remove();
+    }
 });
+
+jQuery.validator.addMethod("email", function(value, element) {
+    if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value)) {
+        return true;
+    } else {
+        return false;
+    }
+}, "Please enter a valid Email.");
 Chart.elements.Rectangle.prototype.draw = function() {    
     var ctx = this._chart.ctx;
     var vm = this._view;
@@ -4755,75 +4799,31 @@ Chart.elements.Rectangle.prototype.draw = function() {
         ctx.stroke();
     }
 }; 
+//== Set defaults
 
-  $.fn.markdown.defaults.iconlibrary = 'fa';
-//$.fn.bootstrapSwitch.defaults.size = 'large';
-//$.fn.bootstrapSwitch.defaults.onColor = 'success';
-$.fn.timepicker.defaults = $.extend(true, {}, $.fn.timepicker.defaults, {
-    icons: {
-        up: 'la la-angle-up',
-        down: 'la la-angle-down'  
-    }
+$.notifyDefaults({
+	template: '' +
+	'<div data-notify="container" class="alert alert-{0} m-alert" role="alert">' +
+	'<button type="button" aria-hidden="true" class="close" data-notify="dismiss"></button>' +
+	'<span data-notify="icon"></span>' +
+	'<span data-notify="title">{1}</span>' +
+	'<span data-notify="message">{2}</span>' +
+	'<div class="progress" data-notify="progressbar">' +
+	'<div class="progress-bar progress-bar-animated bg-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+	'</div>' +
+	'<a href="{3}" target="{4}" data-notify="url"></a>' +
+	'</div>'
 });
-jQuery.validator.setDefaults({
-    errorElement: 'div', //default input error message container
-    errorClass: 'form-control-feedback', // default input error message class
-    focusInvalid: false, // do not focus the last invalid input
-    ignore: "",  // validate all fields including form hidden input
-
-    errorPlacement: function(error, element) { // render error placement for each input type
-        var group = $(element).closest('.m-form__group-sub').length > 0 ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
-        var help = group.find('.m-form__help');
-
-        if (group.find('.form-control-feedback').length !== 0) {
-            return;
-        }
-
-        if (help.length > 0) {
-            help.before(error);
-        } else {
-            if ($(element).closest('.input-group').length > 0) {
-                $(element).closest('.input-group').after(error);
-            } else {
-                if ($(element).is(':checkbox')) {
-                    $(element).closest('.m-checkbox').find('>span').after(error);
-                } else {
-                    $(element).after(error);
-                }                
-            }            
-        }
-    },
-
-    highlight: function(element) { // hightlight error inputs
-        var group = $(element).closest('.m-form__group-sub').length > 0  ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
-
-        console.log('add' + group.attr('class'));
-
-        group.addClass('has-danger'); // set error class to the control groupx
-    },
-
-    unhighlight: function(element) { // revert the change done by hightlight
-        var group = $(element).closest('.m-form__group-sub').length > 0  ? $(element).closest('.m-form__group-sub') : $(element).closest('.m-form__group');
-
-        group.removeClass('has-danger'); // set error class to the control group
-    },
-
-    success: function(label, element) {
-        var group = $(label).closest('.m-form__group-sub').length > 0  ? $(label).closest('.m-form__group-sub') : $(label).closest('.m-form__group');
-
-        //group.addClass('has-success').removeClass('has-danger'); // set success class and hide error class
-        group.removeClass('has-danger'); // hide error class
-        group.find('.form-control-feedback').remove();
-    }
+//== Set defaults
+swal.setDefaults({
+	width: 400,
+	padding: '2.5rem',
+	buttonsStyling: false,
+	confirmButtonClass: 'btn btn-success m-btn m-btn--custom',
+	confirmButtonColor: null,
+	cancelButtonClass: 'btn btn-secondary m-btn m-btn--custom',
+	cancelButtonColor: null
 });
-
-jQuery.validator.addMethod("email", function(value, element) {
-    if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value)) {
-        return true;
-    } else {
-        return false;
-    }
-}, "Please enter a valid Email.");
 var mLayout = function() {
     var horMenu;
     var asideMenu;
