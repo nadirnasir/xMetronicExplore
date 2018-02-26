@@ -11,7 +11,7 @@
         "path": {
             "src": "./../src",
             "node_modules": "./node_modules",
-            "demo_api_url": "https://keenthemes.com/metronic/preview/"
+            "demo_api_url": "http://localhost/"
         },
         "dist": [
             "./../dist/x/**/src/assets/"

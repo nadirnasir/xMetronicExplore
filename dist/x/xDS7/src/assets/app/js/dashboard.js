@@ -1341,7 +1341,7 @@ var Dashboard = function() {
                 type: 'remote',
                 source: {
                     read: {
-                        url: 'inc/api/datatables/demos/default.php'
+                        url: 'http://localhost/inc/api/datatables/demos/default.php'
                     }
                 },
                 pageSize: 10,

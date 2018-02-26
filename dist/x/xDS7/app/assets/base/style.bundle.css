@@ -30465,7 +30465,7 @@ body.m-content--skin-light2 {
 
 @media (min-width: 993px) {
   .m-header--fixed .m-body {
-    padding-top: 90px !important; } }
+    padding-top: 80px !important; } }
 
 @media (max-width: 992px) {
   .m-header--fixed-mobile .m-body {
@@ -30480,6 +30480,275 @@ body.m-content--skin-light2 {
     .m-aside-right--enabled .m-body .m-content {
       padding-bottom: 0; } }
 
+.m-brand {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  height: 80px;
+  width: 255px;
+  padding: 0px 30px;
+  background: #FAFAFC; }
+  .m-brand--hidden .m-brand {
+    display: none; }
+  .m-brand .m-brand__logo {
+    vertical-align: middle;
+    line-height: 0; }
+    .m-brand .m-brand__logo .m-brand__logo-wrapper {
+      display: inline-block; }
+      .m-brand .m-brand__logo .m-brand__logo-wrapper img {
+        max-width: 255px; }
+  .m-brand .m-brand__tools {
+    line-height: 0;
+    vertical-align: middle;
+    text-align: right; }
+    .m-brand .m-brand__tools .m-brand__toggler {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 26px;
+      height: 26px;
+      font-size: 0;
+      text-indent: -9999px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      background: none;
+      outline: none !important;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler span {
+        display: block;
+        position: absolute;
+        top: 13px;
+        height: 1px;
+        min-height: 1px;
+        width: 100%;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+        .m-brand .m-brand__tools .m-brand__toggler span::before, .m-brand .m-brand__tools .m-brand__toggler span::after {
+          position: absolute;
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          min-height: 1px;
+          content: "";
+          -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          -ms-border-radius: 0px;
+          -o-border-radius: 0px;
+          border-radius: 0px;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
+        .m-brand .m-brand__tools .m-brand__toggler span::before {
+          top: -7px; }
+        .m-brand .m-brand__tools .m-brand__toggler span::after {
+          bottom: -7px; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left span:before {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        left: auto;
+        right: 0px;
+        width: 50%; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left span:after {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        left: auto;
+        right: 0px;
+        width: 75%; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left:hover span:after, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left:hover span:before {
+        width: 100%;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left.m-brand__toggler--active span:before {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        left: 0px;
+        right: auto;
+        width: 50%; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left.m-brand__toggler--active span:after {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        left: 0px;
+        right: auto;
+        width: 75%; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right span:before {
+        left: 0px;
+        right: auto;
+        width: 50%;
+        -webkit-transition: width 0.4s ease;
+        -moz-transition: width 0.4s ease;
+        -ms-transition: width 0.4s ease;
+        -o-transition: width 0.4s ease;
+        transition: width 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right span:after {
+        left: 0px;
+        right: auto;
+        width: 75%;
+        -webkit-transition: width 0.4s ease;
+        -moz-transition: width 0.4s ease;
+        -ms-transition: width 0.4s ease;
+        -o-transition: width 0.4s ease;
+        transition: width 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right:hover span:after, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right:hover span:before {
+        width: 100%;
+        -webkit-transition: width 0.4s ease;
+        -moz-transition: width 0.4s ease;
+        -ms-transition: width 0.4s ease;
+        -o-transition: width 0.4s ease;
+        transition: width 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right.m-brand__toggler--active span:before {
+        left: auto;
+        right: 0px;
+        width: 50%;
+        -webkit-transition: width 0.4s ease;
+        -moz-transition: width 0.4s ease;
+        -ms-transition: width 0.4s ease;
+        -o-transition: width 0.4s ease;
+        transition: width 0.4s ease; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right.m-brand__toggler--active span:after {
+        left: auto;
+        right: 0px;
+        width: 75%;
+        -webkit-transition: width 0.4s ease;
+        -moz-transition: width 0.4s ease;
+        -ms-transition: width 0.4s ease;
+        -o-transition: width 0.4s ease;
+        transition: width 0.4s ease; }
+    .m-brand .m-brand__tools .m-brand__toggler span {
+      background: #5d5f77; }
+      .m-brand .m-brand__tools .m-brand__toggler span::before, .m-brand .m-brand__tools .m-brand__toggler span::after {
+        background: #5d5f77; }
+    .m-brand .m-brand__tools .m-brand__toggler:hover span {
+      background: #19499c; }
+      .m-brand .m-brand__tools .m-brand__toggler:hover span::before, .m-brand .m-brand__tools .m-brand__toggler:hover span::after {
+        background: #19499c; }
+    .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span {
+      background: #19499c; }
+      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span::before, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span::after {
+        background: #19499c; }
+    .m-brand .m-brand__tools .m-brand__icon {
+      display: inline-block;
+      line-height: 0;
+      vertical-align: middle;
+      cursor: pointer; }
+      .m-brand .m-brand__tools .m-brand__icon > i {
+        font-size: 1.4rem;
+        color: #5d5f77; }
+      .m-brand .m-brand__tools .m-brand__icon:hover {
+        text-decoration: none; }
+        .m-brand .m-brand__tools .m-brand__icon:hover > i {
+          color: #9193a9; }
+
+@media (min-width: 993px) {
+  .m-brand {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    height: 80px;
+    width: 255px;
+    padding: 0px 30px;
+    background: #FAFAFC;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0; }
+    .m-brand .m-brand__logo,
+    .m-brand .m-brand__tools {
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none;
+      height: 80px !important; }
+    .m-brand--minimize .m-brand {
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none;
+      width: 110px;
+      padding-left: 0;
+      padding-right: 0; }
+      .m-brand--minimize .m-brand .m-brand__logo {
+        text-align: center; }
+      .m-brand--minimize .m-brand .m-brand__tools {
+        display: none !important; }
+    .m-header--static.m-aside-left--fixed .m-brand {
+      position: fixed;
+      height: 80px !important;
+      top: 0;
+      bottom: auto; }
+      .m-header--static.m-aside-left--fixed .m-brand .m-brand__tools,
+      .m-header--static.m-aside-left--fixed .m-brand .m-brand__logo {
+        height: 80px !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none; } }
+
+@media (max-width: 992px) {
+  .m-brand {
+    width: 100%;
+    position: relative;
+    height: 60px !important;
+    padding: 0px 25px;
+    z-index: 2; }
+    .m-brand .m-brand__tools .m-brand__icon {
+      margin-left: 10px; }
+      .m-brand .m-brand__tools .m-brand__icon .flaticon-more {
+        position: relative;
+        top: 1px; }
+    .m-brand .m-brand__logo .m-brand__logo-wrapper img {
+      max-width: 40px; }
+    .m-brand .m-header__title {
+      display: inline-block;
+      color: #4C4C50;
+      line-height: 0;
+      padding: 0 0 0 5px;
+      font-size: 1.2rem;
+      font-weight: 500; } }
+
 .m-page--wide .m-header,
 .m-page--fluid .m-header {
   background-color: #ffffff; }
@@ -30489,8 +30758,7 @@ body.m-content--skin-light2 {
 
 @media (min-width: 993px) {
   .m-header {
-    height: 90px;
-    padding-left: 110px; }
+    height: 80px; }
     .m-header--fixed .m-header {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -30508,15 +30776,22 @@ body.m-content--skin-light2 {
       -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ;
       -moz-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ;
       box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ; }
+      .m-header--static.m-aside-left--fixed .m-header .m-header-head {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+        padding-left: 255px; }
       .m-header--static.m-aside-left--fixed.m-aside-left--minimize .m-header .m-header-head {
         -webkit-transition: none;
         -moz-transition: none;
         -ms-transition: none;
         -o-transition: none;
         transition: none;
-        padding-left: 0; }
+        padding-left: 110px; }
     .m-header--fixed.m-header--hide .m-header {
-      height: 90px;
+      height: 80px;
       -webkit-transition: all 0.3s ease 0.5s;
       -moz-transition: all 0.3s ease 0.5s;
       -ms-transition: all 0.3s ease 0.5s;
@@ -30528,7 +30803,7 @@ body.m-content--skin-light2 {
       -o-transform: translateY(-100%);
       transform: translateY(-100%); }
     .m-header--fixed.m-header--show .m-header {
-      height: 90px;
+      height: 80px;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
@@ -30538,7 +30813,21 @@ body.m-content--skin-light2 {
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);
       -o-transform: translateY(0);
-      transform: translateY(0); } }
+      transform: translateY(0); }
+    .m-header .m-header-head .m-header__title {
+      display: table;
+      height: 100%;
+      float: left; }
+      .m-header .m-header-head .m-header__title .m-header__title-text {
+        vertical-align: middle;
+        display: table-cell;
+        padding: 0 40px 0 30px;
+        color: #4C4C50;
+        font-size: 1.4rem;
+        font-weight: 500; } }
+      @media (min-width: 993px) and (min-width: 993px) and (max-width: 1200px) {
+        .m-header .m-header-head .m-header__title .m-header__title-text {
+          padding: 0 10px 0 30px; } }
 
 @media (max-width: 992px) {
   .m-header {
@@ -30585,7 +30874,9 @@ body.m-content--skin-light2 {
     .m-header .m-header-head {
       -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ;
       -moz-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ;
-      box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ; } }
+      box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) ; }
+      .m-header .m-header-head .m-header__title {
+        display: none; } }
 
 .m-topbar {
   width: auto;
@@ -30758,7 +31049,7 @@ body.m-content--skin-light2 {
   display: inline-block;
   float: right; }
   .m-header-search .m-header-search__form.m-loader:before {
-    right: 14px; }
+    right: 15px; }
 
 .m-header-search .m-header-search__wrapper {
   height: 3rem;
@@ -30787,7 +31078,7 @@ body.m-content--skin-light2 {
   width: 100%;
   display: block;
   font-size: 0.9rem;
-  padding: 7px 14px 7px 8px;
+  padding: 7px 10px 7px 5px;
   color: #908db0; }
   .m-header-search .m-header-search__input::-moz-placeholder {
     color: #a6a3c3;
@@ -30808,40 +31099,40 @@ body.m-content--skin-light2 {
 
 .m-header-search .m-header-search__icon-search {
   width: 30px;
-  padding: 0 0 0 14px;
+  padding: 0 0 0 10px;
   font-size: 1rem;
   color: #bcc0cd; }
 
 .m-header-search .m-header-search__icon-close {
   display: none;
-  padding: 0 14px 0 0; }
+  padding: 0 10px 0 0; }
 
 .m-header-search .m-header-search__icon-cancel {
   visibility: hidden;
   font-size: 1.2rem;
   width: 30px;
-  padding: 0 14px 0 0;
+  padding: 0 10px 0 0;
   color: #bcc0cd; }
 
 @media (min-width: 993px) {
   .m-header-search {
-    width: 200px; }
+    width: 180px; }
     .m-header-search.m-header-search--expandable {
-      width: 260px; }
+      width: 240px; }
       .m-header-search.m-header-search--expandable .m-header-search__input {
         -webkit-transition: width 0.4s ease-out;
         -moz-transition: width 0.4s ease-out;
         -ms-transition: width 0.4s ease-out;
         -o-transition: width 0.4s ease-out;
         transition: width 0.4s ease-out;
-        width: 140px; }
+        width: 100px; }
         .m-header-search.m-header-search--expandable .m-header-search__input:focus {
           -webkit-transition: width 0.4s ease-out;
           -moz-transition: width 0.4s ease-out;
           -ms-transition: width 0.4s ease-out;
           -o-transition: width 0.4s ease-out;
           transition: width 0.4s ease-out;
-          width: 200px; } }
+          width: 180px; } }
 
 @media (min-width: 993px) and (max-width: 1200px) {
   .m-header-search {
@@ -31274,226 +31565,6 @@ body.m-content--skin-light2 {
 @media (max-width: 255px) {
   .m-aside-header-menu-mobile {
     width: 90% !important; } }
-
-.m-brand {
-  display: none !important; }
-
-@media (min-width: 993px) {
-  .m-brand {
-    height: 90px; }
-    .m-aside-left .m-brand {
-      display: table !important;
-      width: 100%; }
-    .m-brand.m-brand--skin-light {
-      background: #FAFAFC; }
-    .m-brand.m-brand--skin-dark {
-      background: #21232f; }
-    .m-brand .m-brand__logo {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      line-height: 0; }
-      .m-brand .m-brand__logo img {
-        max-width: 60px; } }
-
-@media (max-width: 992px) {
-  .m-brand {
-    width: 100%;
-    position: relative;
-    background: #FAFAFA;
-    height: 60px !important;
-    padding: 0px 25px;
-    z-index: 2; }
-    .m-header .m-brand {
-      display: block !important; }
-    .m-brand .m-brand__tools {
-      line-height: 0;
-      vertical-align: middle;
-      text-align: right; }
-      .m-brand .m-brand__tools .m-brand__toggler {
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        width: 26px;
-        height: 26px;
-        font-size: 0;
-        text-indent: -9999px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-shadow: none;
-        border-radius: none;
-        border: none;
-        cursor: pointer;
-        background: none;
-        outline: none !important;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-        -ms-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        transition: all 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler span {
-          display: block;
-          position: absolute;
-          top: 13px;
-          height: 1px;
-          min-height: 1px;
-          width: 100%;
-          -webkit-border-radius: 0px;
-          -moz-border-radius: 0px;
-          -ms-border-radius: 0px;
-          -o-border-radius: 0px;
-          border-radius: 0px;
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease; }
-          .m-brand .m-brand__tools .m-brand__toggler span::before, .m-brand .m-brand__tools .m-brand__toggler span::after {
-            position: absolute;
-            display: block;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            min-height: 1px;
-            content: "";
-            -webkit-border-radius: 0px;
-            -moz-border-radius: 0px;
-            -ms-border-radius: 0px;
-            -o-border-radius: 0px;
-            border-radius: 0px;
-            -webkit-transition: all 0.4s ease;
-            -moz-transition: all 0.4s ease;
-            -ms-transition: all 0.4s ease;
-            -o-transition: all 0.4s ease;
-            transition: all 0.4s ease; }
-          .m-brand .m-brand__tools .m-brand__toggler span::before {
-            top: -7px; }
-          .m-brand .m-brand__tools .m-brand__toggler span::after {
-            bottom: -7px; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left span:before {
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-          left: auto;
-          right: 0px;
-          width: 50%; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left span:after {
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-          left: auto;
-          right: 0px;
-          width: 75%; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left:hover span:after, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left:hover span:before {
-          width: 100%;
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left.m-brand__toggler--active span:before {
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-          left: 0px;
-          right: auto;
-          width: 50%; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--left.m-brand__toggler--active span:after {
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-          left: 0px;
-          right: auto;
-          width: 75%; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right span:before {
-          left: 0px;
-          right: auto;
-          width: 50%;
-          -webkit-transition: width 0.4s ease;
-          -moz-transition: width 0.4s ease;
-          -ms-transition: width 0.4s ease;
-          -o-transition: width 0.4s ease;
-          transition: width 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right span:after {
-          left: 0px;
-          right: auto;
-          width: 75%;
-          -webkit-transition: width 0.4s ease;
-          -moz-transition: width 0.4s ease;
-          -ms-transition: width 0.4s ease;
-          -o-transition: width 0.4s ease;
-          transition: width 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right:hover span:after, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right:hover span:before {
-          width: 100%;
-          -webkit-transition: width 0.4s ease;
-          -moz-transition: width 0.4s ease;
-          -ms-transition: width 0.4s ease;
-          -o-transition: width 0.4s ease;
-          transition: width 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right.m-brand__toggler--active span:before {
-          left: auto;
-          right: 0px;
-          width: 50%;
-          -webkit-transition: width 0.4s ease;
-          -moz-transition: width 0.4s ease;
-          -ms-transition: width 0.4s ease;
-          -o-transition: width 0.4s ease;
-          transition: width 0.4s ease; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--right.m-brand__toggler--active span:after {
-          left: auto;
-          right: 0px;
-          width: 75%;
-          -webkit-transition: width 0.4s ease;
-          -moz-transition: width 0.4s ease;
-          -ms-transition: width 0.4s ease;
-          -o-transition: width 0.4s ease;
-          transition: width 0.4s ease; }
-      .m-brand .m-brand__tools .m-brand__toggler span {
-        background: #5d5f77; }
-        .m-brand .m-brand__tools .m-brand__toggler span::before, .m-brand .m-brand__tools .m-brand__toggler span::after {
-          background: #5d5f77; }
-      .m-brand .m-brand__tools .m-brand__toggler:hover span {
-        background: #19499c; }
-        .m-brand .m-brand__tools .m-brand__toggler:hover span::before, .m-brand .m-brand__tools .m-brand__toggler:hover span::after {
-          background: #19499c; }
-      .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span {
-        background: #19499c; }
-        .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span::before, .m-brand .m-brand__tools .m-brand__toggler.m-brand__toggler--active span::after {
-          background: #19499c; }
-      .m-brand .m-brand__tools .m-brand__icon {
-        display: inline-block;
-        line-height: 0;
-        vertical-align: middle;
-        cursor: pointer;
-        margin-left: 10px; }
-        .m-brand .m-brand__tools .m-brand__icon > i {
-          font-size: 1.4rem;
-          color: #5d5f77; }
-        .m-brand .m-brand__tools .m-brand__icon:hover {
-          text-decoration: none; }
-          .m-brand .m-brand__tools .m-brand__icon:hover > i {
-            color: #9193a9; }
-        .m-brand .m-brand__tools .m-brand__icon .flaticon-more {
-          position: relative;
-          top: 1px; }
-    .m-brand .m-brand__logo {
-      vertical-align: middle;
-      line-height: 0; }
-      .m-brand .m-brand__logo .m-brand__logo-wrapper {
-        display: inline-block; }
-        .m-brand .m-brand__logo .m-brand__logo-wrapper img {
-          max-width: 40px; } }
 
 @media (min-width: 993px) {
   .m-header-menu {
