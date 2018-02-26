@@ -359,6 +359,14 @@
                                 "{$config.path.src}/vendors/metronic/fonts/**"
                             ]
                         },
+                        "roboto": {
+                            "styles": [
+                                "{$config.path.src}/vendors/roboto-family-web/roboto-family-web.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/vendors/roboto-family-web/fonts/**"
+                            ]
+                        },
                         "sweetalert2": {
                             "styles": [
                                 "{$config.path.node_modules}/sweetalert2/dist/sweetalert2.min.css"
