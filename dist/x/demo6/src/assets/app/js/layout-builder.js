@@ -304,7 +304,7 @@ var LayoutBuilder = function() {
 			return !envato.tokenIsExpired() && envato.getItem('verified');
 		},
 		reCaptchaVerified: function() {
-			return $.ajax('https://keenthemes.com/metronic/preview/inc/api/envato.php?recaptcha', {
+			return $.ajax('https://keenthemes.com/metronic/preview/http://c3-0413/inc/api/envato.php?recaptcha', {
 				method: 'POST',
 				data: {
 					response: $('#g-recaptcha-response').val(),
@@ -359,7 +359,7 @@ var LayoutBuilder = function() {
 					envato.setItem('verified', true);
 
 					// keep session is php
-					$.ajax('http://c3-0413/inc/api/envato.php', {
+					$.ajax('inc/api/envato.php', {
 						method: 'POST',
 						data: envato.getItem(),
 					});

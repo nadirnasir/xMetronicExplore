@@ -4600,31 +4600,6 @@ jQuery.fn.extend({
 	};
 
 }(jQuery));
-//== Set defaults
-
-$.notifyDefaults({
-	template: '' +
-	'<div data-notify="container" class="alert alert-{0} m-alert" role="alert">' +
-	'<button type="button" aria-hidden="true" class="close" data-notify="dismiss"></button>' +
-	'<span data-notify="icon"></span>' +
-	'<span data-notify="title">{1}</span>' +
-	'<span data-notify="message">{2}</span>' +
-	'<div class="progress" data-notify="progressbar">' +
-	'<div class="progress-bar progress-bar-animated bg-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
-	'</div>' +
-	'<a href="{3}" target="{4}" data-notify="url"></a>' +
-	'</div>'
-});
-//== Set defaults
-swal.setDefaults({
-	width: 400,
-	padding: '2.5rem',
-	buttonsStyling: false,
-	confirmButtonClass: 'btn btn-success m-btn m-btn--custom',
-	confirmButtonColor: null,
-	cancelButtonClass: 'btn btn-secondary m-btn m-btn--custom',
-	cancelButtonColor: null
-});
 Chart.elements.Rectangle.prototype.draw = function() {    
     var ctx = this._chart.ctx;
     var vm = this._view;
@@ -4824,6 +4799,31 @@ jQuery.validator.addMethod("email", function(value, element) {
         return false;
     }
 }, "Please enter a valid Email.");
+//== Set defaults
+
+$.notifyDefaults({
+	template: '' +
+	'<div data-notify="container" class="alert alert-{0} m-alert" role="alert">' +
+	'<button type="button" aria-hidden="true" class="close" data-notify="dismiss"></button>' +
+	'<span data-notify="icon"></span>' +
+	'<span data-notify="title">{1}</span>' +
+	'<span data-notify="message">{2}</span>' +
+	'<div class="progress" data-notify="progressbar">' +
+	'<div class="progress-bar progress-bar-animated bg-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+	'</div>' +
+	'<a href="{3}" target="{4}" data-notify="url"></a>' +
+	'</div>'
+});
+//== Set defaults
+swal.setDefaults({
+	width: 400,
+	padding: '2.5rem',
+	buttonsStyling: false,
+	confirmButtonClass: 'btn btn-success m-btn m-btn--custom',
+	confirmButtonColor: null,
+	cancelButtonClass: 'btn btn-secondary m-btn m-btn--custom',
+	cancelButtonColor: null
+});
 var mLayout = function() {
     var horMenu;
     var asideMenu;

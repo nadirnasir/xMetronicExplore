@@ -14,7 +14,7 @@
             "demo_api_url": "http://c3-0413/"
         },
         "dist": [
-            "./../dist/x/**/src/assets/"
+            "./../dist/x/**/src/assets"
         ]
     },
     "build": {
@@ -361,10 +361,10 @@
                         },
                         "roboto": {
                             "styles": [
-                                "{$config.path.src}/vendors/roboto-family-web/roboto-family-web.css"
+                                "{$config.path.src}/vendors/roboto/styles.css"
                             ],
                             "fonts": [
-                                "{$config.path.src}/vendors/roboto-family-web/fonts/**"
+                                "{$config.path.src}/vendors/roboto/fonts/**"
                             ]
                         },
                         "sweetalert2": {
