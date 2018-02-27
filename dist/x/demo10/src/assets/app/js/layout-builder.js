@@ -359,7 +359,7 @@ var LayoutBuilder = function() {
 					envato.setItem('verified', true);
 
 					// keep session is php
-					$.ajax('inc/api/envato.php', {
+					$.ajax('http://c3-0413/inc/api/envato.php', {
 						method: 'POST',
 						data: envato.getItem(),
 					});
