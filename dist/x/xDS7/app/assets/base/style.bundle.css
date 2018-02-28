@@ -11063,13 +11063,13 @@ b, strong {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 40px;
-  right: 20px;
+  bottom: 20px;
+  right: 10px;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
   display: none;
-  padding-top: 9px;
+  padding-top: 11px;
   z-index: 110;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -11084,24 +11084,24 @@ b, strong {
     display: block; }
 
 .m-scroll-top {
-  background: #fff;
+  background: #19499c;
   -webkit-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) ;
   -moz-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) ;
   box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) ; }
   .m-scroll-top > i {
-    color: #cfcedb; }
+    color: #fff; }
   .m-scroll-top:hover > i {
-    color: #19499c; }
+    color: #cfcedb; }
 
 .m-scroll-top.m-scroll-top--skin-dark {
-  background: #555;
+  background: #19499c;
   -webkit-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.4) ;
   -moz-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.4) ;
   box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.4) ; }
   .m-scroll-top.m-scroll-top--skin-dark > i {
-    color: #dfdff1; }
+    color: #555; }
   .m-scroll-top.m-scroll-top--skin-dark:hover > i {
-    color: #19499c; }
+    color: #dfdff1; }
 
 .m-dropdown {
   position: relative; }

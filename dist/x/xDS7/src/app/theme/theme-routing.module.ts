@@ -14,8 +14,16 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/subheader--type-search\/index\/index.module#IndexModule"
             },
             {
+                "path": "leads",
+                "loadChildren": ".\/pages\/default\/leads\/leads.module#LeadsModule"
+            },
+            {
                 "path": "inner",
                 "loadChildren": ".\/pages\/default\/inner\/inner.module#InnerModule"
+            },
+            {
+                "path": "blank",
+                "loadChildren": ".\/pages\/default\/blank\/blank.module#BlankModule"
             },
             {
                 "path": "profile",

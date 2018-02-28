@@ -10,13 +10,13 @@
         width: 40px;
         height: 40px;
         position: fixed;
-        bottom: 40px;  
-        right: 20px;
+        bottom: 20px;  
+        right: 10px;
         cursor: pointer;
         text-align: center;
         vertical-align: middle;
         display: none;
-        padding-top: 9px;
+        padding-top: 11px;
         z-index: 110;
         
         @include border-radius(100%);
@@ -39,16 +39,16 @@
 @mixin m-build-component--nav-scroll-top-skin($layout, $skin) {
     
     @include component-skin(m-scroll-top, $skin) {        
-        background: array-get($layout, bg-color);
+        background: get-brand-color();
         @include shadow(get-shadow($skin));
 
         > i {
-            color: get-color($skin, icon);
+            color: array-get($layout, bg-color);
         }
 
         &:hover {
             > i {
-                color: get-brand-color();
+                color: get-color($skin, icon);
             } 
         }
     }

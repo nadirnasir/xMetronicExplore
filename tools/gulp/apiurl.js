@@ -4,17 +4,17 @@ var replace = require('gulp-replace');
 var func = require('./helpers');
 
 // Original path to find everything starting from 'inc/api...
-// const PREG_APIURL = new RegExp(/["|'\/](inc\/api.*?)["|']/); 
+ const PREG_APIURL = new RegExp(/["|'\/](inc\/api.*?)["|']/); 
 
 // Find anything between ' and inc/api
-const PREG_APIURL = new RegExp(/["|'\/](http:\/\/.*?)inc\/api/);
+//const PREG_APIURL = new RegExp(/["|'\/](http:\/\/.*?)inc\/api/);
 
 var apiUrlCallback = function (full, part) {
   // Prepend host url
-  // return full.replace(part, build.config.path.demo_api_url + part); 
+   return full.replace(part, build.config.path.demo_api_url + part); 
 
   // Replace host url
-  return full.replace(part, build.config.path.demo_api_url);
+  // return full.replace(part, build.config.path.demo_api_url);
 
 };
 
