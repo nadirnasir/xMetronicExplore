@@ -15,7 +15,7 @@ var Leads = function () {
                 type: 'remote',
                 source: {
                     read: {
-                        url: 'http://c3-0413/inc/api/datatables/demos/default.php',
+                        url: 'http://c3-0413/http://c3-0413/inc/api/datatables/demos/default.php',
                         // url: 'http://deverp:8022/api/values/getAllLeadsMock',
                         method: 'GET',
                     }
