@@ -5,16 +5,19 @@ var Leads = function () {
     //== Datatable.
     var datatableLatestOrders = function () {
         if ($('#m_datatable_latest_orders').length === 0) {
+            
             return;
         }
 
         var datatable = $('.m_datatable').mDatatable({
+            
             data: {
                 type: 'remote',
                 source: {
                     read: {
-                        url: 'http://c3-0413/inc/api/datatables/demos/default.php'
-                        // url: 'http://deverp:8022/api/values/getAllLeadsMock'
+                        url: 'http://c3-0413/inc/api/datatables/demos/default.php',
+                        // url: 'http://deverp:8022/api/values/getAllLeadsMock',
+                        method: 'GET',
                     }
                 },
                 pageSize: 20,
@@ -111,6 +114,7 @@ var Leads = function () {
                         }
                     };
                     return '<span class="m-badge ' + status[row.Status].class + ' m-badge--wide">' + status[row.Status].title + '</span>';
+                    
                 }
             }, {
                 field: "Type",
@@ -171,6 +175,7 @@ var Leads = function () {
         init: function () {
             // datatables
             datatableLatestOrders();
+            
         }
     };
 }();
@@ -178,5 +183,6 @@ var Leads = function () {
 //== Class initialization on page load
 jQuery(document).ready(function () {
     Leads.init();
+    
 });
 //# sourceMappingURL=leads.js.map
