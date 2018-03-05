@@ -11,7 +11,7 @@
         "path": {
             "src": "./../src",
             "node_modules": "./node_modules",
-            "demo_api_url": "http://c3-0413/"
+            "demo_api_url": "http://c3-04as13/"
         },
         "dist": [
             "./../dist/x/**/src/assets"

@@ -15,7 +15,7 @@ export class LeadsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     var localStObject = JSON.parse(localStorage.getItem("currentUser"));
-    // console.log(localStObject.fullName)
+    console.log(localStObject.fullName)
     
   }
 
