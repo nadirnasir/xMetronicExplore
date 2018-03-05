@@ -35348,3 +35348,40 @@ body.m-content--skin-light2 {
       margin: 0 auto; } }
 
 /*# sourceMappingURL=style.bundle.css.map */
+
+
+.process-steps {
+  width: 150px;
+  position: relative;
+  background-color: lightgrey;
+  padding: 10px 30px;
+  margin-right: 20px;
+  display: inline-block;
+
+}
+.process-steps:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #f2f3f8;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.process-steps:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid lightgrey;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.process-steps:after:hover {
+  background: grey;
+}

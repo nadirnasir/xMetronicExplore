@@ -43,6 +43,17 @@ var Leads = function () {
             filterable: false,
 
             pagination: true,
+            
+            search: {
+                onEnter: false,
+                input: $('#searchDatatable'),
+                delay: 400
+             },
+            
+             toolbar: {
+                layout: ['pagination', 'info'],
+                placement: ['bottom']
+             },
 
             columns: [{
                 field: "headers",
