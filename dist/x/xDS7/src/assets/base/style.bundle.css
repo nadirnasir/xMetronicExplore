@@ -35385,3 +35385,19 @@ body.m-content--skin-light2 {
 .process-steps:after:hover {
   background: grey;
 }
+
+.m-subheader .m-subheader__daterange {
+  display: inline-block;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-radius: 2rem;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.m-subheader .m-subheader__daterange .m-subheader__daterange-label {
+  padding: 0;
+}
