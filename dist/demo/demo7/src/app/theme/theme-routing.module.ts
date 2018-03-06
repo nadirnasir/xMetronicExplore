@@ -18,6 +18,14 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/inner\/inner.module#InnerModule"
             },
             {
+                "path": "enquiry",
+                "loadChildren": ".\/pages\/default\/enquiry\/enquiry.module#EnquiryModule"
+            },
+            {
+                "path": "detail-enquiry",
+                "loadChildren": ".\/pages\/default\/detail-enquiry\/detail-enquiry.module#DetailEnquiryModule"
+            },
+            {
                 "path": "profile",
                 "loadChildren": ".\/pages\/default\/profile\/profile.module#ProfileModule"
             },

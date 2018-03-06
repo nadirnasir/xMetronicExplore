@@ -10,6 +10,13 @@ import { ScriptLoaderService } from "./_services/script-loader.service";
 import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
 
+// Separately added HttpClientModule and Rest Service other than the theme
+import { HttpClientModule } from '@angular/common/http';
+import { ApiConstant } from './core/api.constant';
+import { RestApiService } from './_services/http.service';
+import { LeadsDataHandler } from './_services/leads-data-handle.service';
+import { LeadsService } from './_services/leads/lead.service';
+
 @NgModule({
     declarations: [
         ThemeComponent,
@@ -22,8 +29,15 @@ import { AuthModule } from "./auth/auth.module";
         AppRoutingModule,
         ThemeRoutingModule,
         AuthModule,
+        HttpClientModule
     ],
-    providers: [ScriptLoaderService],
+    providers: [
+        ScriptLoaderService,
+        ApiConstant,
+        RestApiService,
+        LeadsService,
+        LeadsDataHandler
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

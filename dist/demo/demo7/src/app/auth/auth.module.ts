@@ -32,9 +32,9 @@ import { fakeBackendProvider } from './_helpers/index';
         AuthenticationService,
         UserService,
         // api backend simulation
-        fakeBackendProvider,
-        MockBackend,
-        BaseRequestOptions,
+        // fakeBackendProvider,
+        // MockBackend,
+        // BaseRequestOptions,
     ],
     entryComponents: [AlertComponent],
 })
