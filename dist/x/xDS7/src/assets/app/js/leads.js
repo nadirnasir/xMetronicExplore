@@ -218,10 +218,11 @@ var Leads = function () {
                 title = 'Today:';
                 range = start.format('MMM D');
             }
-            //  else if (label == 'Yesterday') {
-            //     title = 'Yesterday:';
-            //     range = start.format('MMM D');
-            // } else if (label == 'Last 7 Days') {
+             else if (label == 'Yesterday') {
+                title = 'Yesterday:';
+                range = start.format('MMM D');
+            } 
+            // else if (label == 'Last 7 Days') {
             //         title = label
             //         range = start.format('MMM D') + ' - ' + end.format('MMM D');
             // }
