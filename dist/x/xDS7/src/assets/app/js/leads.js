@@ -217,8 +217,7 @@ var Leads = function () {
             if ((end - start) < 100) {
                 title = 'Today:';
                 range = start.format('MMM D');
-            }
-             else if (label == 'Yesterday') {
+            } else if (label == 'Yesterday') {
                 title = 'Yesterday:';
                 range = start.format('MMM D');
             } 

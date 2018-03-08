@@ -1,9 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Routes, RouterModule} from '@angular/router';
-import {LayoutModule} from '../../../layouts/layout.module';
-import {DefaultComponent} from '../default.component';
-import {LeadsComponent} from './leads.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { LayoutModule } from '../../../layouts/layout.module';
+import { DefaultComponent } from '../default.component';
+import { LeadsComponent } from './leads.component';
+import { DatatableService } from '../../../../_services/datatable.service';
 
 const routes: Routes = [
   {
@@ -26,6 +27,9 @@ const routes: Routes = [
   ], declarations: [
     LeadsComponent,
   ],
+  providers: [
+    DatatableService
+  ]
 })
 export class LeadsModule {
 }

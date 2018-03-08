@@ -16,12 +16,12 @@ export class LeadsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     // accessing local storage to pass to datatable call
-    // var localStObject = JSON.parse(localStorage.getItem("currentUser"));
+    var localStObject = JSON.parse(localStorage.getItem("currentUser"));
     // console.log(localStObject.fullName)
-    var apiurl: string = 'http://deverp:8022/api/values/getAllLeadsMock'
 
-    // Initialize datatable 
-    this.datatable = (<any>$('.m_datatable')).mDatatable({
+    var apiurl: string = 'http://deverp:8022/api/values/getAllLeadsMock'
+    var leadStatus: string "open"
+    var options = {
 
       data: {
         type: 'remote',
@@ -30,7 +30,20 @@ export class LeadsComponent implements OnInit, AfterViewInit {
             // url: 'http://c3-0413/inc/api/datatables/demos/default.php',
             url: apiurl,
             method: 'GET',
-          }
+            headers: { // Custome Headers
+              // 'x-my-custom-header': 'some value',
+              // 'x-test-header': 'the value'.
+              Authorization: 'Bearer ' + localStObject.token
+            },
+            params: {
+              query: { // Custom Query parameters
+                // generalSearch: '',
+                from: 'fromDate',
+                to: 'toDate',
+                status: leadStatus
+              },
+            },
+          } // Read
         },
         pageSize: 2,
         saveState: {
@@ -68,7 +81,7 @@ export class LeadsComponent implements OnInit, AfterViewInit {
       },
       rows: {
         afterTemplate: function (row, data, index) {
-          console.log(data)
+          // console.log(data)
         },
 
       },
@@ -142,18 +155,22 @@ export class LeadsComponent implements OnInit, AfterViewInit {
               ';
         }
       }]
-    });
+    };
+
+    // Initialize datatable 
+    this.datatable = (<any>$('.m_datatable')).mDatatable(options);
+
+
   }
 
-  clickEvent(e) {
-    e.preventDefault();
-    console.log(e)
-  }
 
   ngAfterViewInit() {
+
+    // Load metronic specific javascript code
     this._script.loadScripts('app-leads',
       ['assets/app/js/leads.js']);
 
+    // Function to bind click function to btn-edit button in datatable
     let _self = this;
     this.datatable.on('m-datatable--on-layout-updated', function (e) {
       // console.log('m-datatable--on-layout-updated');
@@ -169,5 +186,14 @@ export class LeadsComponent implements OnInit, AfterViewInit {
 
     });
     this.datatable.row('1')
+
   }
+
+
+  // helper function to prevent default click behaviours
+  clickEvent(e) {
+    e.preventDefault();
+    console.log(e)
+  }
+
 }
