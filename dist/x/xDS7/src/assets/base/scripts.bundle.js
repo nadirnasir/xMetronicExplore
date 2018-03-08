@@ -2128,10 +2128,13 @@ $(document).ready(function() {
 					}
 					// deprecated in v5.0.7
 					ajaxParams.data['datatable'] = data;
-					ajaxParams.data = $.extend(true, ajaxParams.data, data, Plugin.getOption('data.source.read.params'));
+                    ajaxParams.data = $.extend(true, ajaxParams.data, data, Plugin.getOption('data.source.read.params'));
+                    
 				}
-
-				return $.ajax(ajaxParams).done(function(response, textStatus, jqXHR) {
+                // Nadir
+                console.log(ajaxParams)
+                // Nadir
+                return $.ajax(ajaxParams).done(function(response, textStatus, jqXHR) {
 					datatable.lastResponse = response;
 					// extendible data map callback for custom datasource
 					datatable.dataSet = datatable.originalDataSet = Plugin.dataMapCallback(response);
