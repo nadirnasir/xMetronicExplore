@@ -18,6 +18,10 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/leads\/leads.module#LeadsModule"
             },
             {
+                "path": "lead",
+                "loadChildren": ".\/pages\/default\/leads\/lead\/lead.module#LeadModule"
+            },
+            {
                 "path": "inner",
                 "loadChildren": ".\/pages\/default\/inner\/inner.module#InnerModule"
             },
