@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class LeadsComponent implements OnInit, AfterViewInit {
   datatable: any;
-  typeScriptVar: any = "tsvar";
 
   constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
+
   }
 
   ngOnInit() {
@@ -186,12 +186,11 @@ export class LeadsComponent implements OnInit, AfterViewInit {
       });
     });
 
-    this.datatable.on('m-datatable--on-check', function (e) {
-      console.log(e.target);
 
-    });
-    this.datatable.row('1')
+  }
 
+  ngOnDestroy() {
+    // window.angularComponent = null;
   }
 
 

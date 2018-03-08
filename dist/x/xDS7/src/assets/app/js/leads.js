@@ -226,7 +226,7 @@ var Leads = function () {
             //         range = start.format('MMM D') + ' - ' + end.format('MMM D');
             // }
             else {
-                title = label + ': '
+                title = ''
                 range = start.format('MMM D') + ' - ' + end.format('MMM D');
             }
 
@@ -270,9 +270,16 @@ var Leads = function () {
 //== Class initialization on page load
 jQuery(document).ready(function () {
     Leads.init();
-console.log(typeScriptVar)    
 });
 
+
 //# sourceMappingURL=leads.js.map
 
 //# sourceMappingURL=leads.js.map
+
+function callbackfunction(){   
+    // window['angularComponentRef'] might not yet be set here though
+    window['angularComponent'].zone.run(() => {
+      runThisFunctionFromOutside(); 
+    });
+  }
