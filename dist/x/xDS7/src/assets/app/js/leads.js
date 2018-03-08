@@ -270,8 +270,9 @@ var Leads = function () {
 //== Class initialization on page load
 jQuery(document).ready(function () {
     Leads.init();
-
+console.log(typeScriptVar)    
 });
+
 //# sourceMappingURL=leads.js.map
 
 //# sourceMappingURL=leads.js.map

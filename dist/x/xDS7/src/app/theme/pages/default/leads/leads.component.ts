@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LeadsComponent implements OnInit, AfterViewInit {
   datatable: any;
+  typeScriptVar: any = "tsvar";
+
   constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
   }
 
@@ -21,8 +23,8 @@ export class LeadsComponent implements OnInit, AfterViewInit {
 
     var apiurl: string = 'http://deverp:8022/api/values/getAllLeadsMock'
     var leadStatus: string = "open"
-    var options = {
 
+    var options = {
       data: {
         type: 'remote',
         source: {
@@ -36,11 +38,14 @@ export class LeadsComponent implements OnInit, AfterViewInit {
               Authorization: 'Bearer ' + localStObject.token
             },
             params: {
+              from: 'fromDate',
+              to: 'toDate',
+              status: leadStatus,
               query: { // Custom Query parameters
                 // generalSearch: '',
-                from: 'fromDate',
-                to: 'toDate',
-                status: leadStatus
+                // from: 'fromDate',
+                // to: 'toDate',
+                // status: leadStatus
               },
             },
           } // Read
