@@ -20,7 +20,7 @@ export class LeadsComponent implements OnInit, AfterViewInit {
     // console.log(localStObject.fullName)
 
     var apiurl: string = 'http://deverp:8022/api/values/getAllLeadsMock'
-    var leadStatus: string "open"
+    var leadStatus: string = "open"
     var options = {
 
       data: {
