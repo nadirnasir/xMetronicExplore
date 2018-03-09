@@ -19,6 +19,11 @@ const routes: Routes = [
             },
             {
                 "path": "lead",
+                redirectTo: '/leads',
+                pathMatch: 'full'
+            },
+            {
+                "path": "lead/:id",
                 "loadChildren": ".\/pages\/default\/leads\/lead\/lead.module#LeadModule"
             },
             {
