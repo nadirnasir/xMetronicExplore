@@ -2,7 +2,7 @@
 	<div class="d-flex align-items-center">
 		<div class="mr-auto">
 			<h3 class="m-subheader__title m-subheader__title--separator">
-				My Leads
+				Leads
 			</h3>
 			<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
 				<span class="m-subheader__daterange-label">
@@ -15,16 +15,34 @@
 			</span>
 			<div class="process m-subheader__breadcrumbs m-nav m-nav--inline">
 				<div class="process-steps">
-					Process steps
+					Open
+					<span class="m-badge m-badge--brand m-badge--wide">
+						{{ datatableRecordCount }}
+					</span>
 				</div>
 				<div class="process-steps">
-					Process steps
+					Analyzing
+					<span class="m-badge m-badge--metal m-badge--wide">
+						0
+					</span>
 				</div>
 				<div class="process-steps">
-					Process steps
+					Negotiating
+					<span class="m-badge m-badge--metal m-badge--wide">
+						0
+					</span>
 				</div>
 				<div class="process-steps">
-					Process steps
+					Won
+					<span class="m-badge m-badge--metal m-badge--wide">
+						0
+					</span>
+				</div>
+				<div class="process-steps">
+					Lost
+					<span class="m-badge m-badge--metal m-badge--wide">
+						0
+					</span>
 				</div>
 			</div>
 			<!-- <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
@@ -70,21 +88,21 @@
 
 							<h3 class="m-portlet__head-text">
 								Exclusive Datatable Plugin
-								
+
 							</h3>
-							
+
 						</div>
 					</div>
 					<div class="form-group m-form__group float-right">
-							<div class="m-input-icon m-input-icon--left m-input-icon--left">
-								<input class="form-control m-input m-input--solid" placeholder="Tags" type="text">
-								<span class="m-input-icon__icon m-input-icon__icon--left">
-									<span>
-										<i class="la la-search"></i>
-									</span>
+						<div class="m-input-icon m-input-icon--left m-input-icon--left">
+							<input class="form-control m-input m-input--solid" placeholder="Tags" type="text">
+							<span class="m-input-icon__icon m-input-icon__icon--left">
+								<span>
+									<i class="la la-search"></i>
 								</span>
-							</div>
+							</span>
 						</div>
+					</div>
 				</div>
 				<div class="m-portlet__body">
 					<!--begin: Datatable -->

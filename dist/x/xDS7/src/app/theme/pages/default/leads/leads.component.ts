@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { Helpers } from '../../../../helpers';
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
 import { Router } from '@angular/router';
@@ -10,13 +10,18 @@ import { Router } from '@angular/router';
 })
 export class LeadsComponent implements OnInit, AfterViewInit {
   datatable: any;
+  datatableRecordCount: any
 
-  constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
+  constructor(
+    private _script: ScriptLoaderService,
+    private elRef: ElementRef,
+    private router: Router,
+    private _renderer: Renderer2
+  ) {
 
   }
 
   ngOnInit() {
-
     // accessing local storage to pass to datatable call
     var localStObject = JSON.parse(localStorage.getItem("currentUser"));
     // console.log(localStObject.fullName)
@@ -50,10 +55,10 @@ export class LeadsComponent implements OnInit, AfterViewInit {
             },
           } // Read
         },
-        pageSize: 2,
+        pageSize: 200,
         saveState: {
           cookie: false,
-          webstorage: true
+          webstorage: false
         },
         serverPaging: false,
         serverFiltering: false,
@@ -85,8 +90,19 @@ export class LeadsComponent implements OnInit, AfterViewInit {
         placement: ['bottom']
       },
       rows: {
+        beforeTemplate: function (row, data, index) {
+          row.attr("id", data.InquiryNo)
+          //console.log(row.attr("id"))
+        },
         afterTemplate: function (row, data, index) {
-          // console.log(data)
+          // console.log((row.prev()).attr("id"));
+          // var thisRowID = row.attr("id");
+          // var prevRowID = (row.prev()).attr("id");
+          // (thisRowID == prevRowID) ? console.log("true") : console.log("false");
+          var thisRowID = row.attr("id");
+          var prevRowID = (row.prev()).attr("id");
+          // (thisRowID == prevRowID) ? row.addClass("d-none") : console.log("false");
+
         },
 
       },
@@ -170,6 +186,7 @@ export class LeadsComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit() {
+    //console.log("Renderer:" + this._renderer.data)
 
     // Load metronic specific javascript code
     this._script.loadScripts('app-leads',
@@ -181,12 +198,16 @@ export class LeadsComponent implements OnInit, AfterViewInit {
       // console.log('m-datatable--on-layout-updated');
       // console.log(this)
       // $(_self.elRef.nativeElement).find('.btn-edit').click(_self.clickEvent); 
-      $(_self.elRef.nativeElement).find('.btn-edit').click(function () {
-        _self.router.navigate(['/lead']);
+      // $(_self.elRef.nativeElement).find('.btn-edit').click(function () {
+      //   _self.router.navigate(['/lead']);
+      // });
+      $(_self.elRef.nativeElement).find('.m-datatable__row').click(function () {
+        //console.log(this.attributes.id.value)
+        _self.router.navigate(['/lead'], { queryParams: { id: this.attributes.id.value } });
+        // _self.router.navigate(['/lead/' + this.attributes.id.value]);
       });
+      _self.datatableRecordCount = 144
     });
-
-
   }
 
   ngOnDestroy() {
