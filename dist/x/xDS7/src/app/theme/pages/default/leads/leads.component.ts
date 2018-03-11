@@ -338,23 +338,23 @@ export class LeadsComponent implements OnInit {
   temp = [];
   // row which is selected
   selected = [];
-  columns = [
-    { prop: 'InquiryNo' },
-    { prop: 'Quantity' },
-    // { prop: 'QualityCode' },
-    // { prop: 'ColorCode' },
-    // { prop: 'PatternCode' },
-    // { prop: 'StyleCode' },
-    { prop: 'Post' },
-    // { prop: 'PostStatus' },
-    { prop: 'CustCode' },
-    { prop: 'Unit' },
-    { prop: 'CustomerName' },
-    { prop: 'InquireDate' },
-    // { prop: 'LeadTime' },
-    // { prop: 'ShipDate' },
-    { prop: 'ProductDesc' }
-  ];
+  // columns = [
+  //   { prop: 'InquiryNo' },
+  //   { prop: 'Quantity' },
+  //   // { prop: 'QualityCode' },
+  //   // { prop: 'ColorCode' },
+  //   // { prop: 'PatternCode' },
+  //   // { prop: 'StyleCode' },
+  //   { prop: 'Post' },
+  //   // { prop: 'PostStatus' },
+  //   { prop: 'CustCode' },
+  //   { prop: 'Unit' },
+  //   { prop: 'CustomerName' },
+  //   { prop: 'InquireDate' },
+  //   // { prop: 'LeadTime' },
+  //   // { prop: 'ShipDate' },
+  //   { prop: 'ProductDesc' }
+  // ];
 
   constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
     this.temp = [...this.obj.data];
