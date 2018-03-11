@@ -33,12 +33,12 @@
 		<!-- first column -->
 		<div class="col-lg-3 pr-lg-1">
 			<!--begin::Portlet-->
-			<div class="m-portlet m-portlet--mobile m-portlet--sortable">
-				<div class="m-portlet__head">
+			<div class="m-portlet m-portlet--mobile m-portlet--sortable" *ngIf="leadResponse">
+				<div class="m-portlet__head" *ngFor="let res of leadResponse">
 					<div class="m-portlet__head-caption">
 						<div class="m-portlet__head-title">
 							<h3 class="m-portlet__head-text">
-								Account Information
+								{{ res }}
 							</h3>
 						</div>
 					</div>
@@ -218,9 +218,14 @@
 					</div>
 				</div>
 				<div class="m-portlet__body">
-					<ul class="table_type_rows pl-0">
+					<div class="text-center" *ngIf="!leadResponse">
+						<div class="m-loader m-loader--lg m-loader--warning" style="width: 30px; display: inline-block;"></div>
+					</div>
+
+					<ul class="table_type_rows pl-0" *ngIf="leadResponse">
+
 						<!-- row one -->
-						<li class="row d-flex align-items-center">
+						<li class="row d-flex align-items-center" *ngFor="let res of leadResponse">
 							<div class="col-md-6 col-4 pr-0">
 								<div class="pt-4 pb-4">
 									<h5>3 Days</h5>
@@ -229,7 +234,7 @@
 							</div>
 							<div class="col-md-3 col-4 pl-0 pr-0">
 								<div class="pt-4 pb-4">
-									<h5>19,220</h5>
+									<h5>{{ res.Quantity }}</h5>
 									<span>pieces -- PCS</span>
 								</div>
 							</div>
@@ -242,51 +247,6 @@
 						</li>
 						<!-- row one ends -->
 
-						<!-- row two -->
-						<li class="row d-flex align-items-center">
-							<div class="col-md-6 col-4 pr-0">
-								<div class="pt-4 pb-4">
-									<h5>3 Days</h5>
-									<span>lead time</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-4 pl-0 pr-0">
-								<div class="pt-4 pb-4">
-									<h5>19,220</h5>
-									<span>pieces -- PCS</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-4 pl-0">
-								<div class="pt-4 pb-4 text-right">
-									<h5>--</h5>
-									<span>est. value</span>
-								</div>
-							</div>
-						</li>
-						<!-- row two ends -->
-
-						<!-- row three -->
-						<li class="row d-flex align-items-center">
-							<div class="col-md-6 col-4 pr-0">
-								<div class="pt-4 pb-4">
-									<h5>3 Days</h5>
-									<span>lead time</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-4 pl-0 pr-0">
-								<div class="pt-4 pb-4">
-									<h5>19,220</h5>
-									<span>pieces -- PCS</span>
-								</div>
-							</div>
-							<div class="col-md-3 col-4 pl-0">
-								<div class="pt-4 pb-4 text-right">
-									<h5>--</h5>
-									<span>est. value</span>
-								</div>
-							</div>
-						</li>
-						<!-- row three ends -->
 					</ul>
 				</div>
 			</div>

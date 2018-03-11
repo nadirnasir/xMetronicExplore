@@ -1,9 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Routes, RouterModule} from '@angular/router';
-import {LayoutModule} from '../../../layouts/layout.module';
-import {DefaultComponent} from '../default.component';
-import {LeadsComponent} from './leads.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { LayoutModule } from '../../../layouts/layout.module';
+import { DefaultComponent } from '../default.component';
+import { LeadsComponent } from './leads.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule.forChild(routes), LayoutModule,
+    CommonModule, RouterModule.forChild(routes), LayoutModule, NgxDatatableModule
   ], exports: [
     RouterModule,
   ], declarations: [

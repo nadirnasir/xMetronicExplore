@@ -86,9 +86,76 @@
 							</div>
 						</div>
 				</div>
-				<div class="m-portlet__body">
+				<div>
 					<!--begin: Datatable -->
-					<div class="m_datatable" id="m_datatable_latest_orders"></div>
+					<!-- <div class="text-center">
+						<input
+							type='text'
+							style='padding:8px;margin:15px auto;width:30%;'
+							placeholder='Type to filter Inquiry Number...'
+							(keyup)='updateFilter($event)'
+						/>
+					</div> -->
+
+					<div class="m-input-icon m-input-icon--right">
+						<input 
+							class="form-control m-input"
+							style='height:60px;border-radius:0;'
+							placeholder="Type to filter Inquiry Number..." 
+							type="text"
+							(keyup)='updateFilter($event)'
+						>
+						<span class="m-input-icon__icon m-input-icon__icon--right">
+							<span>
+								<i class="la la-search"></i>
+							</span>
+						</span>
+					</div>
+					
+					<div>
+						<ngx-datatable 
+							#table
+							class='material striped'
+							[columns]="columns"
+							[columnMode]="'force'"
+							[headerHeight]="50"
+							[footerHeight]="50"
+							[rowHeight]="'auto'"
+							[limit]="10"
+							[selected]="selected"
+							[selectionType]="'single'"
+							(select)='onSelect($event)'
+							[rows]='rows'>
+						</ngx-datatable>
+					</div>
+
+
+					<!-- another method -->
+					<!-- <div>
+						<ngx-datatable 
+							#table
+							class='material striped'
+							[columns]="columns"
+							[columnMode]="'force'"
+							[headerHeight]="50"
+							[footerHeight]="50"
+							[limit]="10"
+							[scrollbarV]="true"
+        					[scrollbarH]="true"
+							[selected]="selected"
+							[selectionType]="'single'"
+							(select)='onSelect($event)'
+							[rows]='rows'>
+							<ngx-datatable-column name="Inquiry No" [width]="30" prop="InquiryNo"></ngx-datatable-column>
+							<ngx-datatable-column name="Quantity" [width]="30" prop="Quantity"></ngx-datatable-column>
+							<ngx-datatable-column name="Post" [width]="30" prop="Post"></ngx-datatable-column>
+							<ngx-datatable-column name="CustCode" [width]="30" prop="CustCode"></ngx-datatable-column>
+							<ngx-datatable-column name="Unit" [width]="30" prop="Unit"></ngx-datatable-column>
+							<ngx-datatable-column name="CustomerName" [width]="100" prop="CustomerName"></ngx-datatable-column>
+							<ngx-datatable-column name="InquireDate" [width]="60" prop="InquireDate"></ngx-datatable-column>
+							<ngx-datatable-column name="ProductDesc" [width]="300" prop="ProductDesc"></ngx-datatable-column>
+						</ngx-datatable>
+					</div> -->
 					<!--end: Datatable -->
 				</div>
 			</div>

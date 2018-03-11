@@ -1,12 +1,10 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, Pipe, PipeTransform } from '@angular/core';
 import { Helpers } from '../../../../../helpers';
 import { ScriptLoaderService } from '../../../../../_services/script-loader.service';
 import { RestApiService } from '../../../../../_services/http.service';
 import { LeadsDataHandler } from '../../../../../_services/leads-data-handle.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LeadsService } from '../../../../../_services/leads/lead.service';
-
-
 
 @Component({
     selector: "lead",
@@ -16,17 +14,38 @@ import { LeadsService } from '../../../../../_services/leads/lead.service';
 })
 export class LeadComponent implements OnInit, AfterViewInit {
 
-    leadId: String;
+    leadId: string;
     leadResponse: any;
+    idthroughRoute: string;
+    total: any;
 
-    constructor(private _script: ScriptLoaderService, private http: RestApiService, private leadService: LeadsService, private leadData: LeadsDataHandler, private router: Router, ) {
-        // getting the specific lead Id on which the user has clicked
-        this.leadId = this.leadData.leadId;
-        console.log(this.leadId);
+    constructor(private _script: ScriptLoaderService, private http: RestApiService, private leadService: LeadsService, private leadData: LeadsDataHandler, private router: Router, private route: ActivatedRoute) {
+        this.route.params.subscribe(
+            params => this.getLead(params['id'])
+        );
+    }
 
-        // checking if the leadId is undefined if so then it will call goBack() and send the user back to main enquiry page or it will call detailEnquiryCall() and hit the api for getting specipfic detial of a lead
-        // this.leadId === undefined ? this.goBack() : this.leadPageCall();
-        this.leadId === undefined ? this.leadPageCall() : this.leadPageCall();
+    getLead(id: string) {
+        // for navigation from the leads page use
+        // this.router.navigate(['lead', id])
+        // our parameter that the browser is reading
+        console.log(id);
+
+        this.leadService.getLead(id)
+            .subscribe(
+                async (res: any) => {
+                    console.log(`Here I am also accessable from leads service: ${id}`);
+                    console.log(res);
+                    this.leadResponse = await res.data;
+                    this.total = this.leadResponse.reduce((a: any, b: any) => {
+                        a = a + b;
+                    }, 0);
+                    console.log(this.total);
+                },
+                (err) => {
+                    console.log(err);
+                }
+            );
     }
 
     ngOnInit() { }
@@ -40,21 +59,6 @@ export class LeadComponent implements OnInit, AfterViewInit {
     goBack() {
         // if the link is directly accessed or with no parameters then we will be sending the user to enquiry page
         this.router.navigate(['/leads']);
-    }
-
-    // 
-    leadPageCall() {
-        this.leadService.getSpecificLead(this.leadId)
-            .subscribe(
-                async (res: any) => {
-                    console.log(`Here I am also accessable from leads service: ${this.leadId}`);
-                    console.log(res);
-                    this.leadResponse = await res;
-                },
-                (err) => {
-                    console.log(err);
-                }
-            );
     }
 
 }

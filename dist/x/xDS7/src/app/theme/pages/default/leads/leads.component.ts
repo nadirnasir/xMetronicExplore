@@ -1,173 +1,386 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { Helpers } from '../../../../helpers';
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
 import { Router } from '@angular/router';
+import { DatatableComponent } from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'app-leads',
   templateUrl: './leads.component.html',
+  styleUrls: ["./leads.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-export class LeadsComponent implements OnInit, AfterViewInit {
-  datatable: any;
-  constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
-  }
+export class LeadsComponent implements OnInit {
 
-  ngOnInit() {
+  @ViewChild(DatatableComponent) table: DatatableComponent;
 
-    // accessing local storage to pass to datatable call
-    // var localStObject = JSON.parse(localStorage.getItem("currentUser"));
-    // console.log(localStObject.fullName)
-    var apiurl: string = 'http://deverp:8022/api/values/getAllLeadsMock'
-
-    // Initialize datatable 
-    this.datatable = (<any>$('.m_datatable')).mDatatable({
-
-      data: {
-        type: 'remote',
-        source: {
-          read: {
-            // url: 'http://c3-0413/inc/api/datatables/demos/default.php',
-            url: apiurl,
-            method: 'GET',
-          }
-        },
-        pageSize: 2,
-        saveState: {
-          cookie: false,
-          webstorage: true
-        },
-        serverPaging: false,
-        serverFiltering: false,
-        serverSorting: false
-      },
-
-      layout: {
-        theme: 'default',
-        class: '',
-        scroll: false,
-        height: null,
-        footer: false
-      },
-
-      sortable: true,
-
-      filterable: false,
-
-      pagination: true,
-
-      search: {
-        onEnter: false,
-        input: $('#searchDatatable'),
-        delay: 400
-      },
-
-      toolbar: {
-        layout: ['pagination', 'info'],
-        placement: ['bottom']
-      },
-      rows: {
-        afterTemplate: function (row, data, index) {
-          console.log(data)
-        },
-
-      },
-      columns: [{
-        field: "headers",
-        title: "#",
-        sortable: false,
-        width: 40,
-        selector: {
-          class: 'm-checkbox--solid m-checkbox--brand'
-        },
-        textAlign: 'center'
-      }, {
-        field: "InquiryNo",
-        title: "Lead #",
-        sortable: 'asc',
-        filterable: false,
-        width: 70,
-        // template: '{{OrderID}} - {{ShipCountry}}'
-        // template: function(row) {
-        //   console.log(row);
-        //   // add row.idKey to your button
-        //   // <a data-id="row.idKey">Edit</a>
-        // },
-      }, {
-        field: "CustomerName",
-        title: "Account",
-        sortable: 'asc',
-        filterable: false,
-        width: 200,
-        // template: '<a routerLink="/leads" href="/leads?id={{InquiryNo}}">{{CustomerName}}</a>'
-      }, {
-        field: "ProductDesc",
-        title: "Lead Information",
-        width: 350,
-        responsive: {
-          visible: 'lg'
-        },
-        template: '{{Quantity}} - {{ProductDesc}}'
-      }, {
-        field: "InquireDate",
-        title: "Inquired",
-        format: 'MMM DD YYYY' // need to look into this
+  obj = {
+    meta: {
+      page: "1",
+      pages: "1",
+      perpage: "-1",
+      total: 114,
+      sort: "asc",
+      field: "InquiryNo"
+    },
+    data: [
+      {
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Hand Towel"
       },
       {
-        field: "Actions",
-        width: 110,
-        title: "Actions",
-        sortable: false,
-        overflow: 'visible',
-        template: function (row) {
-          var dropup = (row.getDatatable().getPageSize() - row.getIndex()) <= 4 ? 'dropup' : '';
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Towel"
+      },
+      {
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Wash Cloth"
+      },
+      {
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Sheett5"
+      },
+      {
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Non Terry Kitchen Towel"
+      },
+      {
+        InquiryNo: 38090,
+        Quantity: "27000",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "2/6/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Window Pane Solid KT"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Hand Towel"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Towel"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Wash Cloth"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Sheett5"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Non Terry Kitchen Towel"
+      },
+      {
+        InquiryNo: 38303,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Window Pane Solid KT"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Hand Towel"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Towel"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Wash Cloth"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Terry Bath Sheett5"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Non Terry Kitchen Towel"
+      },
+      {
+        InquiryNo: 38304,
+        Quantity: "10",
+        QualityCode: null,
+        ColorCode: null,
+        PatternCode: null,
+        StyleCode: null,
+        Post: "U",
+        PostStatus: null,
+        CustCode: 0,
+        Unit: 1,
+        CustomerName: "WAL-MART STORES INC.",
+        InquireDate: "8/1/2017",
+        LeadTime: null,
+        ShipDate: null,
+        ProductDesc: "Window Pane Solid KT"
+      }
+    ]
+  };
+  // datatable rows
+  rows = [];
+  // copy of rows data to filter
+  temp = [];
+  // row which is selected
+  selected = [];
+  columns = [
+    { prop: 'InquiryNo' },
+    { prop: 'Quantity' },
+    // { prop: 'QualityCode' },
+    // { prop: 'ColorCode' },
+    // { prop: 'PatternCode' },
+    // { prop: 'StyleCode' },
+    { prop: 'Post' },
+    // { prop: 'PostStatus' },
+    { prop: 'CustCode' },
+    { prop: 'Unit' },
+    { prop: 'CustomerName' },
+    { prop: 'InquireDate' },
+    // { prop: 'LeadTime' },
+    // { prop: 'ShipDate' },
+    { prop: 'ProductDesc' }
+  ];
 
-          return '\
-                  <div class="dropdown ' + dropup + '">\
-                      <a href="#" class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown">\
-                          <i class="la la-ellipsis-h"></i>\
-                      </a>\
-                      <div class="dropdown-menu dropdown-menu-right">\
-                          <a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>\
-                          <a class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>\
-                          <a class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>\
-                      </div>\
-                  </div>\
-                  <a class="m-portlet__nav-link btn btn-edit m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">\
-                      <i class="la la-arrow-right"></i>\
-                  </a>\
-                  <a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="Delete">\
-                      <i class="la la-trash"></i>\
-                  </a>\
-              ';
-        }
-      }]
-    });
+  constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router) {
+    this.temp = [...this.obj.data];
+    this.rows = this.obj.data;
   }
 
-  clickEvent(e) {
-    e.preventDefault();
-    console.log(e)
+  ngOnInit() { }
+
+  updateFilter(event) {
+    const val = event.target.value.toLowerCase();
+
+    // filter our data
+    const temp = this.temp.filter(function (d) {
+      return d.InquiryNo.toString().indexOf(val) !== -1 || !val;
+    });
+
+    // update the rows
+    this.rows = temp;
+    // Whenever the filter changes, always go back to the first page
+    this.table.offset = 0;
   }
 
-  ngAfterViewInit() {
-    this._script.loadScripts('app-leads',
-      ['assets/app/js/leads.js']);
-
-    let _self = this;
-    this.datatable.on('m-datatable--on-layout-updated', function (e) {
-      // console.log('m-datatable--on-layout-updated');
-      // console.log(this)
-      // $(_self.elRef.nativeElement).find('.btn-edit').click(_self.clickEvent); 
-      $(_self.elRef.nativeElement).find('.btn-edit').click(function () {
-        _self.router.navigate(['/lead']);
-      });
-    });
-
-    this.datatable.on('m-datatable--on-check', function (e) {
-      console.log(e.target);
-
-    });
-    this.datatable.row('1')
+  onSelect({ selected }) {
+    // console.log('Select Event', selected, this.selected);
+    console.log(this.selected[0].InquiryNo);
+    const inquiryNumber = this.selected[0].InquiryNo;
+    this.router.navigate(['/lead', inquiryNumber]);
   }
 }
