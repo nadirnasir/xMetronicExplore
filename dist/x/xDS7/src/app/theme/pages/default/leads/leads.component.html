@@ -87,15 +87,8 @@
 						</div>
 				</div>
 				<div>
-					<!--begin: Datatable -->
-					<!-- <div class="text-center">
-						<input
-							type='text'
-							style='padding:8px;margin:15px auto;width:30%;'
-							placeholder='Type to filter Inquiry Number...'
-							(keyup)='updateFilter($event)'
-						/>
-					</div> -->
+
+					<!-- input field for inquiry numbers -->
 
 					<div class="m-input-icon m-input-icon--right">
 						<input 
@@ -127,13 +120,13 @@
 							(select)='onSelect($event)'
 							[rows]='rows'>
 								<ngx-datatable-column name="Inquiry #" prop="InquiryNo"></ngx-datatable-column>
+								<ngx-datatable-column name="Customer Name" prop="CustomerName"></ngx-datatable-column>
+								<ngx-datatable-column name="Product Description" [width]="600" prop="ProductDesc"></ngx-datatable-column>
 								<ngx-datatable-column name="Quantity" prop="Quantity"></ngx-datatable-column>
 								<!-- <ngx-datatable-column name="Post" prop="Post"></ngx-datatable-column> -->
-								<ngx-datatable-column name="Customer Code" prop="CustCode"></ngx-datatable-column>
+								<!-- <ngx-datatable-column name="Customer Code" prop="CustCode"></ngx-datatable-column>
 								<ngx-datatable-column name="Unit" prop="Unit"></ngx-datatable-column>
-								<ngx-datatable-column name="Customer Name" prop="CustomerName"></ngx-datatable-column>
-								<ngx-datatable-column name="Inquiry Date" prop="InquireDate"></ngx-datatable-column>
-								<ngx-datatable-column name="Product Description" prop="ProductDesc"></ngx-datatable-column>
+								<ngx-datatable-column name="Inquiry Date" prop="InquireDate"></ngx-datatable-column> -->
 						</ngx-datatable>
 					</div>
 

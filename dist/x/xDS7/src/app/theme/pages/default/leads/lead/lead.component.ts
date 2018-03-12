@@ -2,7 +2,6 @@ import { Component, OnInit, ViewEncapsulation, AfterViewInit, Pipe, PipeTransfor
 import { Helpers } from '../../../../../helpers';
 import { ScriptLoaderService } from '../../../../../_services/script-loader.service';
 import { RestApiService } from '../../../../../_services/http.service';
-import { LeadsDataHandler } from '../../../../../_services/leads-data-handle.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LeadsService } from '../../../../../_services/leads/lead.service';
 
@@ -14,33 +13,29 @@ import { LeadsService } from '../../../../../_services/leads/lead.service';
 })
 export class LeadComponent implements OnInit, AfterViewInit {
 
-    leadId: string;
     leadResponse: any;
-    idthroughRoute: string;
-    total: any;
+    totalQuantity: string;
+    // showing product description
+    checker: boolean = false;
 
-    constructor(private _script: ScriptLoaderService, private http: RestApiService, private leadService: LeadsService, private leadData: LeadsDataHandler, private router: Router, private route: ActivatedRoute) {
+    // singular properties
+    customerName: string;
+
+    constructor(private _script: ScriptLoaderService, private http: RestApiService, private leadService: LeadsService, private router: Router, private route: ActivatedRoute) {
         this.route.params.subscribe(
             params => this.getLead(params['id'])
         );
     }
 
-    getLead(id: string) {
-        // for navigation from the leads page use
-        // this.router.navigate(['lead', id])
-        // our parameter that the browser is reading
-        console.log(id);
+    ngOnInit() { }
 
+    getLead(id: string) {
         this.leadService.getLead(id)
             .subscribe(
                 async (res: any) => {
-                    console.log(`Here I am also accessable from leads service: ${id}`);
-                    console.log(res);
                     this.leadResponse = await res.data;
-                    this.total = this.leadResponse.reduce((a: any, b: any) => {
-                        a = a + b;
-                    }, 0);
-                    console.log(this.total);
+                    this.customerName = this.leadResponse[0].CustomerName;
+                    this.getTotal(this.leadResponse);
                 },
                 (err) => {
                     console.log(err);
@@ -48,17 +43,21 @@ export class LeadComponent implements OnInit, AfterViewInit {
             );
     }
 
-    ngOnInit() { }
+    getTotal(data) {
+        let result = [];
+
+        data.forEach(obj => {
+            let id = obj.InquiryNo;
+            !this[id] ? result.push(this[id] = obj) : this[id].Quantity += obj.Quantity;
+        }, Object.create(null));
+
+        this.totalQuantity = result[0].Quantity;
+    }
 
     ngAfterViewInit() {
         this._script.loadScripts('lead',
             ['assets/vendors/custom/jquery-ui/jquery-ui.bundle.js',
                 'assets/custom/components/portlets/draggable.js']);
-    }
-
-    goBack() {
-        // if the link is directly accessed or with no parameters then we will be sending the user to enquiry page
-        this.router.navigate(['/leads']);
     }
 
 }

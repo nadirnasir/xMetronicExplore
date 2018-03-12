@@ -1,5 +1,64 @@
 <!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				My Leads
+			</h3>
+			<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+				<span class="m-subheader__daterange-label">
+					<span class="m-subheader__daterange-title"></span>
+					<span class="m-subheader__daterange-date m--font-brand"></span>
+				</span>
+				<a href="#" class="btn btn-sm  m-btn m-btn--icon m-btn--icon-only m-btn--custom ">
+					<i class="la la-angle-down"></i>
+				</a>
+			</span>
+			<div class="process m-subheader__breadcrumbs m-nav m-nav--inline">
+				<div class="process-steps">
+					Process steps
+				</div>
+				<div class="process-steps">
+					Process steps
+				</div>
+				<div class="process-steps">
+					Process steps
+				</div>
+				<div class="process-steps">
+					Process steps
+				</div>
+			</div>
+			<!-- <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+					<li class="m-nav__item m-nav__item--home">
+						<a href="#" class="m-nav__link m-nav__link--icon">
+							<i class="m-nav__link-icon la la-home"></i>
+						</a>
+					</li>
+					<li class="m-nav__separator">
+						-
+					</li>
+					<li class="m-nav__item">
+						<a href="" class="m-nav__link">
+							<span class="m-nav__link-text">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li class="m-nav__separator">
+						-
+					</li>
+					<li class="m-nav__item">
+						<a href="" class="m-nav__link">
+							<span class="m-nav__link-text">
+								Generate Reports
+							</span>
+						</a>
+					</li>
+				</ul> -->
+		</div>
 
+	</div>
+</div>
 <!-- END: Subheader -->
 <div class="m-content">
 	
@@ -33,12 +92,12 @@
 		<!-- first column -->
 		<div class="col-lg-3 pr-lg-1">
 			<!--begin::Portlet-->
-			<div class="m-portlet m-portlet--mobile m-portlet--sortable" *ngIf="leadResponse">
-				<div class="m-portlet__head" *ngFor="let res of leadResponse">
+			<div class="m-portlet m-portlet--mobile m-portlet--sortable">
+				<div class="m-portlet__head">
 					<div class="m-portlet__head-caption">
 						<div class="m-portlet__head-title">
 							<h3 class="m-portlet__head-text">
-								{{ res }}
+								Account Information
 							</h3>
 						</div>
 					</div>
@@ -52,13 +111,13 @@
 						</ul>
 					</div>
 				</div>
-				<div class="m-portlet__body">
+				<div class="m-portlet__body" *ngIf="leadResponse">
 
 					<!-- row one -->
 					<div class="row d-flex align-items-center">
 						<div class="col-md-8 col-8 pr-1">
 							<div class="underline_hint_h">
-								<h5>1888 Mills Ltd.</h5>
+								<h5>{{ customerName }}</h5>
 								<span>account name</span>
 							</div>
 						</div>
@@ -131,7 +190,7 @@
 						</div>
 						<div class="col-md-4 col-4 pl-1 pr-1">
 							<div class="underline_hint_h">
-								<h5>19,220</h5>
+								<h5>{{ totalQuantity || 'Total Quantity' }}</h5>
 								<span>pieces -- PCS</span>
 							</div>
 						</div>
@@ -227,14 +286,15 @@
 						<!-- row one -->
 						<li class="row d-flex align-items-center" *ngFor="let res of leadResponse">
 							<div class="col-md-6 col-4 pr-0">
-								<div class="pt-4 pb-4">
-									<h5>3 Days</h5>
-									<span>lead time</span>
+								<div class="pt-4 pb-4"(click)="this.checker = !this.checker">
+									<h5><small>{{ res.QualityCode || 'QualityCode' }} -- {{ res.StyleCode || 'StyleCode' }}</small></h5>
+									<span>{{ res.ColorCode || 'ColorCode' }} -- {{ res.PatternCode || 'PatternCode' }}</span>
+									<p *ngIf="checker"><small>{{ res.ProductDesc || 'ProductDesc' }}</small></p>
 								</div>
 							</div>
 							<div class="col-md-3 col-4 pl-0 pr-0">
 								<div class="pt-4 pb-4">
-									<h5>{{ res.Quantity }}</h5>
+									<h5>{{ res.Quantity || 'Quantity' }}</h5>
 									<span>pieces -- PCS</span>
 								</div>
 							</div>

@@ -12,7 +12,6 @@ export class LeadsService {
     }
 
     getLead(leadId) {
-        console.log(`/Values/GetAllLeadsMockByID?id=${leadId}`);
         return this.http.get(`/Values/GetAllLeadsMockByID?id=${leadId}`);
     }
 
