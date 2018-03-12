@@ -44,6 +44,7 @@ export class LeadsComponent implements OnInit {
       );
   }
 
+  // merging data W.R.T Inquiry Number
   mergeData() {
     let result = [];
 
@@ -62,12 +63,14 @@ export class LeadsComponent implements OnInit {
       }
     }, Object.create(null));
 
+    // copy of the same data
     this.temp = [...result];
     this.rows = result;
 
     console.log(typeof (this.temp[0].InquiryNo));
   }
 
+  // filtering data using the copy of data which is in merge data
   updateFilter(event) {
     const val = event.target.value.toLowerCase();
 
@@ -76,14 +79,15 @@ export class LeadsComponent implements OnInit {
       return d.InquiryNo.toString().indexOf(val) !== -1 || !val;
     });
 
-    // update the rows
+    // updating the rows to show filtered data
     this.rows = temp;
 
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
 
-  onSelect({ selected }) {
+  // when user has clicked on any of the row
+  onSelect(selected) {
     console.log(this.selected[0].InquiryNo);
     const inquiryNumber = this.selected[0].InquiryNo;
     this.router.navigate(['/lead', inquiryNumber]);
