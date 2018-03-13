@@ -12,10 +12,16 @@ import { AuthModule } from "./auth/auth.module";
 
 // Separately added HttpClientModule and Rest Service other than the theme
 import { HttpClientModule } from '@angular/common/http';
+// API constants
 import { ApiConstant } from './core/api.constant';
+// rest service
 import { RestApiService } from './_services/http.service';
-import { LeadsService } from './_services/leads/lead.service';
+// leads Service
+import { LeadsService } from './_services/leads/leads.service';
 import { LeadsDataHandler } from './_services/leads-data-handle.service';
+import { OrdersService } from './_services/orders/orders.service';
+// orders service
+
 
 @NgModule({
   declarations: [
@@ -36,7 +42,8 @@ import { LeadsDataHandler } from './_services/leads-data-handle.service';
     ApiConstant,
     RestApiService,
     LeadsService,
-    LeadsDataHandler
+    LeadsDataHandler,
+    OrdersService
   ],
   bootstrap: [AppComponent]
 })

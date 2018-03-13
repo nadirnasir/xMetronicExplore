@@ -2,7 +2,7 @@
 	<div class="d-flex align-items-center">
 		<div class="mr-auto">
 			<h3 class="m-subheader__title m-subheader__title--separator">
-				My Leads
+				Orders
 			</h3>
 			<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
 				<span class="m-subheader__daterange-label">
@@ -18,42 +18,18 @@
 					Open
 				</div>
 				<div class="process-steps">
-					Analyzing
+					Materialize
 				</div>
 				<div class="process-steps">
-					Negotiating
+					Produce
 				</div>
 				<div class="process-steps">
-					Won
+					Package
+				</div>
+				<div class="process-steps">
+					Dispatch
 				</div>
 			</div>
-			<!-- <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-					<li class="m-nav__item m-nav__item--home">
-						<a href="#" class="m-nav__link m-nav__link--icon">
-							<i class="m-nav__link-icon la la-home"></i>
-						</a>
-					</li>
-					<li class="m-nav__separator">
-						-
-					</li>
-					<li class="m-nav__item">
-						<a href="" class="m-nav__link">
-							<span class="m-nav__link-text">
-								Dashboard
-							</span>
-						</a>
-					</li>
-					<li class="m-nav__separator">
-						-
-					</li>
-					<li class="m-nav__item">
-						<a href="" class="m-nav__link">
-							<span class="m-nav__link-text">
-								Generate Reports
-							</span>
-						</a>
-					</li>
-				</ul> -->
 		</div>
 
 	</div>
@@ -119,17 +95,14 @@
 							[selectionType]="'single'"
 							(select)='onSelect($event)'
 							[rows]='rows'>
-								<ngx-datatable-column name="Inquiry #" prop="InquiryNo"></ngx-datatable-column>
-								<ngx-datatable-column name="Customer Name" prop="CustomerName"></ngx-datatable-column>
-								<ngx-datatable-column name="Product Description" [width]="600" prop="ProductDesc"></ngx-datatable-column>
+								<ngx-datatable-column name="#" prop="os_no"></ngx-datatable-column>
+								<ngx-datatable-column name="Account" prop="CustomerName"></ngx-datatable-column>
 								<ngx-datatable-column name="Quantity" prop="Quantity"></ngx-datatable-column>
-								<!-- <ngx-datatable-column name="Post" prop="Post"></ngx-datatable-column> -->
-								<!-- <ngx-datatable-column name="Customer Code" prop="CustCode"></ngx-datatable-column>
-								<ngx-datatable-column name="Unit" prop="Unit"></ngx-datatable-column>
-								<ngx-datatable-column name="Inquiry Date" prop="InquireDate"></ngx-datatable-column> -->
+								<ngx-datatable-column name="Order Information" prop="ProductDesc"></ngx-datatable-column>
+								<ngx-datatable-column name="Order Date" prop="OrderDate"></ngx-datatable-column>
 						</ngx-datatable>
 					</div>
-
+					
 
 					<!-- another method -->
 					<!-- <div>

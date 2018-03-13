@@ -3,15 +3,15 @@ import { Helpers } from '../../../../helpers';
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
 import { Router } from '@angular/router';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
-import { LeadsService } from '../../../../_services/leads/leads.service';
+import { OrdersService } from '../../../../_services/orders/orders.service';
 
 @Component({
-  selector: 'app-leads',
-  templateUrl: './leads.component.html',
-  styleUrls: ["./leads.component.scss"],
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrls: ["./orders.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
-export class LeadsComponent implements OnInit {
+export class OrdersComponent implements OnInit {
 
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
@@ -23,7 +23,7 @@ export class LeadsComponent implements OnInit {
   // row which is selected
   selected = [];
 
-  constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router, private leadService: LeadsService) {
+  constructor(private _script: ScriptLoaderService, private elRef: ElementRef, private router: Router, private orderService: OrdersService) {
     // to fetch data fetchData function below
     this.fetchData();
   }
@@ -32,7 +32,7 @@ export class LeadsComponent implements OnInit {
 
   fetchData() {
     // this get the results from getAllLeads function in lead service
-    this.leadService.getAllLeads()
+    this.orderService.getAllOrders()
       .subscribe(
         async (res: any) => {
           this.arr = await res.data;
@@ -48,26 +48,35 @@ export class LeadsComponent implements OnInit {
   mergeData() {
     let result = [];
 
-    this.arr.forEach(obj => {
-      let id = obj.InquiryNo;
+    this.arr.forEach((obj) => {
+      let id = obj.os_no;
       // converting quantity type from string to integer
       // obj.Quantity = parseInt(obj.Quantity);
       if (!this[id]) {
         result.push(this[id] = obj);
       } else {
         // converting quantity type from string to integer
-        // this[id].Quantity += parseInt(obj.Quantity);
         this[id].Quantity += obj.Quantity;
-        this[id].InquireDate += `, ${obj.InquireDate}`;
+        this[id].order_qty_pcs += obj.order_qty_pcs;
         this[id].ProductDesc += `, ${obj.ProductDesc}`;
       }
     }, Object.create(null));
 
-    // copy of the same data
-    this.temp = [...result];
-    this.rows = result;
+    console.log(result);
 
-    console.log(typeof (this.temp[0].InquiryNo));
+    this.trackMultiple(result);
+  }
+
+  // concatinating Quantity and product description(showing 'multiple products' if there are more than on products)
+  trackMultiple(resultRow: any) {
+
+    for (let i = 0; i < resultRow.length; i++) {
+      resultRow[i].ProductDesc.split(", ").length ? resultRow[i].ProductDesc = `${resultRow[i].order_qty_pcs}, PCS Multiple Products` : resultRow[i].ProductDesc = `${resultRow[i].order_qty_pcs}, ${resultRow[i].ProductDesc}`;
+    }
+
+    this.temp = [...resultRow];
+    this.rows = resultRow;
+
   }
 
   // filtering data using the copy of data which is in merge data
@@ -76,7 +85,7 @@ export class LeadsComponent implements OnInit {
 
     // filter our data
     const temp = this.temp.filter(function (d) {
-      return d.InquiryNo.toString().indexOf(val) !== -1 || !val;
+      return d.os_no.toString().indexOf(val) !== -1 || !val;
     });
 
     // updating the rows to show filtered data
@@ -88,8 +97,8 @@ export class LeadsComponent implements OnInit {
 
   // when user has clicked on any of the row
   onSelect(selected) {
-    console.log(this.selected[0].InquiryNo);
-    const inquiryNumber = this.selected[0].InquiryNo;
-    this.router.navigate(['/lead', inquiryNumber]);
+    console.log(this.selected[0].os_no);
+    const customerNumber = this.selected[0].os_no;
+    this.router.navigate(['/order', customerNumber]);
   }
 }

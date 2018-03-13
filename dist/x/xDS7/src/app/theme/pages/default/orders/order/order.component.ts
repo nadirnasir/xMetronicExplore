@@ -3,17 +3,17 @@ import { Helpers } from '../../../../../helpers';
 import { ScriptLoaderService } from '../../../../../_services/script-loader.service';
 import { RestApiService } from '../../../../../_services/http.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { LeadsService } from '../../../../../_services/leads/leads.service';
+import { OrdersService } from '../../../../../_services/orders/orders.service';
 
 @Component({
-    selector: "lead",
-    templateUrl: "./lead.component.html",
-    styleUrls: ["./lead.component.scss"],
+    selector: "order",
+    templateUrl: "./order.component.html",
+    styleUrls: ["./order.component.scss"],
     encapsulation: ViewEncapsulation.None,
 })
-export class LeadComponent implements OnInit, AfterViewInit {
+export class OrderComponent implements OnInit, AfterViewInit {
 
-    leadResponse: any;
+    orderResponse: any;
     totalQuantity: string;
     // showing product description
     checker: boolean = false;
@@ -21,7 +21,7 @@ export class LeadComponent implements OnInit, AfterViewInit {
     // singular properties
     customerName: string;
 
-    constructor(private _script: ScriptLoaderService, private http: RestApiService, private leadService: LeadsService, private router: Router, private route: ActivatedRoute) {
+    constructor(private _script: ScriptLoaderService, private http: RestApiService, private orderService: OrdersService, private router: Router, private route: ActivatedRoute) {
         this.route.params.subscribe(
             params => this.getLead(params['id'])
         );
@@ -30,12 +30,12 @@ export class LeadComponent implements OnInit, AfterViewInit {
     ngOnInit() { }
 
     getLead(id: string) {
-        this.leadService.getLead(id)
+        this.orderService.getOrder(id)
             .subscribe(
                 async (res: any) => {
-                    this.leadResponse = await res.data;
-                    this.customerName = this.leadResponse[0].CustomerName;
-                    this.getTotal(this.leadResponse);
+                    this.orderResponse = await res.data;
+                    this.customerName = this.orderResponse[0].CustomerName;
+                    this.getTotal(this.orderResponse);
                 },
                 (err) => {
                     console.log(err);

@@ -1,0 +1,73 @@
+.m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {
+    font-size: 1.18rem;
+}
+
+.underline_hint_h {
+    margin-bottom: 10px;
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.1rem;
+        border-bottom: 1px solid #ebedf2;
+        margin-bottom: 0;
+        font-weight: 400;
+        padding-bottom: 3px;
+
+    }
+    span {
+        font-size: 0.6rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.01rem;
+        display: inline-flex;
+        line-height: 1;
+    }
+    p {
+        font-size: 0.78rem;
+    }
+}
+
+.underline_hint_s {
+    @extend .underline_hint_h;
+    span {
+        display: block;
+        margin-bottom: 0;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #ebedf2;
+    }
+    p {
+        font-size: 0.78rem;
+        display: inline-flex;
+        line-height: 1.4;
+        margin-bottom: 0;
+        color: #181818;
+    }
+}
+
+.table_type_rows {
+    li {
+        border-top: 1px solid #ebedf2;
+        border-bottom: 1px solid #ebedf2;
+        &:first-child {
+            border-bottom: none;
+        }
+        &:last-child {
+            border-top: none;
+        }
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+}
+
+@media(max-width: 991px) {
+    .m-portlet.m-portlet--sortable-empty {
+        display: none;
+    }
+}

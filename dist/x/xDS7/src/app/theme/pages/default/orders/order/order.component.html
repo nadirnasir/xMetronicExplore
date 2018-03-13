@@ -19,13 +19,19 @@
 					Open
 				</div>
 				<div class="process-steps">
-					Analyzing
+					Materialize
 				</div>
 				<div class="process-steps">
-					Negotiating
+					Produce
 				</div>
 				<div class="process-steps">
-					Won/Lost
+					Package
+				</div>
+				<div class="process-steps">
+					Dispatch
+				</div>
+				<div class="process-steps">
+					Closure
 				</div>
 			</div>
 		</div>
@@ -84,15 +90,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="m-portlet__body">
-					<!-- loader -->
-					<div class="text-center" *ngIf="!leadResponse">
-						<div class="m-loader m-loader--lg m-loader--warning" style="width: 30px; display: inline-block;"></div>
-					</div>
-					<!-- loader ends -->
+				<div class="m-portlet__body" *ngIf="leadResponse">
 
 					<!-- row one -->
-					<div class="row d-flex align-items-center" *ngIf="leadResponse">
+					<div class="row d-flex align-items-center">
 						<div class="col-md-8 col-8 pr-1">
 							<div class="underline_hint_h">
 								<h5>{{ customerName }}</h5>
@@ -109,7 +110,7 @@
 					<!-- row one ends -->
 
 					<!-- row two -->
-					<div class="row d-flex align-items-center" *ngIf="leadResponse">
+					<div class="row d-flex align-items-center">
 						<div class="col-md-8 col-8 pr-1">
 							<div class="underline_hint_h">
 								<h5>Signed Customer</h5>
@@ -126,7 +127,7 @@
 					<!-- row two ends -->
 
 					<!-- row three -->
-					<div class="row d-flex align-items-center" *ngIf="leadResponse">
+					<div class="row d-flex align-items-center">
 						<div class="col-sm-12">
 							<div class="underline_hint_h">
 								<h5>Nadeem Akhtar</h5>

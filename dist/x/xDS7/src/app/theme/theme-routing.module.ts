@@ -27,6 +27,19 @@ const routes: Routes = [
                 "loadChildren": ".\/pages\/default\/leads\/lead\/lead.module#LeadModule"
             },
             {
+                "path": "orders",
+                "loadChildren": ".\/pages\/default\/orders\/orders.module#OrdersModule"
+            },
+            {
+                "path": "order",
+                redirectTo: '/orders',
+                pathMatch: 'full'
+            },
+            {
+                "path": "order/:id",
+                "loadChildren": ".\/pages\/default\/orders\/order\/order.module#OrderModule"
+            },
+            {
                 "path": "inner",
                 "loadChildren": ".\/pages\/default\/inner\/inner.module#InnerModule"
             },
