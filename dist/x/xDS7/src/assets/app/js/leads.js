@@ -196,42 +196,80 @@ var Leads = function () {
     //         }]
     //     });
     // }
+
     var daterangepickerInit = function () {
         if ($('#m_dashboard_daterangepicker').length == 0) {
             return;
         }
 
         var picker = $('#m_dashboard_daterangepicker');
+
         // Default to today
         var start = moment();
         var end = moment();
+        var label = "Today"
 
-        // Default to last month
-        // var start = moment().subtract(29, 'days');
-        // var end = moment();
+        // Define the config object to be appended to current user config
+        var currentUserConfig = {
+            ui: {
+                leads: {
+                    "start": '',
+                    "end": '',
+                    "label": ''
+                }
+            }
+        }
+
+        // Accessing saved user object from local storage
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"))
+
+        // If no config object exists, append and save today's date and label and save to local storage
+        if (!currentUser.config) {
+            // console.log("User config is udefined")
+            currentUser.config = currentUserConfig
+            currentUser.config.ui.leads.start = start.format("DD/MM/YY")
+            currentUser.config.ui.leads.end = end.format("DD/MM/YY")
+            currentUser.config.ui.leads.label = label
+            localStorage.setItem("currentUser", JSON.stringify(currentUser))
+
+        } else {
+            //  if config exists, set the start and end to what is saved in the local storage
+            var start = moment(currentUser.config.ui.leads.start, "DD-MM-YY");
+            var end = moment(currentUser.config.ui.leads.end, "DD-MM-YY");
+            var label = currentUser.config.ui.leads.label;
+
+        }
+
 
         function cb(start, end, label) {
             var title = '';
             var range = '';
-
-            if ((end - start) < 100) {
-                title = 'Today:';
+            if (label == "Today") {
+                title = label + ': ';
                 range = start.format('MMM D');
             } else if (label == 'Yesterday') {
-                title = 'Yesterday:';
+                title = label + ': ';
                 range = start.format('MMM D');
-            } 
-            // else if (label == 'Last 7 Days') {
-            //         title = label
-            //         range = start.format('MMM D') + ' - ' + end.format('MMM D');
-            // }
-            else {
+            } else if (label == 'Last 7 Days') {
+                title = label + ": "
+                range = start.format('MMM D') + ' - ' + end.format('MMM D');
+            } else if (label != "Custom Range")  {
                 title = ''
                 range = start.format('MMM D') + ' - ' + end.format('MMM D');
+            } else  {
+                title = ''
+                range = start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY');
             }
 
             picker.find('.m-subheader__daterange-date').html(range);
             picker.find('.m-subheader__daterange-title').html(title);
+
+            currentUser.config.ui.leads.start = start.format("DD/MM/YY")
+            currentUser.config.ui.leads.end = end.format("DD/MM/YY");
+            currentUser.config.ui.leads.label = label;
+            localStorage.setItem("currentUser", JSON.stringify(currentUser))
+
+
         }
 
         picker.daterangepicker({
@@ -242,14 +280,14 @@ var Leads = function () {
                 'Today': [moment(), moment()],
                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment()],
                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                // 'This Month': [moment().startOf('month'), moment().endOf('month')],
                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             }
         }, cb);
 
-        cb(start, end, '');
-        // cb(start, end, 'Last 30 Days');
+        cb(start, end, label);
     }
 
 
@@ -276,10 +314,3 @@ jQuery(document).ready(function () {
 //# sourceMappingURL=leads.js.map
 
 //# sourceMappingURL=leads.js.map
-
-function callbackfunction(){   
-    // window['angularComponentRef'] might not yet be set here though
-    window['angularComponent'].zone.run(() => {
-      runThisFunctionFromOutside(); 
-    });
-  }

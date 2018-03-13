@@ -184,9 +184,11 @@ export class LeadsComponent implements OnInit, AfterViewInit {
 
   }
 
+  callingLeadsComponent() {
+    console.log("I've been called")
+  }
 
   ngAfterViewInit() {
-    //console.log("Renderer:" + this._renderer.data)
 
     // Load metronic specific javascript code
     this._script.loadScripts('app-leads',
@@ -203,7 +205,7 @@ export class LeadsComponent implements OnInit, AfterViewInit {
       // });
       $(_self.elRef.nativeElement).find('.m-datatable__row').click(function () {
         //console.log(this.attributes.id.value)
-        _self.router.navigate(['/lead'], { queryParams: { id: this.attributes.id.value } });
+        // _self.router.navigate(['/lead'], { queryParams: { id: this.attributes.id.value } });
         // _self.router.navigate(['/lead/' + this.attributes.id.value]);
       });
       _self.datatableRecordCount = 144
