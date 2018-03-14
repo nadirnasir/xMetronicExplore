@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Helpers } from '../../../../helpers';
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
 import { Router } from '@angular/router';
@@ -77,8 +77,7 @@ export class LeadsComponent implements OnInit {
     // filter our data
     const temp = this.temp.filter(function (d) {
       return d.InquiryNo.toString().indexOf(val) !== -1 || !val;
-    });
-
+    })
     // updating the rows to show filtered data
     this.rows = temp;
 

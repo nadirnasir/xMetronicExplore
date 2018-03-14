@@ -65,12 +65,12 @@
 		<!-- first column -->
 		<div class="col-lg-3 pr-lg-1">
 			<!--begin::Portlet-->
-			<div class="m-portlet m-portlet--mobile m-portlet--sortable">
-				<div class="m-portlet__head">
+			<div class="m-portlet m-portlet--mobile m-portlet--sortable" *ngIf="leadResponse">
+				<div class="m-portlet__head" *ngFor="let res of leadResponse">
 					<div class="m-portlet__head-caption">
 						<div class="m-portlet__head-title">
 							<h3 class="m-portlet__head-text">
-								Account Information
+								{{ res }}
 							</h3>
 						</div>
 					</div>

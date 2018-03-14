@@ -5,6 +5,7 @@ import { LayoutModule } from '../../../layouts/layout.module';
 import { DefaultComponent } from '../default.component';
 import { LeadsComponent } from './leads.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { DatatableService } from '../../../../_services/datatable.service';
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
   ], declarations: [
     LeadsComponent,
   ],
+  providers: [
+    DatatableService
+  ]
 })
 export class LeadsModule {
 }

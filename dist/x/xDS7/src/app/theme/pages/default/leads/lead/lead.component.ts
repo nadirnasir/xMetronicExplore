@@ -2,8 +2,20 @@ import { Component, OnInit, ViewEncapsulation, AfterViewInit, Pipe, PipeTransfor
 import { Helpers } from '../../../../../helpers';
 import { ScriptLoaderService } from '../../../../../_services/script-loader.service';
 import { RestApiService } from '../../../../../_services/http.service';
+import { LeadsDataHandler } from '../../../../../_services/leads-data-handle.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LeadsService } from '../../../../../_services/leads/leads.service';
+
+// @Pipe({ name: 'keyValues' })
+// export class KeysPipe implements PipeTransform {
+//     transform(value, args: string[]): any {
+//         let keys = [];
+//         for (let key in value) {
+//             keys.push({ key: key, value: value[key] });
+//         }
+//         return keys;
+//     }
+// }
 
 @Component({
     selector: "lead",

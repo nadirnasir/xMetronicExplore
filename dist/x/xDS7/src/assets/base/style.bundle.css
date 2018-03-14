@@ -35351,7 +35351,8 @@ body.m-content--skin-light2 {
 
 
 .process-steps {
-  width: 150px;
+  /* width: 160px; */
+  width: auto;
   position: relative;
   background-color: lightgrey;
   padding: 10px 30px;
@@ -35401,3 +35402,5 @@ body.m-content--skin-light2 {
 .m-subheader .m-subheader__daterange .m-subheader__daterange-label {
   padding: 0;
 }
+
+.m-datatable__row { cursor: pointer }
