@@ -58,12 +58,11 @@ export class LeadComponent implements OnInit, AfterViewInit {
     getTotal(data) {
         let result = [];
 
-        data.forEach(obj => {
-            let id = obj.InquiryNo;
-            !this[id] ? result.push(this[id] = obj) : this[id].Quantity += obj.Quantity;
-        }, Object.create(null));
+        for (let i = 0; i < data.length; i++) {
+            result.push(data[i].Quantity);
+        }
 
-        this.totalQuantity = result[0].Quantity;
+        this.totalQuantity = result.reduce((a, b) => a + b, 0);
     }
 
     ngAfterViewInit() {

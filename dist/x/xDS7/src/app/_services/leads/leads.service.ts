@@ -8,7 +8,7 @@ export class LeadsService {
 
     // this gets us all the leads
     getAllLeads() {
-        return this.http.get('/values/getAllLeadsMock');
+        return this.http.get('/values/getAllLeadsMock?status=U&dateFrom=02/01/2010&dateTo=02/01/2018');
     }
 
     getLead(leadId) {

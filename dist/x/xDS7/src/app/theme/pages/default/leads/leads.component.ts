@@ -58,16 +58,28 @@ export class LeadsComponent implements OnInit {
         // converting quantity type from string to integer
         // this[id].Quantity += parseInt(obj.Quantity);
         this[id].Quantity += obj.Quantity;
-        this[id].InquireDate += `, ${obj.InquireDate}`;
+        // this[id].InquireDate += `, ${obj.InquireDate}`;
         this[id].ProductDesc += `, ${obj.ProductDesc}`;
       }
     }, Object.create(null));
 
     // copy of the same data
-    this.temp = [...result];
-    this.rows = result;
+
+    this.trackMultiple(result);
 
     console.log(typeof (this.temp[0].InquiryNo));
+  }
+
+  // concatinating Quantity and product description(showing 'multiple products' if there are more than on products)
+  trackMultiple(resultRow: any) {
+    console.log(resultRow);
+    for (let i = 0; i < resultRow.length; i++) {
+      resultRow[i].ProductDesc.split(", ").length ? resultRow[i].ProductDesc = `${resultRow[i].Quantity}, PCS Multiple Products` : resultRow[i].ProductDesc = `${resultRow[i].Quantity}, ${resultRow[i].ProductDesc}`;
+    }
+
+    this.temp = [...resultRow];
+    this.rows = resultRow;
+
   }
 
   // filtering data using the copy of data which is in merge data

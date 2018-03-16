@@ -35,42 +35,17 @@
 <!-- END: Subheader -->
 <div class="m-content">
 	
-	<!-- <table class="table" *ngIf="!leadResponse">
-		<tr>
-			<td style="vertical-align:middle; text-align: center;">
-				Please Wait... <div class="m-loader m-loader--lg m-loader--warning" style="width: 30px; display: inline-block;"></div>
-			</td>
-		</tr>
-	</table> -->
-
-	<!-- <table class="table table-striped table-dark" *ngIf="leadResponse">
-		<tr>
-			<th>Index</th>
-			<th>User Id #</th>
-			<th>Id</th>
-			<th>Title</th>
-			<th>Body</th>
-		</tr>
-		<tr *ngFor="let res of leadResponse; index as i">
-			<td>{{ i + 1 }}</td>
-			<td>{{ res.userId }}</td>
-			<td>{{ res.id }}</td>
-			<td>{{ res.title }}</td>
-			<td>{{ res.body }}</td>
-		</tr>
-	</table> -->
-	
 	<div class="row" id="m_sortable_portlets">
 
 		<!-- first column -->
 		<div class="col-lg-3 pr-lg-1">
 			<!--begin::Portlet-->
-			<div class="m-portlet m-portlet--mobile m-portlet--sortable" *ngIf="leadResponse">
-				<div class="m-portlet__head" *ngFor="let res of leadResponse">
+			<div class="m-portlet m-portlet--mobile m-portlet--sortable">
+				<div class="m-portlet__head">
 					<div class="m-portlet__head-caption">
 						<div class="m-portlet__head-title">
 							<h3 class="m-portlet__head-text">
-								{{ res }}
+								Account Information
 							</h3>
 						</div>
 					</div>

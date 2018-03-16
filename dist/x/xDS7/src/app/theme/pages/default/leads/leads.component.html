@@ -104,7 +104,7 @@
 
 					<!-- input field for inquiry numbers -->
 
-					<div class="m-input-icon m-input-icon--right">
+					<!-- <div class="m-input-icon m-input-icon--right">
 						<input 
 							class="form-control m-input"
 							style='height:60px;border-radius:0;'
@@ -117,7 +117,7 @@
 								<i class="la la-search"></i>
 							</span>
 						</span>
-					</div>
+					</div> -->
 					
 					<div>
 						<ngx-datatable 
@@ -131,16 +131,25 @@
 							[limit]="10"
 							[selected]="selected"
 							[selectionType]="'single'"
-							(select)='onSelect($event)'
+							(click)='onSelect($event)'
 							[rows]='rows'>
+								<ngx-datatable-column [width]="30" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
+									<ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+									<input type="checkbox" [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"/>
+									</ng-template>
+									<ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+									<input type="checkbox" [checked]="isSelected" (change)="onCheckboxChangeFn($event)"/>
+									</ng-template>
+								</ngx-datatable-column>
+
 								<ngx-datatable-column name="Inquiry #" prop="InquiryNo"></ngx-datatable-column>
-								<ngx-datatable-column name="Customer Name" prop="CustomerName"></ngx-datatable-column>
-								<ngx-datatable-column name="Product Description" [width]="600" prop="ProductDesc"></ngx-datatable-column>
-								<ngx-datatable-column name="Quantity" prop="Quantity"></ngx-datatable-column>
+								<ngx-datatable-column name="Account" prop="CustomerName"></ngx-datatable-column>
+								<ngx-datatable-column name="Lead Information" prop="ProductDesc"></ngx-datatable-column>
+								<ngx-datatable-column name="Inquired" prop="InquireDate"></ngx-datatable-column>
 								<!-- <ngx-datatable-column name="Post" prop="Post"></ngx-datatable-column> -->
 								<!-- <ngx-datatable-column name="Customer Code" prop="CustCode"></ngx-datatable-column>
-								<ngx-datatable-column name="Unit" prop="Unit"></ngx-datatable-column>
-								<ngx-datatable-column name="Inquiry Date" prop="InquireDate"></ngx-datatable-column> -->
+									<ngx-datatable-column name="Unit" prop="Unit"></ngx-datatable-column>
+									<ngx-datatable-column name="Inquiry Date" prop="InquireDate"></ngx-datatable-column> -->
 						</ngx-datatable>
 					</div>
 

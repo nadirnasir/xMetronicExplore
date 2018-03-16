@@ -17,24 +17,25 @@ export class OrderComponent implements OnInit, AfterViewInit {
     totalQuantity: string;
     // showing product description
     checker: boolean = false;
-
     // singular properties
+    customerId: string;
     customerName: string;
 
     constructor(private _script: ScriptLoaderService, private http: RestApiService, private orderService: OrdersService, private router: Router, private route: ActivatedRoute) {
         this.route.params.subscribe(
-            params => this.getLead(params['id'])
+            params => this.getOrder(params['id'])
         );
     }
 
     ngOnInit() { }
 
-    getLead(id: string) {
+    getOrder(id: string) {
         this.orderService.getOrder(id)
             .subscribe(
                 async (res: any) => {
                     this.orderResponse = await res.data;
                     this.customerName = this.orderResponse[0].CustomerName;
+                    this.customerId = id;
                     this.getTotal(this.orderResponse);
                 },
                 (err) => {
@@ -44,14 +45,16 @@ export class OrderComponent implements OnInit, AfterViewInit {
     }
 
     getTotal(data) {
+        console.log(data.length);
         let result = [];
 
-        data.forEach(obj => {
-            let id = obj.InquiryNo;
-            !this[id] ? result.push(this[id] = obj) : this[id].Quantity += obj.Quantity;
-        }, Object.create(null));
+        for (let i = 0; i < data.length; i++) {
+            result.push(data[i].order_qty_pcs);
+        }
 
-        this.totalQuantity = result[0].Quantity;
+        this.totalQuantity = result.reduce((a, b) => a + b, 0);
+
+        console.log(this.totalQuantity);
     }
 
     ngAfterViewInit() {
